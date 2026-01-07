@@ -5,13 +5,23 @@ function Button({ variant, children }: ButtonProps) {
   function GetVariantStyles(type: string) {
      switch (type) {
       case ButtonEnums.PRIMARY:
-        return "w-full bg-blue-600 text-white";
+        return "bg-[var(--color-primary)] border rounded-[12px] px-[16px] py-[16px] text-[var(--color-white)]";
 
       case ButtonEnums.SECONDARY:
-        return "w-full bg-gray-600 text-white";
+        return "";
 
       case ButtonEnums.OUTLINE:
-        return "w-full border border-blue-600 text-blue-600";
+        return "bg-transparent border border-[var(--color-primary)] rounded-[12px] px-[16px] py-[16px] text-[var(--color-primary)]";
+
+            case ButtonEnums.ROUNDED:
+        return "bg-[var(--color-primary)] bborder-rounded-[32px] px-[16px] py-[11px] text-[var(--color-white)]";
+
+        case ButtonEnums.ROUNDEDOUTLINE:
+        return "bg-transparent border border-[var(--color-primary)] rounded-[12px] px-[16px] py-[11px] text-[var(--color-primary)]";
+
+         case ButtonEnums.DANGER:
+        return "bg-transparent border border-[var(--color-danger)] rounded-[12px] px-[13px] py-[10px] text-[var(--color-danger)]";
+
 
       default:
         return "";

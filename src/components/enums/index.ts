@@ -5,4 +5,6 @@ export const ButtonEnums = {
   GHOST: "Ghost",
   LINK: "Link",
   DANGER: "Danger",
+  ROUNDEDOUTLINE: "RoundedOutline",
+  ROUNDED: "Rounded",
 };
