@@ -12,6 +12,7 @@ function Input({
   const [showPassword, setShowPassword] = useState(false);
 
   const isPassword = type === "password";
+  const inputClass = 'h-[70px] border rounded-[16px] border-[var(--color-blacktext)/10] placeholder:bg-[#0000008/50] placeholder:text-[14px]'
 
   return (
     <div className="relative w-full">
