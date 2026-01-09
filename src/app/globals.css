@@ -10,3 +10,6 @@
   --color-buttonprimary: 152 162 179;
   --color-green: 0 101 87;
 }
+*{
+  font-family: --font-poppins;
+}
