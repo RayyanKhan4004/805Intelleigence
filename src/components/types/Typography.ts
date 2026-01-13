@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface TypographyProps {
+export interface props {
   variant: string;
   children: ReactNode;
 }
