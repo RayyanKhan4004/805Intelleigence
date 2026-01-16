@@ -1,3 +1,4 @@
+'use client';
 import { useState } from "react";
 import { InputProps } from "../types";
 
@@ -20,7 +21,7 @@ function Input({
         placeholder={placehoder}
         type={isPassword && showPassword ? "text" : type}
         value={value}
-        className={`pr-10 ${className}`} 
+        className={`pr-10 ${className} ${inputClass}`} 
         onChange={()=>onChange}
         required={required}
       />
