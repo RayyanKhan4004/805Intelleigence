@@ -1,12 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --color-primary: 45 63 80;
   --color-white: 255 255 255;
-  --color-stroke: 229 229 229;
   --color-blacktext: 21 18 15;
   --color-greytext: 128 128 128;
+  --color-stroke: 229 229 229;
   --color-stroke2: 243 243 243;
   --color-blue: 0 127 196;
   --color-buttonprimary: 152 162 179;
   --color-green: 0 101 87;
+}
+@layer base {
+  :root {
+    /* Core */
+    --background: 0 0% 100%;
+    --foreground: 210 20% 10%;
+
+    /* Cards / Popovers */
+    --card: 0 0% 100%;
+    --card-foreground: var(--foreground);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--foreground);
+
+    /* Primary → App Primary */
+    --primary: 210 28% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 28% 25%;
+
+    /* Muted */
+    --muted: 210 16% 93%;
+    --muted-foreground: 210 10% 45%;
+
+    /* Accent → App Blue */
+    --accent: 200 100% 38%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders & Inputs */
+    --border: 210 16% 90%;
+    --input: 210 16% 90%;
+    --ring: 210 28% 25%;
+
+    /* Charts */
+    --chart-1: 200 100% 38%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --radius: 0.5rem;
+  }
+
+  /* ---------------- DARK MODE ---------------- */
+  .dark {
+    --background: 210 20% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 20% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 20% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 210 28% 25%;
+
+    --secondary: 210 20% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 200 100% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 15%;
+    --input: 210 20% 15%;
+    --ring: 210 30% 80%;
+  }
+}
+
+/* --------------------------------------------------
+   Base Styles
+-------------------------------------------------- */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
