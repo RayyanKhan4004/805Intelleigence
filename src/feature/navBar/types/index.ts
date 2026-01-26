@@ -1,0 +1,1 @@
+export type { navTabTypes as navTabEnumsType } from './navtabsTypes'

@@ -1,6 +1,6 @@
+import Discription from '@/feature/auth/components/Discription'
+import SignupForm from '@/feature/auth/components/SignupForm'
 import React from 'react'
-import SignupForm from '@/components/signup/SignupForm'
-import Discription from '@/components/signup/Discription'
 
 export default function SignupPage() {
   const descriptionData = {
@@ -16,7 +16,7 @@ export default function SignupPage() {
       'Custom branded reports',
     ],
   }
-
+// [...auth]
   return (
     <div className="min-h-screen bg-app-primary text-white flex items-center justify-center p-4 lg:p-10 font-sans relative overflow-hidden">
       {/* Background/Layout Container */}
@@ -30,8 +30,8 @@ export default function SignupPage() {
         </div>
       </div>
 
-      {/* Decorative chart fade effect if needed */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1F2937] to-transparent pointer-events-none lg:hidden"></div>
+      {/* Decorative chart fade effect if needed
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1F2937] to-transparent pointer-events-none lg:hidden"></div> */}
     </div>
   )
 }

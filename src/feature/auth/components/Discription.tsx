@@ -1,6 +1,6 @@
 import React from 'react'
 import { LoginScreensDespProps } from '../types'
-import Typography from '../theme/Typography'
+import Typography from '@/components/theme/Typography'
 
 function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
   // Chart bars data for visualization

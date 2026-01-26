@@ -1,6 +1,6 @@
+import Discription from '@/feature/auth/components/Discription'
+import LoginForm from '@/feature/auth/components/LoginForm'
 import React from 'react'
-import LoginForm from '@/components/login/LoginForm'
-import Discription from '@/components/signup/Discription'
 
 export default function LoginPage() {
   const descriptionData = {
@@ -9,7 +9,6 @@ export default function LoginPage() {
       header: 'Lead with data.<br /> Win with <span style="color: #00BFA5;">Confidence</span>.',
       p: 'Access Realtime marketing intelligence for the 805 area. Make informed decisions with comprehensive analytics and insights.',
     },
-    // No listItems for login page as per design
   }
 
   return (

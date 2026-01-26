@@ -1,0 +1,40 @@
+'use client'
+
+import { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
+import { tabs } from '../enums'
+import NavTabs from './NavTabs'
+
+export default function Navbar() {
+  const [activeTab, setActiveTab] = useState('Reports')
+
+  return (
+    <nav className="flex h-16 w-full items-center justify-between bg-app-primary px-6 text-white shadow-md">
+      {/* Logo */}
+      <div className="flex items-center text-xl font-normal tracking-wide">
+        <span className="italic">805</span>
+        <span className="font-light">Intelligence</span>
+      </div>
+
+      {/* Center Tabs */}
+      <div className="flex items-center rounded-lg bg-app-primaryLight p-1">
+        <NavTabs />
+      </div>
+
+      {/* User Profile */}
+      <div className="flex items-center gap-3">
+        <div className="h-9 w-9 overflow-hidden rounded-full border border-gray-500 bg-gray-200">
+          <img
+            src="https://avatar.vercel.sh/david-taylor"
+            alt="User"
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="flex items-center gap-1 text-sm font-medium">
+          <span>David Taylor</span>
+          <ChevronDown className="h-4 w-4 text-gray-400" />
+        </div>
+      </div>
+    </nav>
+  )
+}
