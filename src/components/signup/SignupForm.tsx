@@ -21,7 +21,7 @@ export default function SignupForm() {
   return (
     <Card className="bg-[#E7EEEC]/90 backdrop-blur-sm border-0 shadow-2xl rounded-2xl overflow-hidden">
       <CardHeader className="pb-2 pt-8 px-8">
-        <CardTitle className="text-3xl font-bold text-gray-800 text-center">
+        <CardTitle className="text-3xl font-bold text-app-primary text-center">
           Create your account
         </CardTitle>
       </CardHeader>
@@ -165,7 +165,7 @@ export default function SignupForm() {
         </div>
 
         {/* Submit Button */}
-        <Button className="w-full bg-[#1F2937] hover:bg-[#111827] text-white font-bold h-12 rounded-lg mt-4 text-base shadow-lg transition-all duration-200">
+        <Button className="w-full bg-app-primary hover:opacity-90 text-white font-bold h-12 rounded-lg mt-4 text-base shadow-lg transition-all duration-200">
           Create Account
         </Button>
       </CardContent>

@@ -1,20 +1,15 @@
 import React from 'react'
-import SignupForm from '@/components/signup/SignupForm'
+import LoginForm from '@/components/login/LoginForm'
 import Discription from '@/components/signup/Discription'
 
-export default function SignupPage() {
+export default function LoginPage() {
   const descriptionData = {
     title: '805',
     subTitle: {
-      header: 'Start your <br /> <span style="color: #00BFA5;">market journey</span>',
-      p: 'Join thousands of real estate professionals using 805Intelligence to stay ahead of market trends.',
+      header: 'Lead with data.<br /> Win with <span style="color: #00BFA5;">Confidence</span>.',
+      p: 'Access Realtime marketing intelligence for the 805 area. Make informed decisions with comprehensive analytics and insights.',
     },
-    listItems: [
-      'Real time market analytics & insights',
-      'Comprehensive 805 area coverage',
-      'Historical trends & forecasting',
-      'Custom branded reports',
-    ],
+    // No listItems for login page as per design
   }
 
   return (
@@ -24,14 +19,14 @@ export default function SignupPage() {
         {/* Left Side: Branding & Info */}
         <Discription {...descriptionData} />
 
-        {/* Right Side: Signup Form */}
+        {/* Right Side: Login Form */}
         <div className="w-full max-w-xl mx-auto lg:ml-auto">
-          <SignupForm />
+          <LoginForm />
         </div>
       </div>
 
       {/* Decorative chart fade effect if needed */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1F2937] to-transparent pointer-events-none lg:hidden"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-app-primary to-transparent pointer-events-none lg:hidden"></div>
     </div>
   )
 }

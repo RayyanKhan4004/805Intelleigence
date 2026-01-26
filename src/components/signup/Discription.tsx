@@ -43,7 +43,10 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
               />
             )}
 
-            <Typography variant="PageSecondText" className="text-gray-300 max-w-lg leading-relaxed">
+            <Typography
+              variant="PageSecondText"
+              className="text-app-greyText max-w-lg leading-relaxed"
+            >
               {subTitle.p}
             </Typography>
           </div>
@@ -68,7 +71,7 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
         {bars.map((bar, i) => (
           <div
             key={i}
-            className={`w-3 sm:w-4 rounded-t-sm bg-gradient-to-t from-[#00BFA5]/20 to-[#00BFA5] ${bar.height} ${bar.opacity}`}
+            className={`w-3 sm:w-4 rounded-t-sm bg-chart-gradient ${bar.height} ${bar.opacity}`}
           ></div>
         ))}
       </div>

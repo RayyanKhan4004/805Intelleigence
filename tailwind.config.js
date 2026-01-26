@@ -10,6 +10,9 @@ module.exports = {
   theme: {
     extend: {
       /* ---------------- Radius (shadcn) ---------------- */
+      fontFamily: {
+        sans: ['var(--font-poppins)', 'sans-serif'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -24,6 +27,7 @@ module.exports = {
       },
       backgroundImage: {
         'field-gradient': 'linear-gradient(180deg, #E7EEEC 0%, rgba(47, 65, 82, 0.10) 100%)',
+        'chart-gradient': 'linear-gradient(to top, rgba(0, 191, 165, 0.2), #00BFA5)',
       },
 
       /* ---------------- shadcn Tokens (HSL) ---------------- */
