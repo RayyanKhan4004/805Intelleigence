@@ -1,9 +1,5 @@
-import { Input } from "@/components/UI/input";
+import { Input } from '@/components/UI/input'
 
 export default function Home() {
-  return (
-    <div className="bg-gray-800  h-screen ">
-    
-    </div>
-  );
+  return <div className=""></div>
 }
