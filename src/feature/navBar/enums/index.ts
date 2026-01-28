@@ -1,7 +1,7 @@
-export const tabs  = [
-  { name: 'Reports', href: '#' },
-  { name: 'Contacts', href: '#' },
-  { name: 'Campaigns', href: '#' },
-  { name: 'Analytics', href: '#' },
-  { name: 'Help', href: '#' },
+export const tabs = [
+  { name: 'Reports', href: 'reports' },
+  { name: 'Contacts', href: 'contacts' },
+  { name: 'Campaigns', href: 'campaigns' },
+  { name: 'Analytics', href: 'analytics' },
+  { name: 'Help', href: 'help' },
 ]

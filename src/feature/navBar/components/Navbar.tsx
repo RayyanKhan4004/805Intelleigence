@@ -1,13 +1,9 @@
 'use client'
 
-import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { tabs } from '../enums'
 import NavTabs from './NavTabs'
 
 export default function Navbar() {
-  const [activeTab, setActiveTab] = useState('Reports')
-
   return (
     <nav className="flex h-16 w-full items-center justify-between bg-app-primary px-6 text-white shadow-md">
       {/* Logo */}

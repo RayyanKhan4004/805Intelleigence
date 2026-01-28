@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Tabs, TabsList, TabsTrigger } from '@/components/UI/tabs'
 import { tabs } from '../enums'
+import Link from 'next/link'
 
 function NavTabs() {
   const router = useRouter()
@@ -11,8 +12,8 @@ function NavTabs() {
   //
   const handleTabChange = (tabName: string) => {
     setActiveTab(tabName)
-    const route = tabName.toLowerCase().replace(/\s+/g, '-')
-    router.push(`/${route}`)
+    // const route = tabName.toLowerCase().replace(/\s+/g, '-')
+    // router.push(`/${route}`)
   }
 
   return (
@@ -24,7 +25,7 @@ function NavTabs() {
             value={tab.name}
             className="data-[state=active]:bg-white data-[state=active]:text-app-primary"
           >
-            {tab.name}
+            <Link href={tab.href}>{tab.name}</Link>
           </TabsTrigger>
         ))}
       </TabsList>
