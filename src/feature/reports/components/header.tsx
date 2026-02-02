@@ -12,18 +12,18 @@ const data = [
 ]
 const reportsData = [
   {
-    id: "1",
-    location: "Los Angeles County, CA",
+    id: '1',
+    location: 'Los Angeles County, CA',
     views: 1,
   },
   {
-    id: "2",
-    location: "Los Angeles County, CA",
+    id: '2',
+    location: 'Los Angeles County, CA',
     views: 1,
   },
   {
-    id: "3",
-    location: "Los Angeles County, CA",
+    id: '3',
+    location: 'Los Angeles County, CA',
     views: 1,
   },
 ]
@@ -94,8 +94,8 @@ function Header() {
             </Button>
           </div>
         </div>
+        <ReportsTable title={['location', 'views']} data={reportsData} />
       </div>
-      <ReportsTable title={['hello','world']} data={reportsData} />
     </div>
   )
 }
