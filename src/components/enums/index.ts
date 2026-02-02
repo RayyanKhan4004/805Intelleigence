@@ -19,6 +19,7 @@ export const TypographyVariants = {
   PageSecondText: 16,
   h2: 46,
   h1: 54,
+  h3:40,
 }
 
 export const TypographyEnums = {
@@ -32,4 +33,5 @@ export const TypographyEnums = {
   PAGESECONDTEXT: 'PageSecondText',
   H1: 'h1',
   H2: 'h2',
+  H3:'h3',
 }

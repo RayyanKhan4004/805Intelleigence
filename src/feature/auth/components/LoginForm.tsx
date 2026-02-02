@@ -15,7 +15,7 @@ export default function LoginForm() {
   return (
     <Card className="bg-[#E7EEEC]/90 backdrop-blur-sm border-0 shadow-2xl rounded-2xl overflow-hidden min-h-[500px] flex flex-col justify-center">
       <CardHeader className="pb-2 px-8">
-        <CardTitle className="text-5xl font-normal text-app-primary text-center uppercase tracking-wider">
+        <CardTitle className="text-5xl font-normal text-app-primary text-center uppercase tracking-wider ">
           Login
         </CardTitle>
       </CardHeader>

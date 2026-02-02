@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  'w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   {
     variants: {
       variant: {
@@ -23,7 +23,7 @@ const buttonVariants = cva(
           'bg-app-primary text-app-white rounded-[32px] px-4 py-[11px] border border-app-primary hover:bg-app-primary/90',
         // ROUNDED OUTLINE
         roundedOutline:
-          'bg-transparent border border-app-primary text-app-primary rounded-xl px-4 py-[11px] hover:bg-app-primary/10',
+          'bg-transparent border border-app-primary text-app-primary rounded-full px-4 py-[11px] hover:bg-app-primary/10',
         // DANGER: matches border-[var(--color-danger)]
         danger:
           'bg-transparent border border-destructive text-destructive rounded-xl px-[13px] py-[10px] hover:bg-destructive/10',
