@@ -60,10 +60,6 @@
 
     --radius: 0.5rem;
   }
-#gradient {
-    background: linear-gradient(90deg, rgba(45,63,80,1) 0%, rgba(0,127,196,1) 100%);
-
-}
   /* ---------------- DARK MODE ---------------- */
   .dark {
     --background: 210 20% 8%;
