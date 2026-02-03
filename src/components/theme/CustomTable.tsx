@@ -16,6 +16,39 @@ interface ReportsTableProps {
 }
 
 export function ReportsTable({ data, title }: ReportsTableProps) {
+
+
+
+  //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+//    const handleShare = (row: ReportRow) => {
+//   alert(`Share clicked for: ${row.location}`)
+// }
+
+// const handleEmbed = (row: ReportRow) => {
+//   alert(`Embed clicked for: ${row.location}`)
+// }
+
+// const handleSnapshot = (row: ReportRow) => {
+//   alert(`Snapshot clicked for: ${row.location}`)
+// }
+
+// const handleCopyLink = (row: ReportRow) => {
+//   navigator.clipboard.writeText(row.location)
+//   alert("Copied location text!")
+// }
+
+// const handlePDF = (row: ReportRow) => {
+//   alert(`PDF clicked for: ${row.location}`)
+// }
+
+// const handleAction = (type: string, row: ReportRow) => {
+//   alert(`${type} action for: ${row.location}`)
+// }
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+
   return (
     <div className="rounded-lg border bg-white">
       <Table>
@@ -38,5 +71,7 @@ export function ReportsTable({ data, title }: ReportsTableProps) {
         </TableBody>
       </Table>
     </div>
+
   )
+
 }

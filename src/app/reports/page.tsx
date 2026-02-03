@@ -5,10 +5,8 @@ import React from 'react'
 function page() {
   return (
     <div>
-      <Navbar></Navbar>
+     <Navbar></Navbar>
      <Header></Header>
-     
-      
     </div>
   )
 }
