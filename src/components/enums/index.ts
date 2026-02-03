@@ -20,6 +20,8 @@ export const TypographyVariants = {
   h2: 46,
   h1: 54,
   h3:40,
+  h4:20,
+  h5:18,
 }
 
 export const TypographyEnums = {
@@ -34,4 +36,6 @@ export const TypographyEnums = {
   H1: 'h1',
   H2: 'h2',
   H3:'h3',
+  H4:'h4',
+  H5:'h5',
 }

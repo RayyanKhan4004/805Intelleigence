@@ -1,15 +1,22 @@
 // 'use client'
 import Navbar from '@/feature/navBar/components/Navbar'
+import Analytics from '@/feature/reports/components/Analytics'
 import Header from '@/feature/reports/components/header'
+import Stats from '@/feature/reports/components/Stats'
 // import React from 'react'
 // import CustomPopup from '@/components/theme/CustomPopUp'
 
 function page() {
   // const [isOpen, setIsOpen] = React.useState(true)
   return (
-    <div>
-      <Navbar></Navbar>
-      <Header></Header>
+    <>
+      <Navbar/>
+    <div className='px-[60px]'>
+      <Header/>
+      <Stats/>
+      <Analytics/>
+
+
       {/* <CustomPopup
         title="ertyh"
         Description="ertyh"
@@ -21,6 +28,7 @@ function page() {
 
       {/* <div className="h-4" onClick={() => setIsOpen(true)}>hjhbnknkn</div> */}
     </div>
+    </>
   )
 }
 

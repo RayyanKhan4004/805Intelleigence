@@ -1,79 +1,79 @@
 'use client'
 import StackedBarChart from '@/components/theme/CustomBarChart'
-import { ReportsTable } from '@/components/theme/CustomTable'
 import Typography from '@/components/theme/Typography'
 import { Button } from '@/components/UI/button'
 import { Input } from '@/components/UI/input'
 import React from 'react'
-const data = [
-  { title: '24', sub: 'Active Markets' },
-  { title: '$1.2M', sub: 'Avg List Price' },
+import { reportsData } from '../Data'
+// const data = [
+//   { title: '24', sub: 'Active Markets' },
+//   { title: '$1.2M', sub: 'Avg List Price' },
 
-  { title: '+34%', sub: 'YoY Growth' },
-  { title: '38', sub: 'Avg Days on Market' },
-]
-const br = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-]
+//   { title: '+34%', sub: 'YoY Growth' },
+//   { title: '38', sub: 'Avg Days on Market' },
+// ]
+// const br = [
+//   {
+//     name: 'Page A',
+//     uv: 4000,
+//     pv: 2400,
+//     amt: 2400,
+//   },
+//   {
+//     name: 'Page B',
+//     uv: 3000,
+//     pv: 1398,
+//     amt: 2210,
+//   },
+//   {
+//     name: 'Page C',
+//     uv: 2000,
+//     pv: 9800,
+//     amt: 2290,
+//   },
+//   {
+//     name: 'Page D',
+//     uv: 2780,
+//     pv: 3908,
+//     amt: 2000,
+//   },
+//   {
+//     name: 'Page E',
+//     uv: 1890,
+//     pv: 4800,
+//     amt: 2181,
+//   },
+//   {
+//     name: 'Page F',
+//     uv: 2390,
+//     pv: 3800,
+//     amt: 2500,
+//   },
+//   {
+//     name: 'Page G',
+//     uv: 3490,
+//     pv: 4300,
+//     amt: 2100,
+//   },
+// ]
 
-const reportsData = [
-  {
-    id: '1',
-    location: 'Los Angeles County, CA',
-    views: 1,
-  },
-  {
-    id: '2',
-    location: 'Los Angeles County, CA',
-    views: 1,
-  },
-  {
-    id: '3',
-    location: 'Los Angeles County, CA',
-    views: 1,
-  },
-]
+// const reportsData = [
+//   {
+//     id: '1',
+//     location: 'Los Angeles County, CA',
+//     views: 1,
+//   },
+//   {
+//     id: '2',
+//     location: 'Los Angeles County, CA',
+//     views: 1,
+//   },
+//   {
+//     id: '3',
+//     location: 'Los Angeles County, CA',
+//     views: 1,
+//   },
+// ]
 
 function Header() {
   return (
@@ -99,51 +99,12 @@ function Header() {
               </Typography>
             </Button>
             <Button className="p-4 w-[162px] h-[56px]">Add Report</Button>
-          </div>
+          </div> 
         </div>
-        <div className="w-full flex justify-center">
-          <div className="flex gap-10 bg-primary text-white w-[1156px] h-[150px] rounded-[12px] justify-center px-10 py-6">
-            {data.map((curr, ind) => (
-              <div className={`${ind > 0 && 'border-l-2 pl-[60px] border-white'}`} key={ind}>
-                <Typography variant="h3" className="w-bold ">
-                  {curr.title}
-                </Typography>
-                <Typography variant="Heading2" className="font-medium">
-                  {curr.sub}
-                </Typography>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="flex justify-between">
-          <div className="flex gap-2.5">
-            <Button variant="roundedOutline" className="p-4  h-[56px] border border-app-primary  ">
-              Favourite
-            </Button>
-            <Button variant="roundedOutline" className="p-4  h-[56px] border border-app-primary">
-              All Reports
-            </Button>
-          </div>
-          <div className="flex gap-3">
-            <Button variant="roundedOutline" className="p-4  h-[56px] border border-app-primary">
-              Tressa Golden-Mills
-            </Button>
-            <Button variant="roundedOutline" className="p-4  h-[56px] border border-app-primary">
-              Setting
-            </Button>
-            <Button variant="roundedOutline" className="p-4  h-[56px] border border-app-primary">
-              Sort By
-            </Button>
-            <Button
-              variant="roundedOutline"
-              className="p-4  h-[56px] border border-app-primary bg-primary text-white"
-            >
-              List view
-            </Button>
-          </div>
-        </div>
-        <StackedBarChart data={br} />
-        {/* <ReportsTable title={['location', 'views']} data={reportsData} /> */}
+
+
+
+       
       </div>
     </div>
   )
