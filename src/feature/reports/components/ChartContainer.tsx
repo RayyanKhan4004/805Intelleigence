@@ -1,5 +1,4 @@
 import Typography from '@/components/theme/Typography'
-import React from 'react'
 import ReportCharts from './reportCharts'
 
 const data = [

@@ -1,4 +1,3 @@
-import React from 'react'
 import { cardProps } from '../types'
 function Card({ children, className }: cardProps) {
   return (
