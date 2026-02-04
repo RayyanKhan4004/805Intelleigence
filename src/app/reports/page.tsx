@@ -2,7 +2,6 @@
 import Footer from '@/feature/Footer/components/Footer'
 import Navbar from '@/feature/navBar/components/Navbar'
 import Analytics from '@/feature/reports/components/Analytics'
-import ChartGrid from '@/feature/reports/components/ChartGrid'
 import Header from '@/feature/reports/components/header'
 import Stats from '@/feature/reports/components/Stats'
 // import React from 'react'
@@ -28,7 +27,6 @@ function page() {
       </CustomPopup> */}
 
         {/* <div className="h-4" onClick={() => setIsOpen(true)}>hjhbnknkn</div> */}
-        <ChartGrid />
         <Footer />
       </div>
     </>

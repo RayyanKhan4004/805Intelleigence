@@ -40,7 +40,6 @@ const StackedBarChart = ({
       {/* <XAxis dataKey="name" stroke="#655B96" axisLine={false} tickLine={false} />
       <YAxis width="auto" stroke="#655B96" axisLine={false} tickLine={false} /> */}
       <Tooltip cursor={{ fill: 'transparent' }} />
-      <Legend iconType="circle" />
       <Bar dataKey="pv" stackId="a" fill="url(#gradient)" radius={[3, 3, 3, 3]} barSize={37} />
       <Bar dataKey="uv" stackId="a" fill="url(#stripes)" radius={[3, 3, 3, 3]} barSize={27} />
       {/* <RechartsDevtools /> */}
