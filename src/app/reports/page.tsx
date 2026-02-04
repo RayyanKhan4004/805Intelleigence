@@ -1,4 +1,5 @@
 // 'use client'
+import Footer from '@/feature/Footer/components/Footer'
 import Navbar from '@/feature/navBar/components/Navbar'
 import Analytics from '@/feature/reports/components/Analytics'
 import Header from '@/feature/reports/components/header'
@@ -27,6 +28,7 @@ function page() {
       </CustomPopup> */}
 
       {/* <div className="h-4" onClick={() => setIsOpen(true)}>hjhbnknkn</div> */}
+      <Footer/>
     </div>
     </>
   )
