@@ -4,7 +4,7 @@ import { br } from '../Data'
 
 function ReportCharts({style}:{style?:React.CSSProperties}) {
   return (
-    <div style={style}>
+    <div >
       <StackedBarChart data={br} style={style} />
     </div>
   )

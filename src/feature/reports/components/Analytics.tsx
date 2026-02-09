@@ -6,7 +6,7 @@ import { ReportsTable } from '@/components/theme/CustomTable'
 import ChartGrid from './ChartGrid'
 
 function Analytics() {
-  const [type, setType] = React.useState<'table' | 'chart'>('chart')
+  const [type, setType] = React.useState<'table' | 'chart'>('table')
   return (
     <>
       <div className="flex justify-between">

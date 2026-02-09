@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/UI/card'
+import {  CardContent, CardHeader, CardTitle } from '@/components/UI/card'
 import { Input } from '@/components/UI/input'
 import { Button } from '@/components/UI/button'
 import {
@@ -13,13 +13,14 @@ import {
 } from '@/components/UI/select'
 import { Label } from '@/components/UI/label'
 import { Eye, EyeOff } from 'lucide-react'
+import Card from '@/components/theme/Card'
 
 export default function SignupForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
   return (
-    <Card className="bg-[#E7EEEC]/90 backdrop-blur-sm border-0 shadow-2xl rounded-2xl overflow-hidden">
+    <Card className="bg-[#E7EEEC]/90 backdrop-blur-sm border-0 shadow-2xl rounded-2xl overflow-hidden w-full">
       <CardHeader className="pb-2 pt-8 px-8">
         <CardTitle className="text-3xl font-bold text-app-primary text-center">
           Create your account

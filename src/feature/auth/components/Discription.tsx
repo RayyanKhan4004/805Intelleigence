@@ -45,7 +45,7 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
 
             <Typography
               variant="PageSecondText"
-              className="text-app-greyText max-w-lg leading-relaxed"
+              className="text-app-white max-w-lg leading-relaxed"
             >
               {subTitle.p}
             </Typography>

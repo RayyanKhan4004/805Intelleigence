@@ -1,12 +1,22 @@
-import { cardProps } from '../types'
-function Card({ children, className }: cardProps) {
-  return (
-    <div
-      className={`w-[45%] rounded-[20px] h-auto ${className ? className : 'lg:p-10 lg:pt-6'} lg:p-10 lg:pt-6 shadow-field  bg-field-gradient`}
+import * as React from 'react'
+import { Card as ShadCard } from '@/components/UI/card'
+import { cn } from '@/lib/utils'
+
+const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <ShadCard
+      ref={ref}
+      className={cn(
+        'w-[45%] rounded-[20px] h-auto lg:p-10 lg:pt-6 shadow-field bg-field-gradient',
+        className
+      )}
+      {...props}
     >
       {children}
-    </div>
+    </ShadCard>
   )
-}
+)
+
+Card.displayName = 'ThemeCard'
 
 export default Card

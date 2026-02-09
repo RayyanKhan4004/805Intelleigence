@@ -1,25 +1,26 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/UI/card'
+import { CardContent, CardHeader, CardTitle } from '@/components/UI/card'
 import { Input } from '@/components/UI/input'
 import { Button } from '@/components/UI/button'
 import { Label } from '@/components/UI/label'
 import { Eye, EyeOff } from 'lucide-react'
 import Link from 'next/link'
 import Typography from '@/components/theme/Typography'
+import Card from '@/components/theme/Card'
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
-    <Card className="bg-[#E7EEEC]/90 backdrop-blur-sm border-0 shadow-2xl rounded-2xl overflow-hidden min-h-[500px] flex flex-col justify-center">
-      <CardHeader className="pb-2 px-8">
-        <CardTitle className="text-5xl font-normal text-app-primary text-center uppercase tracking-wider ">
+    <Card className=" shadow-2xl rounded-2xl overflow-hidden flex flex-col justify-center w-full py-10">
+      <CardHeader className="p-0">
+        <CardTitle className="text-[88px] leading-[88px] font-medium text-app-primary text-center uppercase tracking-wider mb-[72px] p-0">
           Login
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-8 space-y-6">
+      <CardContent className="space-y-6 p-0">
         {/* Email */}
         <div className="space-y-2">
           <Label htmlFor="email" className="text-gray-600 font-medium">
