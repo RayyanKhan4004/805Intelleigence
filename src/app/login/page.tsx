@@ -1,5 +1,5 @@
-import Discription from '@/feature/auth/components/Discription'
-import LoginForm from '@/feature/auth/components/LoginForm'
+import Discription from '@/features/auth/components/Discription'
+import LoginForm from '@/features/auth/components/LoginForm'
 import React from 'react'
 
 export default function LoginPage() {

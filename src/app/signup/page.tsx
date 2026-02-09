@@ -1,5 +1,5 @@
-import Discription from '@/feature/auth/components/Discription'
-import SignupForm from '@/feature/auth/components/SignupForm'
+import Discription from '@/features/auth/components/Discription'
+import SignupForm from '@/features/auth/components/SignupForm'
 import React from 'react'
 
 export default function SignupPage() {
@@ -16,7 +16,7 @@ export default function SignupPage() {
       'Custom branded reports',
     ],
   }
-// [...auth]
+  // [...auth]
   return (
     <div className="min-h-screen bg-app-primary text-white flex items-center justify-center p-4 lg:p-10 font-sans relative overflow-hidden">
       {/* Background/Layout Container */}
