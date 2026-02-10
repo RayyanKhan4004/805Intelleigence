@@ -16,98 +16,111 @@ import { Label } from '@/components/UI/label'
 import { Eye, EyeOff } from 'lucide-react'
 import Card from '@/components/theme/Card'
 import { toast } from '@/hooks/use-toast'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { signupSchema } from './schema/signup.schema'
+import { useForm } from 'react-hook-form'
+import { SignupFormValues } from '../types'
 
 export default function SignupForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  // api
+
   const [signup, { isLoading, error }] = useSignupMutation()
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    const formData = new FormData(event.currentTarget)
-    formData.get('password') === formData.get('confirm_password') &&
-      console.log('passwords do not match')
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm<SignupFormValues>({
+    resolver: yupResolver(signupSchema),
+  })
+
+  const onSubmit = async (data: SignupFormValues) => {
     try {
-      signup(Object.fromEntries(formData.entries()))
-    } catch (err) {
-      console.error('Signup error:', err)
+      await signup(data).unwrap()
+      toast({
+        title: 'Success',
+        description: 'Account created successfully',
+      })
+    } catch (err: any) {
+      toast({
+        title: 'Error',
+        description: err?.data?.message || 'Signup failed',
+        variant: 'destructive',
+      })
     }
-    console.log('Form Data:', Object.fromEntries(formData.entries()))
   }
   return (
-    <Card className="bg-[#E7EEEC]/90 backdrop-blur-sm border-0 shadow-2xl rounded-2xl overflow-hidden w-full">
+    <Card className="backdrop-blur-sm border-0 shadow-2xl rounded-2xl overflow-hidden w-full p-0">
       <CardHeader className="pb-2 pt-8 px-8">
-        <CardTitle className="text-3xl font-bold text-app-primary text-center">
+        <CardTitle className="text-3xl font-bold text-app-primary mb-6 text-center">
           Create your account
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-8 space-y-5">
-        <form onSubmit={handleSubmit}>
-          {/* Name Row */}
+      <CardContent className="p-0 space-y-5 ">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          
+          <div className='gap-[16px]'> {/* Name Row */}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="firstName" className="text-gray-600 font-medium">
-                First Name
-              </Label>
+              <Label htmlFor="firstName">First Name</Label>
               <Input
+                {...register('first_name')}
                 id="firstName"
                 placeholder="e.g. John"
-                className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg"
                 name="first_name"
               />
+              <p className="text-red-500 text-sm">{errors.first_name?.message}</p>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="lastName" className="text-gray-600 font-medium">
-                Last Name
-              </Label>
+              <Label htmlFor="lastName">Last Name</Label>
               <Input
+                {...register('last_name')}
                 id="lastName"
                 placeholder="e.g. Franklin"
-                className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg"
                 name="last_name"
               />
+              <p className="text-red-500 text-sm">{errors.last_name?.message}</p>
             </div>
           </div>
 
           {/* Email */}
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-gray-600 font-medium">
-              Email Address
-            </Label>
+            <Label htmlFor="email">Email Address</Label>
             <Input
+              {...register('email')}
               id="email"
               type="email"
               placeholder="sergio123@example.com"
-              className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg"
               name="email"
             />
+            <p className="text-red-500 text-sm">{errors.email?.message}</p>
           </div>
 
           {/* Company/Brokerage */}
           <div className="space-y-2">
-            <Label htmlFor="brokerage" className="text-gray-600 font-medium">
-              Company/Brokerage
-            </Label>
+            <Label htmlFor="brokerage">Company/Brokerage</Label>
             <Input
+              {...register('company')}
               id="brokerage"
               placeholder="sergio123@example.com"
-              className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg"
               name="company"
             />
+            <p className="text-red-500 text-sm">{errors.company?.message}</p>
           </div>
 
           {/* Role */}
           <div className="space-y-2">
-            <Label htmlFor="role" className="text-gray-600 font-medium">
-              Role
-            </Label>
-            <Select>
+            <Label htmlFor="role">Role</Label>
+            <Select onValueChange={value => setValue('role', value, { shouldValidate: true })}>
               <SelectTrigger
                 id="role"
-                className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg text-primary/50"
+                className="bg-white border-transparent focus:border-gray h-12 rounded-lg text-app-primary"
+               
                 name="role"
               >
-                <SelectValue placeholder="Select your role" />
+                <SelectValue className="text-primary" placeholder="Select your role" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="agent">Real Estate Agent</SelectItem>
@@ -116,47 +129,34 @@ export default function SignupForm() {
                 <SelectItem value="developer">Developer</SelectItem>
               </SelectContent>
             </Select>
+            <p className="text-red-500 text-sm">{errors.role?.message}</p>
           </div>
 
           {/* Zip & Company Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="zip" className="text-gray-600 font-medium">
-                Enter Zip
-              </Label>
-              <Input
-                id="zip"
-                placeholder="1213"
-                className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg"
-                name="zip"
-              />
+              <Label htmlFor="zip">Enter Zip</Label>
+              <Input {...register('zip')} id="zip" placeholder="1213" name="zip" />
+              <p className="text-red-500 text-sm">{errors.zip?.message}</p>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="company2" className="text-gray-600 font-medium">
-                Company
-              </Label>
-              <Input
-                id="company2"
-                placeholder="xyz"
-                className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg"
-                name="company2"
-              />
+              <Label htmlFor="company2">Company</Label>
+              <Input {...register('company2')} id="company2" placeholder="xyz" name="company2" />
+              <p className="text-red-500 text-sm">{errors.company2?.message}</p>
             </div>
           </div>
 
           {/* Password Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2 relative">
-              <Label htmlFor="password" className="text-gray-600 font-medium">
-                Password
-              </Label>
+              <Label htmlFor="password">Password</Label>
               <div className="relative">
                 <Input
+                  {...register('password')}
                   id="password"
                   type={showPassword ? 'text' : 'password'}
                   placeholder="********"
                   name="password"
-                  className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg pr-10"
                 />
                 <button
                   type="button"
@@ -166,17 +166,16 @@ export default function SignupForm() {
                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                 </button>
               </div>
+              <p className="text-red-500 text-sm">{errors.password?.message}</p>
             </div>
             <div className="space-y-2 relative">
-              <Label htmlFor="confirmPassword" className="text-gray-600 font-medium">
-                Confirm Password
-              </Label>
+              <Label htmlFor="confirmPassword">Confirm Password</Label>
               <div className="relative">
                 <Input
+                  {...register('confirm_password')}
                   id="confirmPassword"
                   type={showConfirmPassword ? 'text' : 'password'}
                   placeholder="********"
-                  className="bg-white border-transparent focus:border-gray-300 h-12 rounded-lg pr-10"
                   name="confirm_password"
                 />
                 <button
@@ -187,19 +186,22 @@ export default function SignupForm() {
                   {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                 </button>
               </div>
+              <p className="text-red-500 text-sm">{errors.confirm_password?.message}</p>
             </div>
           </div>
+           </div>
 
           {/* Submit Button */}
           <Button
-           onClick={() =>
-        toast({
-          title: "Success",
-          description: "Account created successfully",
-        })
-      }
+            //      onClick={() =>
+            //   toast({
+            //     title: "Success",
+            //     description: "Account created successfully",
+            //   })
+            // }
             type="submit"
-            className="w-full bg-app-primary hover:opacity-90 text-white font-bold h-12 rounded-lg mt-4 text-base shadow-lg transition-all duration-200"
+            isloading={isLoading}
+            className="w-full mb-4"
           >
             Create Account
           </Button>
