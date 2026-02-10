@@ -11,7 +11,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         ref={ref}
         className={cn(
           `
-          h-12 w-full rounded-xl
+          h-12 w-full rounded-[16px]
           bg-white
           px-4 text-sm text-foreground
           placeholder:text-muted-foreground
