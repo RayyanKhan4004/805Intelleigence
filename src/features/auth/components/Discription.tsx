@@ -1,7 +1,9 @@
 import React from 'react'
 import { LoginScreensDespProps } from '../types'
 import Typography from '@/components/theme/Typography'
+import { Icon } from '@/shared/icons/Icon'
 
+// ;<Icon name="SearchIcon" size={18} className="text-muted" />
 function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
   // Chart bars data for visualization
   const bars = [
@@ -67,14 +69,7 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
       </div>
 
       {/* Chart Visualization (Bottom Left) */}
-      <div className="mt-12 flex items-end gap-2 h-40 mask-gradient-to-t">
-        {bars.map((bar, i) => (
-          <div
-            key={i}
-            className={`w-3 sm:w-4 rounded-t-sm bg-chart-gradient ${bar.height} ${bar.opacity}`}
-          ></div>
-        ))}
-      </div>
+      <Icon size={125} name="BarCharts" className="w-[600px] h-[125px]" />
     </div>
   )
 }

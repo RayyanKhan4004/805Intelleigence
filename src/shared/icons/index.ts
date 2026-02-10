@@ -1,0 +1,7 @@
+// export { default as SearchIcon } from './svg/search.svg'
+// export { default as CloseIcon } from './svg/close.svg'
+// export { default as UserIcon } from './svg/user.svg'
+// export { default as ArrowRightIcon } from './svg/arrow-right.svg'
+// export { default as SettingsIcon } from './svg/settings.svg'
+// export { default as BarCharts } from './svg/barCharts.svg'
+export { default as BarCharts } from './svg/barCharts.svg'
