@@ -16,22 +16,18 @@ export default function SignupPage() {
       'Custom branded reports',
     ],
   }
-  // [...auth]
   return (
-    <div className="min-h-screen bg-app-primary text-white flex items-center justify-center p-4 lg:p-10 font-sans relative overflow-hidden">
+    <div className="min-h-screen bg-app-primary text-white flex items-center justify-center p-4 lg:p-10 overflow-hidden">
       {/* Background/Layout Container */}
-      <div className="container  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+      <div className="w-full flex justify-between items-center gap-10 items-center">
         {/* Left Side: Branding & Info */}
         <Discription {...descriptionData} />
 
         {/* Right Side: Signup Form */}
-        <div className="w-full max-w-xl mx-auto lg:ml-auto">
-          <SignupForm />
-        </div>
+        {/* <div className="w-full max-w-xl mx-auto lg:ml-auto"> */}
+        <SignupForm />
+        {/* </div> */}
       </div>
-
-      {/* Decorative chart fade effect if needed
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1F2937] to-transparent pointer-events-none lg:hidden"></div> */}
     </div>
   )
 }

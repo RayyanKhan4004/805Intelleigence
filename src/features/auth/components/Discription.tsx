@@ -6,10 +6,9 @@ import { Icon } from '@/shared/icons/Icon'
 // ;<Icon name="SearchIcon" size={18} className="text-muted" />
 function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
   // Chart bars data for visualization
- 
 
   return (
-    <div className="flex flex-col gap-8 lg:pr-10 h-full justify-between w-full">
+    <div className="flex flex-col gap-8 lg:pr-10 h-full justify-between w-1/2">
       <Typography
         variant="Heading1"
         as="h1"
