@@ -6,25 +6,10 @@ import { Icon } from '@/shared/icons/Icon'
 // ;<Icon name="SearchIcon" size={18} className="text-muted" />
 function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
   // Chart bars data for visualization
-  const bars = [
-    { height: 'h-8', opacity: 'opacity-40' },
-    { height: 'h-12', opacity: 'opacity-50' },
-    { height: 'h-16', opacity: 'opacity-60' },
-    { height: 'h-10', opacity: 'opacity-40' },
-    { height: 'h-14', opacity: 'opacity-50' },
-    { height: 'h-24', opacity: 'opacity-70' }, // Highlighted group start
-    { height: 'h-32', opacity: 'opacity-80' },
-    { height: 'h-28', opacity: 'opacity-75' },
-    { height: 'h-20', opacity: 'opacity-60' },
-    { height: 'h-18', opacity: 'opacity-50' },
-    { height: 'h-12', opacity: 'opacity-40' },
-    { height: 'h-20', opacity: 'opacity-60' },
-    { height: 'h-28', opacity: 'opacity-80' },
-    { height: 'h-36', opacity: 'opacity-100' }, // Peak
-  ]
+ 
 
   return (
-    <div className="flex flex-col gap-8 lg:pr-10 h-full justify-between">
+    <div className="flex flex-col gap-8 lg:pr-10 h-full justify-between w-full">
       <Typography
         variant="Heading1"
         as="h1"

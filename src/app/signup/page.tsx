@@ -20,7 +20,7 @@ export default function SignupPage() {
   return (
     <div className="min-h-screen bg-app-primary text-white flex items-center justify-center p-4 lg:p-10 font-sans relative overflow-hidden">
       {/* Background/Layout Container */}
-      <div className="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+      <div className="container  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
         {/* Left Side: Branding & Info */}
         <Discription {...descriptionData} />
 
