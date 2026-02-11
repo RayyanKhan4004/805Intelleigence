@@ -52,7 +52,7 @@ export default function SignupForm() {
     }
   }
   return (
-    <Card className="backdrop-blur-sm w-[50vw] border-0 shadow-2xl rounded-2xl overflow-hidden  p-0">
+    <Card className="backdrop-blur-sm lg:w-[700px] border-0 shadow-2xl rounded-2xl overflow-hidden  p-0">
       <CardHeader className="pb-2 pt-8 px-8 text-nowrap">
         <Typography
           variant="h6"
