@@ -1,18 +1,19 @@
 import React from 'react'
 import { LoginScreensDespProps } from '../types'
 import Typography from '@/components/theme/Typography'
-import { Icon } from '@/shared/icons/Icon'
+import Image from 'next/image'
+import BarChart from "@/shared/icons/images/BarCharts.png"
 
 // ;<Icon name="SearchIcon" size={18} className="text-muted" />
 function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
   // Chart bars data for visualization
 
   return (
-    <div className="flex flex-col gap-8 lg:pr-10 h-full justify-between w-1/2">
+    <div className="flex flex-col gap-8  justify-between w-1/2 h-full overflow-hidden">
       <Typography
         variant="Heading1"
         as="h1"
-        className="font-light tracking-wide text-white italic mb-4"
+        className="font-light tracking-wide text-white italic "
       >
         {title || '805'}
         <span className="not-italic font-normal">
@@ -36,7 +37,7 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
               {subTitle.p}
             </Typography>
           </div>
-
+       
           {listItems && (
             <ul className="space-y-4">
               {listItems.map((curr: string, ind: number) => (
@@ -51,10 +52,10 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
           )}
         </div>
       </div>
-
       {/* Chart Visualization (Bottom Left) */}
-      <Icon size={125} name="BarCharts" className="w-[600px] h-[125px]" />
-    </div>
+      <Image src={BarChart} alt="Chart Visualization" width={400} height={200} className="w-full h-auto" />
+      </div>
+  
   )
 }
 

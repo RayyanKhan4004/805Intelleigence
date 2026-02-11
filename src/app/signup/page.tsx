@@ -17,9 +17,9 @@ export default function SignupPage() {
     ],
   }
   return (
-    <div className="min-h-screen bg-app-primary text-white flex items-center justify-center p-4 lg:p-10 overflow-hidden">
+    <div className="min-h-screen bg-app-primary text-white flex  justify-between p-[60px] overflow-hidden ">
       {/* Background/Layout Container */}
-      <div className="w-full flex justify-between items-center gap-10 items-center">
+      <div className="w-full flex lg:flex-row flex-col  gap-[60px] ">
         {/* Left Side: Branding & Info */}
         <Discription {...descriptionData} />
 

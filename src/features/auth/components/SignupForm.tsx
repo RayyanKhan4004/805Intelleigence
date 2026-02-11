@@ -52,18 +52,16 @@ export default function SignupForm() {
     }
   }
   return (
-    <Card className="backdrop-blur-sm min-w-[50%] border-0 shadow-2xl rounded-2xl overflow-hidden  p-0">
-      <CardHeader className="pb-2 pt-8 px-8 text-nowrap">
-        <Typography
-          variant="h6"
-          className="text-[48px] font-semibold text-app-primary mb-6 text-center"
-        >
-          Create your account
-        </Typography>
-      </CardHeader>
+    <Card className="backdrop-blur-sm min-w-[50%] max-lg:!w-full border-0 shadow-2xl rounded-2xl overflow-hidden  p-10">
+      <Typography
+        variant="h6"
+        className="text-[48px] font-semibold text-app-primary mb-6 text-center break-words overflow-hidden p-0"
+      >
+        Create your account
+      </Typography>
       <CardContent className="p-0 space-y-5 ">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          <div className="gap-[16px]">
+          <div className="gap-[16px] flex flex-col">
             {' '}
             {/* Name Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -159,7 +157,7 @@ export default function SignupForm() {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-app-greyText hover:text-app-greyText"
                   >
                     {showPassword ? <EyeOff size={20} /> : <Icon name="Eye" size={20} />}
                   </button>
@@ -179,9 +177,9 @@ export default function SignupForm() {
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                    className="absolute right-3 top-1/2 -translate-y-1/2  text-app-greyText hover:text-app-greyText"
                   >
-                    {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                    {showConfirmPassword ? <EyeOff size={20} /> : <Icon name="Eye" size={20} />}
                   </button>
                 </div>
                 <p className="text-red-500 text-sm">{errors.confirm_password?.message}</p>

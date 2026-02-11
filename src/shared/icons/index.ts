@@ -4,6 +4,5 @@
 // export { default as ArrowRightIcon } from './svg/arrow-right.svg'
 // export { default as SettingsIcon } from './svg/settings.svg'
 // export { default as BarCharts } from './svg/barCharts.svg'
-export { default as BarCharts } from './svg/barCharts.svg'
 export {default as ArrowDown} from './svg/ArrowDown.svg'
 export { default as Eye } from './svg/Eye.svg'
