@@ -47,7 +47,7 @@ export default function LoginForm() {
     }
   }
   return (
-    <Card className="backdrop-blur-sm min-w-[50%] max-lg:!w-full border-none shadow-2xl rounded-2xl overflow-hidden  p-10">
+    <Card className="backdrop-blur-sm min-w-[50%] max-lg:!w-full border-none shadow-2xl rounded-2xl  h-fit  p-10">
       <Typography
         variant="h6"
         className="font-semibold text-app-primary mb-[72px] text-center break-words  p-0 text-nowrap"
