@@ -13,7 +13,7 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
       <Typography
         variant="Heading1"
         as="h1"
-        className="font-light tracking-wide text-white italic max-sm:text-[20px]  text-[44px]"
+        className="font-light tracking-wide text-white italic max-sm:!text-[20px]  !text-[48px]"
       >
         {title || '805'}
         <span className="not-italic font-normal">
