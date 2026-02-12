@@ -7,7 +7,7 @@ const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElemen
     <ShadCard
       ref={ref}
       className={cn(
-        'w-[45%] rounded-[20px] h-auto lg:p-10 lg:pt-6 shadow-field bg-field-gradient',
+        'w-[45%] rounded-[20px] h-auto lg:p-10 shadow-field bg-field-gradient',
         className
       )}
       {...props}

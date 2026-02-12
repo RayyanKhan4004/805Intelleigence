@@ -12,7 +12,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-app-primary text-white flex  justify-between p-[60px] overflow-hidden ">
+    <div className="min-h-screen bg-app-primary text-white flex  justify-between p-[60px] overflow-hidden  max-sm:p-[20px]">
       {/* Background/Layout Container */}
       <div className="w-full flex lg:flex-row flex-col  gap-[60px] ">
         {/* Left Side: Branding & Info */}

@@ -47,14 +47,14 @@ export default function LoginForm() {
     }
   }
   return (
-    <Card className=" shadow-2xl rounded-2xl overflow-hidden flex flex-col justify-center w-full h-[811px] p-10 relative">
+    <Card className=" shadow-2xl rounded-2xl p-5 w-full h-full border-none ">
       <Typography
         variant="h6"
-        className="font-semibold text-app-primary mb-[72px] text-center break-words  p-0"
+        className="font-semibold text-app-primary mb-[72px] text-center break-words  p-0 text-nowrap"
       >
         LOGIN
       </Typography>
-      <CardContent className="p-0 space-y-5 ">
+      <CardContent className="p-0">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 gap-[24px]">
           {/* Email */}
           <div className="space-y-2">
@@ -110,7 +110,7 @@ export default function LoginForm() {
         </div>
 
         {/* Signup Link */}
-        <div className="text-center absolute bottom-[80px] left-1/2 -translate-x-1/2">
+        <div className="w-full text-center !mt-[60px]">
           <Typography variant="TableText" className="text-white font-medium inline-block">
             Don’t have an account?{' '}
             <Link

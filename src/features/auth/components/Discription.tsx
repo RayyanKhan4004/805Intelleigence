@@ -2,24 +2,25 @@ import React from 'react'
 import { LoginScreensDespProps } from '../types'
 import Typography from '@/components/theme/Typography'
 import Image from 'next/image'
-import BarChart from "@/shared/icons/images/BarCharts.png"
+import BarChart from '@/shared/icons/images/BarCharts.png'
 
 // ;<Icon name="SearchIcon" size={18} className="text-muted" />
 function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
   // Chart bars data for visualization
 
   return (
-    <div className="flex flex-col gap-8  justify-between w-1/2 h-full overflow-hidden">
+    <div className="flex flex-col gap-8  justify-between break-words h-full overflow-hidden   ">
       <Typography
         variant="Heading1"
         as="h1"
-        className="font-light tracking-wide text-white italic "
+        className="font-light tracking-wide text-white italic max-sm:text-[20px] text-[48px]"
       >
         {title || '805'}
         <span className="not-italic font-normal">
           {title?.includes('805') ? 'Intelligence' : ''}
         </span>
       </Typography>
+   
       <div>
         <div className="flex flex-col gap-9">
           <div className="flex flex-col gap-6">
@@ -37,7 +38,7 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
               {subTitle.p}
             </Typography>
           </div>
-       
+
           {listItems && (
             <ul className="space-y-4">
               {listItems.map((curr: string, ind: number) => (
@@ -53,9 +54,14 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
         </div>
       </div>
       {/* Chart Visualization (Bottom Left) */}
-      <Image src={BarChart} alt="Chart Visualization" width={400} height={200} className="w-full h-auto" />
-      </div>
-  
+      <Image
+        src={BarChart}
+        alt="Chart Visualization"
+        width={400}
+        height={200}
+        className="w-full h-auto"
+      />
+    </div>
   )
 }
 
