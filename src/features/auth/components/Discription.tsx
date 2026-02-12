@@ -13,14 +13,14 @@ function Discription({ title, subTitle, listItems }: LoginScreensDespProps) {
       <Typography
         variant="Heading1"
         as="h1"
-        className="font-light tracking-wide text-white italic max-sm:text-[20px] text-[48px]"
+        className="font-light tracking-wide text-white italic max-sm:text-[20px]  text-[44px]"
       >
         {title || '805'}
         <span className="not-italic font-normal">
           {title?.includes('805') ? 'Intelligence' : ''}
         </span>
       </Typography>
-   
+
       <div>
         <div className="flex flex-col gap-9">
           <div className="flex flex-col gap-6">
