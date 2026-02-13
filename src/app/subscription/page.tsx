@@ -1,16 +1,19 @@
 'use client'
-
 import Footer from '@/features/Footer/components/Footer'
 import Navbar from '@/features/navBar/components/Navbar'
 import HeroComponent from '@/features/subscription/components/HeroComponent'
+import ListCard from '@/features/subscription/components/ListCard'
 import TableComponent from '@/features/subscription/components/SubscriptionTable'
 function subscriptionpage() {
   return (
-    <div>
+    <div >
       <Navbar />
       <HeroComponent />
+      <div className='p-[60px]'>
+     <ListCard/>
+     </div>
      <TableComponent /> 
-     <Footer />
+     <Footer/>
     </div>
   )
 }

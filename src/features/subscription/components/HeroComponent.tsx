@@ -14,8 +14,8 @@ function HeroComponent() {
   function generateGrid() {
     return {
       backgroundImage: `
-        linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)
+        linear-gradient(to right, #DCDDDF 1px, transparent 1px),
+        linear-gradient(to bottom, #DCDDDF 1px, transparent 1px)
       `,
       backgroundSize: '40px 40px', // size of each square in the grid
       backgroundColor: 'rgba(255,255,255,1)',
@@ -67,10 +67,10 @@ function HeroComponent() {
 
 
         <div className="flex items-center rounded-[6px] pt-[40px]">
-          <div className="bg-app-primary h-[59px] w-[172px] items-center flex justify-center text-white rounded-[6px]">
+          <button className="bg-app-primary h-[59px] w-[172px] items-center flex justify-center text-white rounded-[6px]">
             Individual
-          </div>
-          <div className="bg-white h-[59px] w-[172px] items-center flex justify-center text-primary rounded-[6px]">Office</div>
+          </button>
+          <button className="bg-white h-[59px] w-[172px] items-center flex justify-center text-primary rounded-[6px]">Office</button>
         </div>
       </div>
     </>

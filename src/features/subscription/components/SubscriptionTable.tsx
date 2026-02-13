@@ -1,21 +1,17 @@
 'use client'
 import React from 'react'
-import {
-  PricingTableHead as TableHead,
-  // PricingTableTypes as types,
-  PricingTableFeature as feature,
-} from '../Data'
+import { PricingTableHead as TableHead, PricingTableFeature as feature } from '../Data'
 import Image from 'next/image'
-// import checkMark from './assets/CheckCircle.png';
+
 import Link from 'next/link'
 import { Icon } from '@/shared/icons/Icon'
 
 function TableComponent() {
   return (
-    <div className="w-full px-[30px] lg:px-[60px] max-lg:overflow-x-scroll ">
+    <div className="w-full px-[30px] lg:px-[60px] max-lg:overflow-x-scroll pt-[59px] pb-[80px] ">
       <style jsx>{`
         .table-component {
-          background: linear-gradient(to bottom right, #2bffff1a, #a6e0e005, #00969600);
+          background: linear-gradient(to bottom right, #ebecee, #f9f9fa, #eeeff0);
           border-collapse: collapse;
           width: 100%;
           justify-content: center;
@@ -26,7 +22,7 @@ function TableComponent() {
         }
         table tr td,
         table thead tr th {
-          border: 2px solid #e0e0e0;
+          border: 1px solid #bcbebf;
         }
         @media (max-width: 1200) {
           table tr td:first-child {
@@ -35,7 +31,7 @@ function TableComponent() {
           }
         }
       `}</style>
-      <table className="w-full border-collapse table-component  border-[2px] border-gray-300 ">
+      <table className="w-full border-collapse table-component border-[2px] border-gray-800 rounded-tr-[32px] rounded-tl-[32px]  rounded-bl-[32px] rounded-br-[32px] overflow-hidden" >
         <thead>
           <tr>
             <th
@@ -49,7 +45,7 @@ function TableComponent() {
                 ind > 0 && (
                   <th
                     key={head}
-                    className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-left"
+                    className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-left  "
                     style={{ verticalAlign: 'middle', textAlign: 'center' }}
                   >
                     {head}
@@ -59,77 +55,11 @@ function TableComponent() {
           </tr>
         </thead>
         <tbody>
-          {/* {types.map((curr, ind) => (
-            <tr className="h-[76px]  text-center  " key={ind}>
-              <td className="  border-[2px] py-[26px] text-[18px] font-medium text-black border-gray-300">
-                {curr.employeess}
-              </td>
-              <td className="  border-[2px] border-gray-300  text-[28px] text-[var(--color-primary)] font-medium">
-                {curr.basic}
-              </td>
-              <td className="  border-[2px] border-gray-300 text-[28px] text-[var(--color-primary)] font-medium ">
-                {curr.premium}
-                <sub className="text-[14px]">/month (billed annually)</sub>
-              </td>
-             
-            </tr>
-          ))} */}
-          <tr className="h-[155px]">
-            {['', 'GET STARTED', 'GET STARTED'].map((curr, ind) => (
-              <td
-                key={ind}
-                className=" px-4 py-2 border-[2px] border-gray-300  "
-                style={{ verticalAlign: 'middle', textAlign: 'center' }}
-              >
-                {curr && (
-                  <>
-                    <Link target="_blank" href={''}>
-                      {/* <ButtonAnimated btnAnimClass="text-nowrap" text="GET STARTED NOW" variant="darkGreen" /> */}
-                    </Link>
-                    {/* <LinkAnimated
-                      href={isLoggedIn ? '/user/profile?showSubscription=1' : '/login'}
-                      variant="green"
-                      btnAnimClass="w-fit"
-                      text={curr}
-                      target="_blank"
-                    /> */}
-                  </>
-                )}
-              </td>
-            ))}
-          </tr>
-          <tr className="">
-            <td
-              className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-left"
-              style={{ verticalAlign: 'middle' }}
-            >
-              Features
-            </td>
-            <td
-              className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-center"
-              style={{ verticalAlign: 'middle' }}
-            >
-              BASIC
-            </td>
-            <td
-              className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-center"
-              style={{ verticalAlign: 'middle' }}
-            >
-              PREMIUM
-            </td>
-            <td
-              className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-center"
-              style={{ verticalAlign: 'middle' }}
-            >
-              PRO
-            </td>
-            {/* <td></td> */}
-          </tr>
           {feature.map((curr, ind) => (
             <tr key={ind} className="text-center">
               <td
                 style={{ verticalAlign: 'middle' }}
-                className=" w-[450px] px-[24px] text-[20px] pr-[16px] lg:pr-[27px] border-[2px] border-gray-300 py-[16px] lg:py-[28px] leading-6 "
+                className=" w-[450px] px-[24px] text-[20px] pr-[16px] lg:pr-[27px] border-[2px] border-gray-300 py-[16px] lg:py-[18px] leading-6 "
               >
                 {curr.desp}
               </td>
@@ -137,7 +67,7 @@ function TableComponent() {
                 style={{ verticalAlign: 'middle', textAlign: 'center' }}
                 className="border-[2px] border-gray-300 py-[34px] "
               >
-                <div className=" flex justify-center items-center font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]">
+                <div className=" flex justify-center items-center font-medium text-[var(--color-primary)] text-[20px]  leading-[56px]">
                   {typeof curr.basic === 'boolean'
                     ? curr.basic && <Icon name={'CheckCircle'} width={40} height={40} />
                     : curr.basic}
@@ -148,43 +78,23 @@ function TableComponent() {
                 style={{ verticalAlign: 'middle', textAlign: 'center' }}
                 className="border-[2px] border-gray-300"
               >
-                <div
-                  className="  flex justify-center items-center font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]"
-                
-                >
+                <div className="  flex justify-center items-center font-medium text-[var(--color-primary)] text-[20px]  leading-[56px]">
                   {typeof curr.premium === 'boolean'
                     ? curr.premium && <Icon name={'CheckCircle'} width={40} height={40} />
                     : curr.premium}
                 </div>
               </td>
 
-
- <td
+              <td
                 style={{ verticalAlign: 'middle', textAlign: 'center' }}
                 className="border-[2px] border-gray-300"
               >
-                <div
-                  className="  flex justify-center items-center font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]"
-                
-                >
+                <div className="  flex justify-center items-center font-medium text-[var(--color-primary)] text-[20px]  leading-[56px]">
                   {typeof curr.pro === 'boolean'
                     ? curr.pro && <Icon name={'CheckCircle'} width={40} height={40} />
                     : curr.pro}
                 </div>
               </td>
-
-         
-
-              {/* <td style={{ verticalAlign: 'middle' }} className="border-[2px] border-gray-300">
-                <div
-                  className="font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]"
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  {typeof curr.premium === 'boolean' ? curr.pro && <Image src={checkMark} alt="" width={40} height={40} /> : curr.premium}
-                </div>
-              </td> */}
             </tr>
           ))}
         </tbody>
