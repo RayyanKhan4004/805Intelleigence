@@ -55,7 +55,7 @@ export default function SignupForm() {
     <Card className="backdrop-blur-sm min-w-[50%] max-lg:!w-full border-0 shadow-2xl rounded-2xl overflow-hidden  p-10">
       <Typography
         variant="h6"
-        className="text-[48px] font-semibold text-app-primary mb-6 text-center break-words overflow-hidden p-0"
+        className="text-[48px] font-semibold text-app-primary mb-6 text-center  text-nowrap p-0  w-full"
       >
         Create your account
       </Typography>
