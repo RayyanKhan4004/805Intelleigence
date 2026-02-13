@@ -1,9 +1,14 @@
-'use client';
-import React from 'react';
-import { PricingTableHead as TableHead, PricingTableTypes as types, PricingTableFeature as feature } from '../Data';
-import Image from 'next/image';
+'use client'
+import React from 'react'
+import {
+  PricingTableHead as TableHead,
+  // PricingTableTypes as types,
+  PricingTableFeature as feature,
+} from '../Data'
+import Image from 'next/image'
 // import checkMark from './assets/CheckCircle.png';
-import Link from 'next/link';
+import Link from 'next/link'
+import { Icon } from '@/shared/icons/Icon'
 
 function TableComponent() {
   return (
@@ -54,23 +59,28 @@ function TableComponent() {
           </tr>
         </thead>
         <tbody>
-          {types.map((curr, ind) => (
+          {/* {types.map((curr, ind) => (
             <tr className="h-[76px]  text-center  " key={ind}>
-              <td className="  border-[2px] py-[26px] text-[18px] font-medium text-black border-gray-300">{curr.employeess}</td>
-              <td className="  border-[2px] border-gray-300  text-[28px] text-[var(--color-primary)] font-medium">{curr.basic}</td>
+              <td className="  border-[2px] py-[26px] text-[18px] font-medium text-black border-gray-300">
+                {curr.employeess}
+              </td>
+              <td className="  border-[2px] border-gray-300  text-[28px] text-[var(--color-primary)] font-medium">
+                {curr.basic}
+              </td>
               <td className="  border-[2px] border-gray-300 text-[28px] text-[var(--color-primary)] font-medium ">
                 {curr.premium}
                 <sub className="text-[14px]">/month (billed annually)</sub>
               </td>
-              {/* <td className="  border-[2px] border-gray-300 text-[28px] text-[var(--color-primary)] font-medium ">
-                {curr.pro}
-                <sub className="text-[14px]">/month (billed annually)</sub>
-              </td> */}
+             
             </tr>
-          ))}
+          ))} */}
           <tr className="h-[155px]">
             {['', 'GET STARTED', 'GET STARTED'].map((curr, ind) => (
-              <td key={ind} className=" px-4 py-2 border-[2px] border-gray-300  " style={{ verticalAlign: 'middle', textAlign: 'center' }}>
+              <td
+                key={ind}
+                className=" px-4 py-2 border-[2px] border-gray-300  "
+                style={{ verticalAlign: 'middle', textAlign: 'center' }}
+              >
                 {curr && (
                   <>
                     <Link target="_blank" href={''}>
@@ -93,19 +103,25 @@ function TableComponent() {
               className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-left"
               style={{ verticalAlign: 'middle' }}
             >
-              Green Star Feature
+              Features
             </td>
             <td
               className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-center"
               style={{ verticalAlign: 'middle' }}
             >
-              Basic
+              BASIC
             </td>
             <td
               className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-center"
               style={{ verticalAlign: 'middle' }}
             >
-              Premium
+              PREMIUM
+            </td>
+            <td
+              className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-center"
+              style={{ verticalAlign: 'middle' }}
+            >
+              PRO
             </td>
             {/* <td></td> */}
           </tr>
@@ -117,25 +133,48 @@ function TableComponent() {
               >
                 {curr.desp}
               </td>
-              <td style={{ verticalAlign: 'middle', textAlign: 'center' }} className="border-[2px] border-gray-300 py-[34px] ">
-                {/* <div
-                  className=" flex justify-center items-center font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]"
-              
-                >
-                  {typeof curr.basic === 'boolean' ? curr.basic && <Image src={checkMark} alt="" width={40} height={40} /> : curr.basic}
-                </div> */}
+              <td
+                style={{ verticalAlign: 'middle', textAlign: 'center' }}
+                className="border-[2px] border-gray-300 py-[34px] "
+              >
+                <div className=" flex justify-center items-center font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]">
+                  {typeof curr.basic === 'boolean'
+                    ? curr.basic && <Icon name={'CheckCircle'} width={40} height={40} />
+                    : curr.basic}
+                </div>
               </td>
 
-              <td style={{ verticalAlign: 'middle', textAlign: 'center' }} className="border-[2px] border-gray-300">
-                {/* <div
+              <td
+                style={{ verticalAlign: 'middle', textAlign: 'center' }}
+                className="border-[2px] border-gray-300"
+              >
+                <div
                   className="  flex justify-center items-center font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]"
                 
                 >
                   {typeof curr.premium === 'boolean'
-                    ? curr.premium && <Image src={checkMark} alt="" width={40} height={40} />
+                    ? curr.premium && <Icon name={'CheckCircle'} width={40} height={40} />
                     : curr.premium}
-                </div> */}
+                </div>
               </td>
+
+
+ <td
+                style={{ verticalAlign: 'middle', textAlign: 'center' }}
+                className="border-[2px] border-gray-300"
+              >
+                <div
+                  className="  flex justify-center items-center font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]"
+                
+                >
+                  {typeof curr.pro === 'boolean'
+                    ? curr.pro && <Icon name={'CheckCircle'} width={40} height={40} />
+                    : curr.pro}
+                </div>
+              </td>
+
+         
+
               {/* <td style={{ verticalAlign: 'middle' }} className="border-[2px] border-gray-300">
                 <div
                   className="font-medium text-[var(--color-primary)] text-[28px]  leading-[56px]"
@@ -151,7 +190,7 @@ function TableComponent() {
         </tbody>
       </table>
     </div>
-  );
+  )
 }
 
-export default TableComponent;
+export default TableComponent
