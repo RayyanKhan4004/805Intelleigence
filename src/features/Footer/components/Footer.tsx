@@ -2,11 +2,12 @@
 import Typography from '@/components/theme/Typography'
 import React from 'react'
 import {footerSections} from '../data/FooterData'
+import { Icon } from '@/shared/icons/Icon'
 
 
 function Footer() {
   return (
-    <div className='grid grid-cols-4 bg-primary text-white px-[60px] py-[60px] '>
+    <div className='grid grid-cols-4 bg-primary text-white px-[60px] py-[60px] max-lg:grid-cols-2 max-sm:grid-cols-1'>
       
         {footerSections.map((section) => (  
             <div key={section.title}>
@@ -20,6 +21,7 @@ function Footer() {
                 ))}
             </div>
         ))} 
+       
     </div>
 
   )

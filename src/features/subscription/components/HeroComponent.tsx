@@ -29,6 +29,7 @@ function HeroComponent() {
   //     generateGrid()
   //     // return () => clearInterval(interval);
   //   }, [])
+  const [tapswitch, settapswitch] = useState<'individual' | 'office'>('individual')
   return (
     <>
       <div className="w-full py-20 flex flex-col items-center text-center" style={generateGrid()}>
@@ -43,7 +44,6 @@ function HeroComponent() {
             className="bg-white rounded-[100px] !w-[calc(100%-3px)] h-[calc(100%-3px)] flex justify-center items-center"
             style={{ width: 'calc(100% - 3px)' }}
           >
-         
             <div className=" text-nowrap text-[12px] font-normal   rounded-full  w-fit flex justify-center items-center leading-[16px] text-[var(--color-secondary)]">
               Bring your business to the best scale
             </div>
@@ -63,14 +63,24 @@ function HeroComponent() {
         <Typography variant="TableText" className=" text-[16px] font-regular text-app-primary">
           Flexible pricing tailored to fit your business goals
         </Typography>
-       
-
 
         <div className="flex items-center rounded-[6px] pt-[40px]">
-          <button className="bg-app-primary h-[59px] w-[172px] items-center flex justify-center text-white rounded-[6px]">
+          <button
+            onClick={() => {
+              settapswitch('individual')
+            }}
+            className={` ${tapswitch === 'individual'?'bg-app-primary text-white' : 'bg-white text-primary'}  h-[59px] w-[172px] items-center flex justify-center  rounded-[6px]`}
+          >
             Individual
           </button>
-          <button className="bg-white h-[59px] w-[172px] items-center flex justify-center text-primary rounded-[6px]">Office</button>
+          <button
+            onClick={() => {
+              settapswitch('office')
+            }}
+            className={` ${tapswitch ==='office'  ? 'bg-app-primary text-white' : 'bg-white text-primary'}   h-[59px] w-[172px] items-center flex justify-center  rounded-[6px]`}
+          >
+            Office
+          </button>
         </div>
       </div>
     </>

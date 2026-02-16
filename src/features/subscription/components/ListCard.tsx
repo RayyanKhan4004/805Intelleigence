@@ -1,5 +1,5 @@
-
 import Typography from '@/components/theme/Typography'
+import { Button } from '@/components/UI/button'
 import React from 'react'
 
 const data = [
@@ -8,6 +8,7 @@ const data = [
     subtitle: 'Generate a free report',
     price: '$0',
     li: ['1 zip/city report', '1 county report', 'Easy-to-share market summaries', 'empty'],
+    button: 'Get Started',
   },
   {
     title: 'Premium',
@@ -22,6 +23,7 @@ const data = [
       'Live training',
       'Cancel at any time',
     ],
+    button: 'Get Started',
   },
   {
     title: 'Pro',
@@ -35,15 +37,16 @@ const data = [
       'Advanced analytics platform',
       'Cancel at any time',
     ],
+    button: 'Get Started',
   },
 ]
 
 function ListCard() {
   return (
-    <div className="flex gap-[20px] bg-gradient-to-br from-[#EAECEE] to-[#FFFFFF]">
+    <div className="flex gap-[20px] justify-center max-md:flex-col">
       {data.map(item => {
         return (
-          <div className='w-[451px] h-[603px] border border-app-stroke rounded-[32px] pl-[40px] '>
+          <div className="w-[451px] h-[603px] border border-app-stroke rounded-[32px] pl-[40px] bg-gradient-to-br from-[#EAECEE] to-[#FFFFFF] relative ">
             <Typography variant="Heading1" className="text-center">
               {item.title}
             </Typography>
@@ -64,6 +67,11 @@ function ListCard() {
                 </li>
               ))}
             </ul>
+            {/* <div className='flex justify-center'> */}
+            <Button className="rounded-[6px] absolute bottom-10  text-white translate-x-1/2 right-1/2 ">
+              {item.button}
+            </Button>
+            {/* </div> */}
           </div>
         )
       })}
