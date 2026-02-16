@@ -7,3 +7,7 @@
 export { default as ArrowDown } from './svg/ArrowDown.svg'
 export { default as CheckCircle } from './svg/CheckCircle.svg'
 export { default as Eye } from './svg/Eye.svg'
+export { default as Facebook } from './svg/Facebook.svg'
+export { default as Vector } from './svg/Vector.svg'
+export { default as Insta } from './svg/Insta.svg'
+export { default as Linked } from './svg/Linked.svg'

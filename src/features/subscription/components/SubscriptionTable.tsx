@@ -22,7 +22,7 @@ function TableComponent() {
         }
         table tr td,
         table thead tr th {
-          border: 1px solid #bcbebf;
+          border: 1px solid #d1d1d1;
         }
         @media (max-width: 1200) {
           table tr td:first-child {
@@ -31,11 +31,14 @@ function TableComponent() {
           }
         }
       `}</style>
-      <table className="w-full border-collapse table-component border-[2px] border-gray-800 rounded-tr-[32px] rounded-tl-[32px]  rounded-bl-[32px] rounded-br-[32px] overflow-hidden" >
+      <table
+        className="w-full table-component border-[2px] rounded-[32px] overflow-hidden"
+        style={{ border: '1px solid var(--color-stroke)' }}
+      >
         <thead>
           <tr>
             <th
-              className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-left"
+              className="  !p-10 border-[2px] text-[22px] text-black font-medium text-left"
               style={{ verticalAlign: 'middle' }}
             >
               {TableHead[0]}
@@ -45,7 +48,7 @@ function TableComponent() {
                 ind > 0 && (
                   <th
                     key={head}
-                    className="  !p-10 border-[2px] text-[22px] text-black font-medium border-gray-300  text-left  "
+                    className="  !p-10 border-[2px] text-[22px] text-black    text-left font-bold "
                     style={{ verticalAlign: 'middle', textAlign: 'center' }}
                   >
                     {head}
@@ -56,18 +59,22 @@ function TableComponent() {
         </thead>
         <tbody>
           {feature.map((curr, ind) => (
-            <tr key={ind} className="text-center">
+            <tr key={ind} className="text-center ">
               <td
                 style={{ verticalAlign: 'middle' }}
-                className=" w-[450px] px-[24px] text-[20px] pr-[16px] lg:pr-[27px] border-[2px] border-gray-300 py-[16px] lg:py-[18px] leading-6 "
+                className=" w-[450px] px-[24px] text-[18px] font-semibold pr-[16px] lg:pr-[27px] border-[2px]  py-[16px] lg:py-[18px] leading-6 "
               >
                 {curr.desp}
               </td>
               <td
-                style={{ verticalAlign: 'middle', textAlign: 'center' }}
-                className="border-[2px] border-gray-300 py-[34px] "
+                style={{
+                  verticalAlign: 'middle',
+                  textAlign: 'center',
+                  fontWeight: ind === 0 ? '700' : '500',
+                }}
+                className="border-[2px] border-gray-300 "
               >
-                <div className=" flex justify-center items-center font-medium text-[var(--color-primary)] text-[20px]  leading-[56px]">
+                <div className=" flex justify-center items-center  text-[var(--color-primary)] text-[20px]  leading-[56px]">
                   {typeof curr.basic === 'boolean'
                     ? curr.basic && <Icon name={'CheckCircle'} width={40} height={40} />
                     : curr.basic}
@@ -75,10 +82,14 @@ function TableComponent() {
               </td>
 
               <td
-                style={{ verticalAlign: 'middle', textAlign: 'center' }}
+                style={{
+                  verticalAlign: 'middle',
+                  textAlign: 'center',
+                  fontWeight: ind === 0 ? '700' : '500',
+                }}
                 className="border-[2px] border-gray-300"
               >
-                <div className="  flex justify-center items-center font-medium text-[var(--color-primary)] text-[20px]  leading-[56px]">
+                <div className="  flex justify-center items-center text-[var(--color-primary)] text-[20px]  leading-[56px]">
                   {typeof curr.premium === 'boolean'
                     ? curr.premium && <Icon name={'CheckCircle'} width={40} height={40} />
                     : curr.premium}
@@ -86,10 +97,14 @@ function TableComponent() {
               </td>
 
               <td
-                style={{ verticalAlign: 'middle', textAlign: 'center' }}
-                className="border-[2px] border-gray-300"
+                style={{
+                  verticalAlign: 'middle',
+                  textAlign: 'center',
+                  fontWeight: ind === 0 ? '700' : '500',
+                }}
+                className="border-[2px] "
               >
-                <div className="  flex justify-center items-center font-medium text-[var(--color-primary)] text-[20px]  leading-[56px]">
+                <div className="  flex justify-center items-center text-[var(--color-primary)] text-[20px]  leading-[56px]">
                   {typeof curr.pro === 'boolean'
                     ? curr.pro && <Icon name={'CheckCircle'} width={40} height={40} />
                     : curr.pro}

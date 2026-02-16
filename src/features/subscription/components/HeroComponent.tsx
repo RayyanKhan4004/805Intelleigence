@@ -18,7 +18,7 @@ function HeroComponent() {
         linear-gradient(to bottom, #DCDDDF 1px, transparent 1px)
       `,
       backgroundSize: '40px 40px', // size of each square in the grid
-      backgroundColor: 'var(--color-stroke2)',
+      backgroundColor: '#F3F4F5',
     }
   }
   //   useEffect(() => {
@@ -32,7 +32,14 @@ function HeroComponent() {
   const [tapswitch, settapswitch] = useState<'individual' | 'office'>('individual')
   return (
     <>
-      <div className="w-full py-20 flex flex-col items-center text-center" style={generateGrid()}>
+      <div
+        className="w-full py-20 flex flex-col items-center text-center px-[60px] relative overflow-hidden"
+        style={generateGrid()}
+      >
+        {/* <div
+          className="absolute h-[828px] w-[2051px] rounded-full top-[-50px] bg-transparent -z-10"
+          style={{ border: '150px solid #2D3F5033/.2' }}
+        /> */}
         {/* Small Button */}
         <div
           style={{
@@ -69,7 +76,7 @@ function HeroComponent() {
             onClick={() => {
               settapswitch('individual')
             }}
-            className={` ${tapswitch === 'individual'?'bg-app-primary text-white' : 'bg-white text-primary'}  h-[59px] w-[172px] items-center flex justify-center  rounded-[6px]`}
+            className={` ${tapswitch === 'individual' ? 'bg-app-primary text-white' : 'bg-white text-primary'}  h-[59px] w-[172px] items-center flex justify-center  rounded-[6px]`}
           >
             Individual
           </button>
@@ -77,7 +84,7 @@ function HeroComponent() {
             onClick={() => {
               settapswitch('office')
             }}
-            className={` ${tapswitch ==='office'  ? 'bg-app-primary text-white' : 'bg-white text-primary'}   h-[59px] w-[172px] items-center flex justify-center  rounded-[6px]`}
+            className={` ${tapswitch === 'office' ? 'bg-app-primary text-white' : 'bg-white text-primary'}   h-[59px] w-[172px] items-center flex justify-center  rounded-[6px]`}
           >
             Office
           </button>

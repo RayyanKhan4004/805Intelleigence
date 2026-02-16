@@ -47,15 +47,15 @@ function ListCard() {
       {data.map(item => {
         return (
           <div className="w-[451px] h-[603px] border border-app-stroke rounded-[32px] pl-[40px] bg-gradient-to-br from-[#EAECEE] to-[#FFFFFF] relative ">
-            <Typography variant="Heading1" className="text-center text-app-primary font-bold">
+            <Typography variant="Heading1" className="text-left text-app-primary font-bold ">
               {item.title}
             </Typography>
-            <Typography variant="Heading2" className="text-center text-app-primary">
+            <Typography variant="Heading2" className="text-left text-app-primary text-[24px]">
               {item.subtitle}
             </Typography>
             <Typography
               variant="h8"
-              className="text-center text-nowrap flex justify-center font-medium text-app-green text-[32px] items-center"
+              className="w-full text-nowrap flex justify-center font-medium text-app-green text-[32px] items-center"
             >
               {item.price}
               <Typography variant="TableTextSize" className="text-[14px]">
