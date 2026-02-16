@@ -43,19 +43,24 @@ const data = [
 
 function ListCard() {
   return (
-    <div className="flex gap-[20px] justify-center max-md:flex-col">
+    <div className="flex gap-[20px] justify-center flex-nowrap items-center max-sm:flex-col  max-xl:flex-wrap ">
       {data.map(item => {
         return (
           <div className="w-[451px] h-[603px] border border-app-stroke rounded-[32px] pl-[40px] bg-gradient-to-br from-[#EAECEE] to-[#FFFFFF] relative ">
-            <Typography variant="Heading1" className="text-center">
+            <Typography variant="Heading1" className="text-center text-app-primary font-bold">
               {item.title}
             </Typography>
-            <Typography variant="Heading2" className="text-center">
+            <Typography variant="Heading2" className="text-center text-app-primary">
               {item.subtitle}
             </Typography>
-            <Typography variant="h8" className="text-center text-nowrap flex justify-center">
+            <Typography
+              variant="h8"
+              className="text-center text-nowrap flex justify-center font-medium text-app-green text-[32px] items-center"
+            >
               {item.price}
-              <Typography variant="TableTextSize">/ per year</Typography>
+              <Typography variant="TableTextSize" className="text-[14px]">
+                / per year
+              </Typography>
             </Typography>
             <ul className="mt-6 space-y-4">
               {item.li.map((curr, ind) => (

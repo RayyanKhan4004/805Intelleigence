@@ -18,7 +18,7 @@ function HeroComponent() {
         linear-gradient(to bottom, #DCDDDF 1px, transparent 1px)
       `,
       backgroundSize: '40px 40px', // size of each square in the grid
-      backgroundColor: 'rgba(255,255,255,1)',
+      backgroundColor: 'var(--color-stroke2)',
     }
   }
   //   useEffect(() => {
