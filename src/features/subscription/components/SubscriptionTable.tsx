@@ -38,7 +38,7 @@ function TableComponent() {
         <thead>
           <tr>
             <th
-              className="  !p-10 border-[2px] text-[22px] text-black font-medium text-left"
+              className="  !p-10 border-[2px] text-[22px] text-black rounded-[34px]  font-medium text-left"
               style={{ verticalAlign: 'middle' }}
             >
               {TableHead[0]}

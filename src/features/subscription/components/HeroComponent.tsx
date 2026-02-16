@@ -43,7 +43,7 @@ function HeroComponent() {
         {/* Small Button */}
         <div
           style={{
-            background: `linear-gradient(95deg, #2D3F50,#CFD2D7 ,#2D3F50)`,
+            background: `linear-gradient(135deg, #2D3F50,#CFD2D7, #CDD2D6 ,#2D3F50)`,
           }}
           className=" transition-all duration-700 text-nowrap w-[252px] h-[28px] flex justify-center items-center rounded-[100px]"
         >

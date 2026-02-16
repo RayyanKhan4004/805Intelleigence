@@ -6,14 +6,14 @@ import ListCard from '@/features/subscription/components/ListCard'
 import TableComponent from '@/features/subscription/components/SubscriptionTable'
 function subscriptionpage() {
   return (
-    <div >
+    <div>
       <Navbar />
       <HeroComponent />
-      <div className='p-[60px]'>
-     <ListCard/>
-     </div>
-     <TableComponent /> 
-     <Footer/>
+      <div className="p-[60px]">
+        <ListCard />
+      </div>
+      <TableComponent />
+      <Footer />
     </div>
   )
 }
