@@ -8,7 +8,7 @@ import { Icon } from '@/shared/icons/Icon'
 
 function TableComponent() {
   return (
-    <div className="w-full px-[30px] lg:px-[60px] max-lg:overflow-x-scroll pt-[59px] pb-[80px] ">
+    <div className="w-full px-[30px] lg:px-[60px]  pt-[59px] pb-[80px] ">
       <style jsx>{`
         .table-component {
           background: linear-gradient(to bottom right, #ebecee, #f9f9fa, #eeeff0);
@@ -38,7 +38,7 @@ function TableComponent() {
         <thead>
           <tr>
             <th
-              className="  !p-10 border-[2px] text-[22px] text-black rounded-[34px]  font-medium text-left"
+              className="  !p-10 border-[2px] text-[22px] text-black rounded-[34px]  font-medium text-left "
               style={{ verticalAlign: 'middle' }}
             >
               {TableHead[0]}
@@ -48,7 +48,7 @@ function TableComponent() {
                 ind > 0 && (
                   <th
                     key={head}
-                    className="  !p-10 border-[2px] text-[22px] text-black    text-left font-bold "
+                    className="  !p-10 border-[2px] text-[22px] text-black    text-left font-bold  "
                     style={{ verticalAlign: 'middle', textAlign: 'center' }}
                   >
                     {head}
@@ -62,7 +62,7 @@ function TableComponent() {
             <tr key={ind} className="text-center ">
               <td
                 style={{ verticalAlign: 'middle' }}
-                className=" w-[450px] px-[24px] text-[18px] font-semibold pr-[16px] lg:pr-[27px] border-[2px]  py-[16px] lg:py-[18px] leading-6 "
+                className=" w-[450px] px-[24px] text-[18px] font-semibold pr-[16px] lg:pr-[27px] border-[2px]  py-[16px] lg:py-[18px] leading-6 text-app-primary "
               >
                 {curr.desp}
               </td>

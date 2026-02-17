@@ -7,7 +7,7 @@ import { Icon } from '@/shared/icons/Icon'
 function Footer() {
   return (
     <div className="bg-primary  px-[60px] py-[40px]  ">
-      <div className=" text-white flex justify-between items-start max-lg:grid max-lg:grid-cols-2 max-sm:grid-cols-1">
+      <div className=" text-white flex justify-between items-start max-lg:grid max-lg:grid-cols-2 max-sm:grid-cols-1 gap-y-10 lg:gap-y-0 gap-x-8 ">
         {footerSections.map(section => (
           <div key={section.title}>
             <Typography className="font-semibold mb-[64px] text-[36px] " variant="Heading1">

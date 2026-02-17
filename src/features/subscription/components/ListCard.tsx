@@ -64,7 +64,7 @@ function ListCard() {
             </Typography>
             <ul className="mt-6 space-y-4">
               {item.li.map((curr, ind) => (
-                <li key={ind} className="flex items-center gap-3 text-app-primary">
+                <li key={ind} className="flex items-center gap-3 text-app-primary font-medium text-[16px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-app-primary block shrink-0" />
                   <Typography variant="TableText" as="span">
                     {curr}

@@ -76,7 +76,7 @@ function HeroComponent() {
             onClick={() => {
               settapswitch('individual')
             }}
-            className={` ${tapswitch === 'individual' ? 'bg-app-primary text-white' : 'bg-white text-primary'}  h-[59px] w-[172px] items-center flex justify-center  rounded-[6px]`}
+            className={` ${tapswitch === 'individual' ? 'bg-app-primary text-white' : 'bg-white text-primary'}  h-[59px] w-[172px] items-center flex justify-center  rounded-[6px] font-semibold`}
           >
             Individual
           </button>
@@ -84,7 +84,7 @@ function HeroComponent() {
             onClick={() => {
               settapswitch('office')
             }}
-            className={` ${tapswitch === 'office' ? 'bg-app-primary text-white' : 'bg-white text-primary'}   h-[59px] w-[172px] items-center flex justify-center  rounded-[6px]`}
+            className={` ${tapswitch === 'office' ? 'bg-app-primary text-white' : 'bg-white text-app-primary'}   h-[59px] w-[172px] items-center flex justify-center  rounded-[6px] font-semibold text-[18px]`}
           >
             Office
           </button>
