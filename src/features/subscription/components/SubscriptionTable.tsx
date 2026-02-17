@@ -8,13 +8,15 @@ import { Icon } from '@/shared/icons/Icon'
 
 function TableComponent() {
   return (
-    <div className="w-full px-[30px] lg:px-[60px]  pt-[59px] pb-[80px] ">
+    <div className="w-full px-[30px] lg:px-[60px]  pt-[59px] pb-[80px] overflow-x-scroll ">
       <style jsx>{`
         .table-component {
           background: linear-gradient(to bottom right, #ebecee, #f9f9fa, #eeeff0);
           border-collapse: collapse;
           width: 100%;
           justify-content: center;
+          overflow-x-scroll
+          
         }
         table tr td:first-child {
           padding-left: 60px;
@@ -38,7 +40,7 @@ function TableComponent() {
         <thead>
           <tr>
             <th
-              className="  !p-10 border-[2px] text-[22px] text-black rounded-[34px]  font-medium text-left "
+              className="  !pl-[60px]  border-[2px] text-[22px] text-black rounded-[34px]  font-medium text-left "
               style={{ verticalAlign: 'middle' }}
             >
               {TableHead[0]}
@@ -48,8 +50,8 @@ function TableComponent() {
                 ind > 0 && (
                   <th
                     key={head}
-                    className="  !p-10 border-[2px] text-[22px] text-black    text-left font-bold  "
-                    style={{ verticalAlign: 'middle', textAlign: 'center' }}
+                    className="  pl-[40px] border-[2px] text-[22px] text-black text-left font-bold  pb-[7px] pt-[40px]"
+                    style={{ verticalAlign: 'middle', textAlign: 'left' }}
                   >
                     {head}
                   </th>

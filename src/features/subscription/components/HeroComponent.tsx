@@ -71,12 +71,12 @@ function HeroComponent() {
           Flexible pricing tailored to fit your business goals
         </Typography>
 
-        <div className="flex items-center rounded-[6px] pt-[40px]">
+        <div className="flex items-center rounded-[6px] bg-white mt-10">
           <button
             onClick={() => {
               settapswitch('individual')
             }}
-            className={` ${tapswitch === 'individual' ? 'bg-app-primary text-white' : 'bg-white text-primary'}  h-[59px] w-[172px] items-center flex justify-center  rounded-[6px] font-semibold`}
+            className={` ${tapswitch === 'individual' ? 'bg-app-primary text-white rounded-r-[6px]' : 'bg-white text-primary'}  h-[59px] w-[172px] items-center flex justify-center  rounded-l-[6px] font-semibold`}
           >
             Individual
           </button>
@@ -84,7 +84,7 @@ function HeroComponent() {
             onClick={() => {
               settapswitch('office')
             }}
-            className={` ${tapswitch === 'office' ? 'bg-app-primary text-white' : 'bg-white text-app-primary'}   h-[59px] w-[172px] items-center flex justify-center  rounded-[6px] font-semibold text-[18px]`}
+            className={` ${tapswitch === 'office' ? 'bg-app-primary text-white rounded-l-[6px]' : 'bg-white text-app-primary'}   h-[59px] w-[172px] items-center flex justify-center  rounded-r-[6px] font-semibold text-[18px]`}
           >
             Office
           </button>
