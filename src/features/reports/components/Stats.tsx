@@ -7,10 +7,10 @@ function Stats() {
              <div className="flex gap-10 bg-primary text-white w-[1156px] h-[150px] rounded-[12px] justify-center px-10 py-6">
                {data.map((curr, ind) => (
                  <div className={`${ind > 0 && 'border-l-2 pl-[60px] border-white'}`} key={ind}>
-                   <Typography variant="h3" className="w-bold ">
+                   <Typography variant="h3" className="w-bold  font-bold text-[40px] ">
                      {curr.title}
                    </Typography>
-                   <Typography variant="Heading2" className="font-medium">
+                   <Typography variant="Heading2" className=" font-medium text-[24px] ">
                      {curr.sub}
                    </Typography>
                  </div>

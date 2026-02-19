@@ -89,6 +89,10 @@ module.exports = {
           stroke2: 'rgb(var(--color-stroke2) / <alpha-value>)',
           buttonPrimary: 'rgb(var(--color-buttonprimary) / <alpha-value>)',
           primaryLight: 'rgb(var(--color-primary-light) / <alpha-value>)',
+
+          surface: 'rgb(var(--color-surface) / <alpha-value>)',
+          mutedBg: 'rgb(var(--color-mutedbg) / <alpha-value>)',
+        
         },
       },
     },

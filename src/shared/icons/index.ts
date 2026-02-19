@@ -18,5 +18,9 @@ export { default as Heart } from './svg/Heart.svg'
 export { default as Search } from './svg/Search.svg'
 export { default as DownDown } from './svg/DownDown.svg'
 export { default as Plus } from './svg/Plus.svg'
+export { default as Action } from './svg/Action.svg'
+export { default as Clip } from './svg/Clip.svg'
+export { default as ChartLine } from './svg/ChartLine.svg'
+export { default as share } from './svg/share.svg'
 
 

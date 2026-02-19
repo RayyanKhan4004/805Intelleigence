@@ -112,4 +112,11 @@ const reportsData = [
     views: 1,
   },
 ]
+export const sampleTableData= [
+  { location: "New York", views: 1200, performance: "High" },
+  { location: "Los Angeles", views: 950, performance: "Medium" },
+  { location: "Chicago", views: 800, performance: "Low" },
+  { location: "Houston", views: 650 }, 
+  { location: "Phoenix", views: "500+", performance: "Medium" },
+];
 export { data,  br, reportsData }

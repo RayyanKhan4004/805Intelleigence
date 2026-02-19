@@ -2,15 +2,16 @@
 import { Button } from '@/components/UI/button'
 import React from 'react'
 import { br, reportsData } from '../Data'
-import { ReportsTable } from '@/components/theme/CustomTable'
+
 import ChartGrid from './ChartGrid'
 import { Icon } from '@/shared/icons/Icon'
-
+import ReportTable from './reportTable'
+import { sampleTableData } from '../Data'
 function Analytics() {
   const [type, setType] = React.useState<'table' | 'chart'>('table')
   return (
     <div className="p-[60px]">
-      <div className="flex justify-between rounded-[80px]  pb-[30px]">
+      <div className="flex justify-between rounded-[80px]  mb-[30px] bg-app-surface items-center px-[19px] py-[20px]">
         <div className="flex gap-2.5">
           <Button
             variant="roundedOutline"
@@ -22,7 +23,7 @@ function Analytics() {
             variant="roundedOutline"
             className="  h-[56px] border border-app-primary font-medium text-[20px]  rounded-[32px]"
           >
-            All Reports <Icon name={'ArrowDown'} size={20} className='!w-[24px] !h-[24px]' />
+            All Reports <Icon name={'ArrowDown'} size={20} className="!w-[24px] !h-[24px]" />
           </Button>
         </div>
         <div className="flex gap-3 items-center">
@@ -31,30 +32,31 @@ function Analytics() {
             variant="roundedOutline"
             className="  h-[56px] border border-app-primary font-medium text-[20px]  rounded-[32px]"
           >
-            Tressa Golden-Mills <Icon name={'ArrowDown'} size={20} className='!w-[24px] !h-[24px]' />
+            Tressa Golden-Mills{' '}
+            <Icon name={'ArrowDown'} size={20} className="!w-[24px] !h-[24px]" />
           </Button>
           <Button
             variant="roundedOutline"
             className="  h-[56px] border border-app-primary font-medium text-[20px]  rounded-[32px]"
           >
-            Setting <Icon name={'Setting'} size={20} className='!w-[24px] !h-[24px]' />
+            Setting <Icon name={'Setting'} size={20} className="!w-[24px] !h-[24px]" />
           </Button>
           <Button
             variant="roundedOutline"
             className="  h-[56px] border border-app-primary font-medium text-[20px]  rounded-[32px]"
           >
-            Sort By <Icon name={'ArrowDown'} size={20} className='!w-[24px] !h-[24px]' />
+            Sort By <Icon name={'ArrowDown'} size={20} className="!w-[24px] !h-[24px]" />
           </Button>
           <Button
             variant="roundedOutline"
             className="  h-[56px] border border-app-primary bg-primary text-white font-medium text-[20px] rounded-[32px]"
           >
-            List view <Icon name={'ListView'} size={20} className='!w-[24px] !h-[24px]' />
+            List view <Icon name={'ListView'} size={20} className="!w-[24px] !h-[24px]" />
           </Button>
         </div>
       </div>
       {type === 'table' ? (
-        <ReportsTable title={['location', 'views']} data={reportsData} />
+        <ReportTable tableData={sampleTableData} />
       ) : (
         // <StackedBarChart data={br} />
         <ChartGrid />
