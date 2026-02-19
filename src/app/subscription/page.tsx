@@ -9,7 +9,7 @@ function subscriptionpage() {
     <div>
       {/* <Navbar /> */}
       <HeroComponent />
-      <div className="p-[60px]">
+      <div className="p-[60px] max-sm:p-[15px] max:md:p-[32px]">
         <ListCard />
       </div>
       <TableComponent />

@@ -58,11 +58,11 @@ function HeroComponent() {
         </div>
 
         {/* Main Title */}
-        <div className="bg-gradient-to-b from-[#5A5B56] from-[30%] to-[#009696] text-clip bg-clip-text text-transparent mt-6">
-          <Typography variant={'h7'} className=" text-[64px] font-medium  ">
+        <div className="bg-gradient-to-b from-[#5A5B56] from-[30%] to-[#009696] text-clip bg-clip-text text-transparent mt-6  ">
+          <Typography variant={'h7'} className=" text-[64px] font-medium max-sm:text-[32px]">
             Choose the plan that
           </Typography>
-          <Typography variant="h7" className=" text-[64px] font-medium ">
+          <Typography variant="h7" className=" text-[64px] font-medium max-sm:text-[32px]">
             is right for you and your team.
           </Typography>
         </div>
