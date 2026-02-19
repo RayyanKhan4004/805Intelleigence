@@ -66,5 +66,50 @@ const reportsData = [
     location: 'Los Angeles County, CA',
     views: 1,
   },
+   {
+    id: '4',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
+   {
+    id: '5',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
+   {
+    id: '6',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
+   {
+    id: '7',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
+   {
+    id: '8',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
+   {
+    id: '9',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
+   {
+    id: '10',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
+   {
+    id: '11',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
+   {
+    id: '12',
+    location: 'Los Angeles County, CA',
+    views: 1,
+  },
 ]
 export { data,  br, reportsData }

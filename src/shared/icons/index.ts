@@ -11,3 +11,12 @@ export { default as Facebook } from './svg/Facebook.svg'
 export { default as Vector } from './svg/Vector.svg'
 export { default as Insta } from './svg/Insta.svg'
 export { default as Linked } from './svg/Linked.svg'
+export { default as ListView } from './svg/ListView.svg'
+export { default as Setting } from './svg/Setting.svg'
+export { default as Funnel } from './svg/Funnel.svg'
+export { default as Heart } from './svg/Heart.svg'
+export { default as Search } from './svg/Search.svg'
+export { default as DownDown } from './svg/DownDown.svg'
+export { default as Plus } from './svg/Plus.svg'
+
+

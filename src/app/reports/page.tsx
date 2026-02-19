@@ -27,7 +27,7 @@ function page() {
       </CustomPopup> */}
 
         {/* <div className="h-4" onClick={() => setIsOpen(true)}>hjhbnknkn</div> */}
-        <Footer />
+       
       </div>
     </>
   )

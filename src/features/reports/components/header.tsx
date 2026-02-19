@@ -5,6 +5,7 @@ import { Button } from '@/components/UI/button'
 import { Input } from '@/components/UI/input'
 import React from 'react'
 import { reportsData } from '../Data'
+import { Icon } from '@/shared/icons/Icon'
 // const data = [
 //   { title: '24', sub: 'Active Markets' },
 //   { title: '$1.2M', sub: 'Avg List Price' },
@@ -81,30 +82,34 @@ function Header() {
       <div className="flex gap-[30px] flex-col">
         <div className="flex justify-between  ">
           <div>
-            <Typography variant="PageHeading" className="font-semibold text-app-primary">
+            <Typography
+              variant="PageHeading"
+              className="font-semibold text-app-primary text-[30px]"
+            >
               Market Reports
             </Typography>
-            <Typography variant="TableTextSize" className="text-app-black">
+            <Typography variant="TableTextSize" className="text-app-black text-[14px]">
               Real time insights for 805 areas
             </Typography>
           </div>
           <div className="flex gap-4">
             <Input
-              className="w-[237px] h-[56px] text-app-primary placeholder:text-app-greyText "
-              placeholder="Search by name"
+              preIcon={<Icon name="Search" className="!w-6 !h-6" />}
+              className="w-[237px] h-[56px] text-app-primary placeholder:text-app-greyText rounded-[12px] border-app-primary "
+              placeholder=" Search by name"
             />
             <Button variant="outline" className="p-4  h-[56px] border border-app-primary">
-              <Typography variant="PageSecondText" className="text-app-primary font-medium">
+              <Typography
+                variant="PageSecondText"
+                className="text-app-primary font-medium border-app-primary rounded-[12px] flex items-center"
+              >
+                <Icon name="DownDown" className="!w-6 !h-6" />
                 Export
               </Typography>
             </Button>
-            <Button className="p-4 w-[162px] h-[56px]">Add Report</Button>
-          </div> 
+            <Button className="p-4 w-[162px] h-[56px] flex items-center">  <Icon name="Plus" className="!w-6 !h-6" /> Add Report</Button>
+          </div>
         </div>
-
-
-
-       
       </div>
     </div>
   )
