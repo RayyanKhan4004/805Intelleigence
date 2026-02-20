@@ -79,8 +79,8 @@ import { Icon } from '@/shared/icons/Icon'
 function Header() {
   return (
     <div className="p-[60px]">
-      <div className="flex gap-[30px] flex-col">
-        <div className="flex justify-between  ">
+      <div className="flex gap-[30px] flex-col ">
+        <div className="flex justify-between flex-wrap gap-4">
           <div>
             <Typography
               variant="PageHeading"
@@ -92,7 +92,7 @@ function Header() {
               Real time insights for 805 areas
             </Typography>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap">
             <Input
               preIcon={<Icon name="Search" className="!w-6 !h-6" />}
               className="w-[237px] h-[56px] text-app-primary placeholder:text-app-greyText rounded-[12px] border-app-primary "

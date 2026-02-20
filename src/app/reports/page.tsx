@@ -11,8 +11,8 @@ function page() {
   // const [isOpen, setIsOpen] = React.useState(true)
   return (
     <>
-      <Navbar />
-      <div className="px-[60px]">
+      {/* <Navbar /> */}
+      <div >
         <Header />
         <Stats />
         <Analytics />

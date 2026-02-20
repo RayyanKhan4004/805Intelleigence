@@ -11,7 +11,7 @@ function Analytics() {
   const [type, setType] = React.useState<'table' | 'chart'>('table')
   return (
     <div className="p-[60px]">
-      <div className="flex justify-between rounded-[80px]  mb-[30px] bg-app-surface items-center px-[19px] py-[20px]">
+      <div className="flex justify-between rounded-[80px]  mb-[30px] bg-app-surface items-center px-[19px] py-[20px] overflow-x-auto">
         <div className="flex gap-2.5">
           <Button
             variant="roundedOutline"
