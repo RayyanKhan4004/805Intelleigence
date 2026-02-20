@@ -18,14 +18,22 @@ interface tableDataProps {
 }
 export function ReportTable({ tableData }: { tableData?: tableDataProps[] }) {
   return (
-    <div className='h-[1020px] w-[1391px]'>
+    <div>
       <Table>
         <TableHeader>
-          <TableRow className='bg-app-mutedBg'>
-            <TableHead className="font-bold text-[20px] text-app-primary  h-[60px] w-[295px]">Location</TableHead>
-            <TableHead className="font-bold text-[20px] text-app-primary  h-[60px] w-[295px] ">Views</TableHead>
-            <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px]">Performance</TableHead>
-            <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">Quick Actions</TableHead>
+          <TableRow className="bg-app-mutedBg border-app-primary border-b">
+            <TableHead className="font-bold text-[20px] text-app-primary  h-[60px] w-[295px]">
+              Location
+            </TableHead>
+            <TableHead className="font-bold text-[20px] text-app-primary  h-[60px] w-[295px] ">
+              Views
+            </TableHead>
+            <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px]">
+              Performance
+            </TableHead>
+            <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">
+              Quick Actions
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -37,11 +45,20 @@ export function ReportTable({ tableData }: { tableData?: tableDataProps[] }) {
                 </TableCell>
                 <TableCell>
                   {' '}
-                  <div className='flex gap-[4px]'>
-                  <Typography className='font-bold text-[16px] text-app-primary'>{cur.views}</Typography> <Typography className='font-medium text-[16px] text-app-greyText'> View</Typography>
+                  <div className="flex gap-[4px]">
+                    <Typography className="font-bold text-[16px] text-app-primary">
+                      {cur.views}
+                    </Typography>{' '}
+                    <Typography className="font-medium text-[16px] text-app-greyText">
+                      {' '}
+                      View
+                    </Typography>
                   </div>
                 </TableCell>
-                <TableCell> {cur.performance || '-----------------'}</TableCell>
+                <TableCell className="font-medium text-[16px] text-app-greyText">
+                  {' '}
+                  {cur.performance || '-----------------'}
+                </TableCell>
 
                 <TableCell>
                   <div className="flex gap-[10px]">
