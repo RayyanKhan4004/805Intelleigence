@@ -6,7 +6,7 @@ import { tabs } from '../enums'
 import Link from 'next/link'
 
 function NavTabs() {
-  const router = useRouter()
+  // const router = useRouter()
   const [activeTab, setActiveTab] = useState('Reports')
 
   //

@@ -61,8 +61,8 @@ export default function Navbar() {
             // style={{ backgroundColor: 'var(--color-white)' }}
           ></div>
         </div>
-        <SideBar isOpen={openSideBar} />
       </nav>
+      <SideBar isOpen={openSideBar} />
     </React.Fragment>
   )
 }
