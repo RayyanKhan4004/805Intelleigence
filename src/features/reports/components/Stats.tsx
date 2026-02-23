@@ -5,8 +5,8 @@ function Stats() {
   return (
     <div className="w-full px-10 mb-[30px] flex justify-center">
       <div className=" grid grid-cols-4 gap-10
-          bg-primary text-white
-          max-w-[1156px] rounded-[12px]
+          bg-app-primary text-white
+          rounded-[12px] 
           px-10 py-6
           max-lg:grid-cols-2
           max-sm:grid-cols-1 ">
@@ -15,7 +15,7 @@ function Stats() {
             <Typography variant="h3" className="w-bold  font-bold text-[40px] ">
               {curr.title}
             </Typography>
-            <Typography variant="Heading2" className=" font-medium text-[24px] ">
+            <Typography variant="Heading2" className=" font-medium text-[24px]  ">
               {curr.sub}
             </Typography>
           </div>
