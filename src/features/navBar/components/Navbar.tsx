@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <React.Fragment>
       <nav
-        className={`flex h-16 w-full items-center justify-between bg-app-primary px-6 text-white shadow-md max-md:fixed  `}
+        className={`flex h-16 w-full items-center justify-between bg-app-primary px-6 text-white shadow-md max-md:fixed`}
       >
         <div className="flex items-center text-xl font-normal tracking-wide">
           <span className="italic">805</span>
@@ -50,15 +50,12 @@ export default function Navbar() {
             className={`transition-all duration-500 h-1 w-8 bg-white ${
               openSideBar && 'rotate-45 translate-y-1'
             }`}
-          
           ></div>
           <div
             className={`transition-all duration-500 h-1 w-8 bg-white ${openSideBar && 'hidden'}`}
-          
           ></div>
           <div
             className={`transition-all duration-500 h-1 w-8 bg-white ${openSideBar && '-rotate-45 '}`}
-          
           ></div>
         </div>
       </nav>

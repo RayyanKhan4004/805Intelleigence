@@ -30,10 +30,10 @@
   mask-composite: exclude; 
 }  */
 /* styles/index.css */
-
+/* 
 .borderContainer {
   padding: 1px; /* border thickness */
-  border-radius: 12px;
+  /* border-radius: 12px;
 
   background: conic-gradient(
     from 102.21deg at 52.75% 38.75%,
@@ -48,4 +48,5 @@
     rgba(249, 249, 249, 0.3) 327.05deg,
     rgba(64, 64, 64, 0.5) 370.52deg
   );
-}
+/* } */ 
+

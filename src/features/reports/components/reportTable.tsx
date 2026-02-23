@@ -57,7 +57,7 @@ export function ReportTable({ tableData }: { tableData?: tableDataProps[] }) {
                 </TableCell>
                 <TableCell className="font-medium text-[16px] text-app-greyText">
                   {' '}
-                  {cur.performance || '-----------------'}
+                  {cur.performance || '---------'}
                 </TableCell>
 
                 <TableCell>

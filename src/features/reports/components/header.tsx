@@ -79,7 +79,7 @@ import { Icon } from '@/shared/icons/Icon'
 function Header() {
   return (
     <div className="p-[60px]">
-      <div className="flex gap-[30px] flex-col ">
+      <div className="flex gap-[30px] flex-col  max-md:mt-[24px]">
         <div className="flex justify-between flex-wrap gap-4">
           <div>
             <Typography

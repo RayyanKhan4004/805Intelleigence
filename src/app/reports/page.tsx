@@ -12,7 +12,7 @@ function page() {
   return (
     <>
       <Navbar />
-      <div >
+      <div>
         <Header />
         <Stats />
         <Analytics />

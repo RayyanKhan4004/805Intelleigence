@@ -7,7 +7,7 @@ import TableComponent from '@/features/subscription/components/SubscriptionTable
 function subscriptionpage() {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroComponent />
       <div className="p-[60px] max-sm:p-[15px] max:md:p-[32px]">
         <ListCard />
