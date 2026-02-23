@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import ReduxProvider from '@/ReduxProvider'
+
+import { Toaster } from '@/components/UI/toaster'
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -20,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased font-sans`}>{children}</body>
+      <body className={`${poppins.variable} antialiased font-sans`}>
+        <ReduxProvider>
+          {children} <Toaster />
+        </ReduxProvider>
+      </body>
     </html>
   )
 }

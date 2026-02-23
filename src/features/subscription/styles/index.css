@@ -1,0 +1,15 @@
+/* .gradient-text {
+  background-image: linear-gradient(90deg, #5A5B56, #009696);
+-webkit-text-fill-color: inherit; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: white;
+  
+} */
+ .gradient-text {
+  background: linear-gradient(90deg, #5A5B56, #009696);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

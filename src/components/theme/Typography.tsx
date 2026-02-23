@@ -17,9 +17,5 @@ export default function Typography({
   const variants = TypographyVariants as Record<string, number>
   const size = variant && typeof variants[variant] === 'number' ? variants[variant] : defaultSize
 
-  return (
-    <Component className={cn(className)} style={{ fontSize: `${size}px` }}>
-      {children}
-    </Component>
-  )
+  return <Component className={cn(className + ` text-[${size}px]`)}>{children}</Component>
 }

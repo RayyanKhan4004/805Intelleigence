@@ -26,7 +26,7 @@ module.exports = {
     `,
       },
       backgroundImage: {
-        'field-gradient': 'linear-gradient(180deg, #E7EEEC 0%, rgba(47, 65, 82, 0.10) 100%)',
+        'field-gradient': 'linear-gradient(180deg, #E7EEEC 0%,#9DA9AE 100%)',
         'chart-gradient': 'linear-gradient(to top, rgba(0, 191, 165, 0.2), #00BFA5)',
       },
 
@@ -89,6 +89,10 @@ module.exports = {
           stroke2: 'rgb(var(--color-stroke2) / <alpha-value>)',
           buttonPrimary: 'rgb(var(--color-buttonprimary) / <alpha-value>)',
           primaryLight: 'rgb(var(--color-primary-light) / <alpha-value>)',
+
+          surface: 'rgb(var(--color-surface) / <alpha-value>)',
+          mutedBg: 'rgb(var(--color-mutedbg) / <alpha-value>)',
+        
         },
       },
     },
