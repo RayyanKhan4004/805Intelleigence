@@ -1,0 +1,51 @@
+/* .borderContainer {
+  .borderContainer {
+    padding: 1px; 
+    border-radius: 12px;
+
+    background: conic-gradient(
+      from 102.21deg at 52.75% 38.75%,
+      rgba(249, 249, 249, 0.3) -32.95deg,
+      rgba(64, 64, 64, 0.5) 10.52deg,
+      rgba(64, 64, 64, 0.35) 32.12deg,
+      rgba(255, 255, 255, 0.3) 60.28deg,
+      rgba(255, 255, 255, 0.3) 107.79deg,
+      rgba(64, 64, 64, 0.35) 187.59deg,
+      rgba(249, 249, 249, 0.5) 207.58deg,
+      rgba(255, 255, 255, 0.3) 287.31deg,
+      rgba(249, 249, 249, 0.3) 327.05deg,
+      rgba(64, 64, 64, 0.5) 370.52deg
+    );
+  }
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; 
+}  */
+/* styles/index.css */
+
+.borderContainer {
+  padding: 1px; /* border thickness */
+  border-radius: 12px;
+
+  background: conic-gradient(
+    from 102.21deg at 52.75% 38.75%,
+    rgba(249, 249, 249, 0.3) -32.95deg,
+    rgba(64, 64, 64, 0.5) 10.52deg,
+    rgba(64, 64, 64, 0.35) 32.12deg,
+    rgba(255, 255, 255, 0.3) 60.28deg,
+    rgba(255, 255, 255, 0.3) 107.79deg,
+    rgba(64, 64, 64, 0.35) 187.59deg,
+    rgba(249, 249, 249, 0.5) 207.58deg,
+    rgba(255, 255, 255, 0.3) 287.31deg,
+    rgba(249, 249, 249, 0.3) 327.05deg,
+    rgba(64, 64, 64, 0.5) 370.52deg
+  );
+}

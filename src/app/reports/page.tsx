@@ -11,7 +11,7 @@ function page() {
   // const [isOpen, setIsOpen] = React.useState(true)
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div >
         <Header />
         <Stats />
