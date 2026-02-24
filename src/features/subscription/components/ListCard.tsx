@@ -46,7 +46,7 @@ function ListCard() {
     <div className="flex gap-[20px] justify-center flex-nowrap items-center max-sm:flex-col  max-xl:flex-wrap   ">
       {data.map(item => {
         return (
-          <div className="flex  gap-4 flex-col justify-between border border-app-stroke rounded-[32px] p-[40px] bg-gradient-to-br from-[#EAECEE] to-[#FFFFFF] min-h-[603px] ">
+          <div className="flex  gap-4 flex-col justify-between border border-app-stroke rounded-[32px] p-[40px] bg-gradient-to-br from-[#EAECEE] to-[#FFFFFF] !h-[603px] ">
             <div className="w-full max-w-[451px]">
               <Typography variant="Heading1" className="text-left text-app-primary font-bold ">
                 {item.title}

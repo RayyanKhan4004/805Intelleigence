@@ -79,7 +79,7 @@ import { Icon } from '@/shared/icons/Icon'
 function Header() {
   return (
     <div className="p-[60px]">
-      <div className="flex gap-[30px] flex-col  max-md:mt-[24px]">
+      <div className="flex gap-[30px] flex-col ">
         <div className="flex justify-between flex-wrap gap-4">
           <div>
             <Typography
@@ -107,7 +107,10 @@ function Header() {
                 Export
               </Typography>
             </Button>
-            <Button className="p-4 w-[162px] h-[56px] flex items-center">  <Icon name="Plus" className="!w-6 !h-6" /> Add Report</Button>
+            <Button className="p-4 w-[162px] h-[56px] flex items-center">
+              {' '}
+              <Icon name="Plus" className="!w-6 !h-6" /> Add Report
+            </Button>
           </div>
         </div>
       </div>
