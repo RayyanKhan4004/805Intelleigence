@@ -12,7 +12,7 @@ export default function Navbar() {
       <nav
         className={`flex h-[100px] w-full items-center top-0 justify-between bg-app-primary px-6 text-white shadow-lg max-lg:fixed  z-30 `}
       >
-        <div className="flex items-center text-[32px] font-normal tracking-wide">
+        <div className="flex items-center text-[32px] font-normal tracking-wide max-xl:text-[28px]">
           <span className="italic">805</span>
           <span className="font-light">Intelligence</span>
         </div>
@@ -26,16 +26,16 @@ export default function Navbar() {
 
         {/* User Profile */}
         <div className="flex items-center gap-3 max-lg:hidden">
-          <div className="h-[60px] w-[60px] overflow-hidden rounded-full border border-gray-500 bg-gray-200">
+          <div className="h-[60px] w-[60px] overflow-hidden rounded-full border border-gray-500 bg-gray-200 max-xl:h-[40px] max-xl:w-[40px]">
             <img
               src="https://avatar.vercel.sh/david-taylor"
               alt="User"
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="flex items-center gap-1 text-[16px] font-medium" >
+          <div className="flex items-center gap-1 text-[16px] font-medium ">
             <span>David Taylor</span>
-            <ChevronDown className="h-4 w-4 text-gray-400" />
+            <ChevronDown className="h-4 w-4 text-gray-400 " />
           </div>
         </div>
         <div
