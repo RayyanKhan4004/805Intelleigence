@@ -4,14 +4,13 @@ import { ChevronDown } from 'lucide-react'
 import NavTabs from './NavTabs'
 import React, { useState } from 'react'
 import SideBar from './SideBar'
-// import type { CSS } from 'next'
 require('../styles/index.css')
 export default function Navbar() {
   const [openSideBar, setOpenSideBar] = useState(false)
   return (
     <React.Fragment>
       <nav
-        className={`flex h-16 w-full items-center justify-between bg-app-primary px-6 text-white shadow-md max-md:fixed`}
+        className={`flex h-16 w-full items-center justify-between bg-app-primary px-6 text-white shadow-md max-md:fixed z-30`}
       >
         <div className="flex items-center text-xl font-normal tracking-wide">
           <span className="italic">805</span>
@@ -42,7 +41,7 @@ export default function Navbar() {
         <div
           className={`md:hidden relative flex flex-col justify-center items-center cursor-pointer h-[44px] w-[44px] ${
             !openSideBar && 'gap-1'
-          }  rounded-full transition-all duration-500`}
+          }   transition-all duration-700`}
           aria-label="Toggle Sidebar"
           onClick={() => setOpenSideBar((e: boolean) => !e)}
         >
@@ -50,16 +49,17 @@ export default function Navbar() {
             className={`transition-all duration-500 h-1 w-8 bg-white ${
               openSideBar && 'rotate-45 translate-y-1'
             }`}
-          ></div>
+          />
           <div
             className={`transition-all duration-500 h-1 w-8 bg-white ${openSideBar && 'hidden'}`}
-          ></div>
+          />
           <div
             className={`transition-all duration-500 h-1 w-8 bg-white ${openSideBar && '-rotate-45 '}`}
-          ></div>
+          />
         </div>
       </nav>
-      <SideBar isOpen={openSideBar} />
+      <SideBar isOpen={openSideBar}
+      onClose={() => setOpenSideBar(false)} />
     </React.Fragment>
   )
 }

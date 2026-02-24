@@ -18,7 +18,7 @@ function NavTabs() {
 
   return (
     <Tabs value={activeTab} onValueChange={handleTabChange} className="w-auto">
-      <TabsList className="bg-app-primaryLight text-white  bg-gradient-to-b from-[#52616F] via-[#425262] to-[#52616F] max-md:w-full max-md:flex-col ">
+      <TabsList className="bg-app-primaryLight text-white max-md:bg-transparent md:bg-gradient-to-b md:from-[#52616F] md:via-[#425262] md:to-[#52616F] max-md:w-full max-md:flex-col max-md:items-start px-6">
         {tabs.map(tab => (
           <TabsTrigger
             key={tab.name}
