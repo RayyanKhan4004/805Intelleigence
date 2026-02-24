@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <React.Fragment>
       <nav
-        className={`flex h-[100px] w-full items-center top-0 justify-between bg-app-primary px-6 text-white shadow-lg max-lg:fixed z-30`}
+        className={`flex h-[100px] w-full items-center top-0 justify-between bg-app-primary px-6 text-white shadow-lg max-lg:fixed  z-30 `}
       >
         <div className="flex items-center text-[32px] font-normal tracking-wide">
           <span className="italic">805</span>
@@ -33,7 +33,7 @@ export default function Navbar() {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="flex items-center gap-1 text-[16px] font-medium">
+          <div className="flex items-center gap-1 text-[16px] font-medium" >
             <span>David Taylor</span>
             <ChevronDown className="h-4 w-4 text-gray-400" />
           </div>
