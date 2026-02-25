@@ -12,7 +12,7 @@ function page() {
   // const [isOpen, setIsOpen] = React.useState(true)
   return (
     <>
-      <Layout settings={{ navbar: true }}>
+      <Layout settings={{ navbar: true,footer:true }}>
         {/* <Navbar /> */}
         <div>
           <Header />
