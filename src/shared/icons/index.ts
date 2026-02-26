@@ -23,5 +23,6 @@ export { default as Clip } from './svg/Clip.svg'
 export { default as ChartLine } from './svg/ChartLine.svg'
 export { default as share } from './svg/share.svg'
 export { default as ArrowUp} from './svg/ArrowUp.svg'
+export { default as WhiteSearchIcon} from './svg/WhiteSearchIcon.svg'
 
 

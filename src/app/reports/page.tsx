@@ -3,6 +3,7 @@ import Layout from '@/components/theme/Layout'
 // import Footer from '@/features/Footer/components/Footer'
 // import Navbar from '@/features/navBar/components/Navbar'
 import Analytics from '@/features/reports/components/Analytics'
+import AddNewReport from '@/features/reports/components/dialouges/AddNewReport'
 import Header from '@/features/reports/components/header'
 import Stats from '@/features/reports/components/Stats'
 // import React from 'react'
@@ -18,6 +19,7 @@ function page() {
           <Header />
           <Stats />
           <Analytics />
+          <AddNewReport/>
 
           {/* <CustomPopup
         title="ertyh"

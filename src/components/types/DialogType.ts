@@ -5,4 +5,5 @@ export interface props {
   Description?: string
   children: React.ReactNode
   trigger?: React.ReactNode
+  className?: string
 }
