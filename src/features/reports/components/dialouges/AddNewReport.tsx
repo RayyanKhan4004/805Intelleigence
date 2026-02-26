@@ -13,21 +13,19 @@ function AddNewReport() {
   ]
 
   const [isOpen, setIsOpen] = React.useState(true)
-  const [selectedTab, setSelectedTab] = React.useState<'zipCode' | 'counties' | 'regions'>(
-    'zipCode'
-  )
-  const tabs: Array<{ label: string; value: 'zipCode' | 'counties' | 'regions' }> = [
+  const [selectedTab, setSelectedTab] = React.useState<'zipCode' | 'Country' | 'Regions'>('zipCode')
+  const tabs: Array<{ label: string; value: 'zipCode' | 'Country' | 'Regions' }> = [
     {
       label: 'Zip Code',
       value: 'zipCode',
     },
     {
       label: 'Counties',
-      value: 'counties',
+      value: 'Country',
     },
     {
       label: 'Regions',
-      value: 'regions',
+      value: 'Regions',
     },
   ]
 
@@ -54,9 +52,12 @@ function AddNewReport() {
           })}
         </div>
 
-        <div className="flex gap-[10px] p-[16px] items-center  w-full  ">
+        <div className="flex gap-[10px] items-center  w-full  ">
           <div>
-            <Input placeholder="Los" className="border-primary rounded-[12px] w-[275px]" />
+            <Input
+              placeholder={selectedTab === 'zipCode' ? 'Los' : 'Search by ' + selectedTab}
+              className="border-primary rounded-[12px] w-[275px]"
+            />
           </div>
           <div>
             <Button>
@@ -66,9 +67,18 @@ function AddNewReport() {
           </div>
         </div>
 
-        <div>
-          <div className="font-bold text-[16px] text-app-primary mb-[15px]">Search Results</div>
-          {selectedTab === 'zipCode' && (
+        {(selectedTab === 'Country' || selectedTab === 'Regions') && (
+          <div className="flex items-center gap-2 px-[16px] mb-[10px] ]">
+            <input type="checkbox" />
+            <Label className="text-[14px] text-app-greyText">
+              Include all city/zip reports from county
+            </Label>
+          </div>
+        )}
+        {selectedTab === 'zipCode' && (
+          <div>
+            <div className="font-bold text-[16px] text-app-primary mb-[15px]">Search Results</div>
+
             <div className=" flex flex-col  gap-[10px]">
               {data.map(value => {
                 return (
@@ -102,8 +112,8 @@ function AddNewReport() {
                 )
               })}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </CustomPopup>
     </div>
   )

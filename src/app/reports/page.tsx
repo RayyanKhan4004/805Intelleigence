@@ -4,6 +4,7 @@ import Layout from '@/components/theme/Layout'
 // import Navbar from '@/features/navBar/components/Navbar'
 import Analytics from '@/features/reports/components/Analytics'
 import AddNewReport from '@/features/reports/components/dialouges/AddNewReport'
+import ViewPopUp from '@/features/reports/components/dialouges/ViewPopUp'
 import Header from '@/features/reports/components/header'
 import Stats from '@/features/reports/components/Stats'
 // import React from 'react'
@@ -19,7 +20,9 @@ function page() {
           <Header />
           <Stats />
           <Analytics />
-          <AddNewReport/>
+
+          {/* <AddNewReport/> */}
+          <ViewPopUp/>
 
           {/* <CustomPopup
         title="ertyh"
