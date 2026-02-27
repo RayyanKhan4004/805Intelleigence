@@ -18,7 +18,7 @@ function SideBar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
         className={`
     fixed inset-0 z-20 lg:hidden
     bg-black/20
-    transition-opacity duration-700 
+    transition-opacity duration-700
     ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
   `}
       />

@@ -23,8 +23,8 @@ function page() {
           <Analytics />
 
           {/* <AddNewReport/> */}
-          {/* <ViewPopUp/> */}
-          <PromotePopUp/>
+          <ViewPopUp/>
+          {/* <PromotePopUp/> */}
 
 
 
