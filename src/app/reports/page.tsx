@@ -4,6 +4,7 @@ import Layout from '@/components/theme/Layout'
 // import Navbar from '@/features/navBar/components/Navbar'
 import Analytics from '@/features/reports/components/Analytics'
 import AddNewReport from '@/features/reports/components/dialouges/AddNewReport'
+import PromotePopUp from '@/features/reports/components/dialouges/PromotePopUp'
 import ViewPopUp from '@/features/reports/components/dialouges/ViewPopUp'
 import Header from '@/features/reports/components/header'
 import Stats from '@/features/reports/components/Stats'
@@ -22,7 +23,17 @@ function page() {
           <Analytics />
 
           {/* <AddNewReport/> */}
-          <ViewPopUp/>
+          {/* <ViewPopUp/> */}
+          <PromotePopUp/>
+
+
+
+
+
+
+
+
+
 
           {/* <CustomPopup
         title="ertyh"

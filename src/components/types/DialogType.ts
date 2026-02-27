@@ -6,4 +6,5 @@ export interface props {
   children: React.ReactNode
   trigger?: React.ReactNode
   className?: string
+  footer?:React.ReactNode
 }

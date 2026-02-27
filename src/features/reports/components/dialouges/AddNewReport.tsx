@@ -36,6 +36,12 @@ function AddNewReport() {
         // Description=""
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
+
+         footer={
+    <Typography className="text-[14px] text-app-greyText">
+      Maps by Leaflet | © OpenStreetMap contributors
+    </Typography>
+  }
       >
         <div className="flex gap-[15px] justify-between">
           {tabs.map(curr => {
@@ -82,7 +88,7 @@ function AddNewReport() {
             <div className=" flex flex-col  gap-[10px]">
               {data.map(value => {
                 return (
-                  <div className="flex w-full justify-between rounded-[20px] shadow-shadow p-5">
+                  <div key={value.location} className="flex w-full justify-between rounded-[20px] shadow-shadow p-5">
                     <div>
                       <Typography className="font-bold text-[16px] text-app-primary">
                         {value.location}

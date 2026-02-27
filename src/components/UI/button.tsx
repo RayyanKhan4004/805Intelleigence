@@ -12,13 +12,13 @@ const buttonVariants = cva(
       variant: {
         // PRIMARY: matches bg-[var(--color-primary)]
         default:
-          'bg-app-primary text-app-white rounded-xl px-4 py-4 border border-app-primary hover:bg-app-primary/90',
+          'bg-app-primary text-app-white rounded-xl px-4 py-2.5 border border-app-primary hover:bg-app-primary/90',
         // SECONDARY: placeholder for future implementation
         secondary:
-          'bg-secondary text-secondary-foreground rounded-xl px-4 py-4 hover:bg-secondary/80',
+          'bg-secondary text-secondary-foreground rounded-xl px-4 py-2.5 hover:bg-secondary/80',
         // OUTLINE: matches border-[var(--color-primary)]
         outline:
-          'bg-transparent border border-app-primary text-app-primary rounded-xl px-4 py-4 hover:bg-app-primary/10',
+          'bg-transparent border border-app-primary text-app-primary rounded-xl px-4 py-2.5 hover:bg-app-primary/10',
         // ROUNDED: matches rounded-[32px]
         rounded:
           'bg-app-primary text-app-white rounded-[32px] px-4 py-[11px] border border-app-primary hover:bg-app-primary/90',
@@ -33,9 +33,9 @@ const buttonVariants = cva(
         link: 'text-app-primary underline-offset-4 hover:underline',
       },
       size: {
-        default: 'px-4 py-4',
+        default: 'px-4 py-2.5',
         sm: 'px-3 py-2 text-xs',
-        lg: 'px-8 py-4',
+        lg: 'px-8 py-2.5',
         icon: 'h-9 w-9',
       },
     },
@@ -48,21 +48,32 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-  isloading?: boolean;
+  asChild?: boolean
+  isloading?: boolean
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className,isloading=false, variant, size, disabled = false,
-      children, asChild = false, ...props }, ref) => {
+  (
+    {
+      className,
+      isloading = false,
+      variant,
+      size,
+      disabled = false,
+      children,
+      asChild = false,
+      ...props
+    },
+    ref
+  ) => {
     const Comp = asChild ? Slot : 'button'
     return (
-        <Comp
+      <Comp
         ref={ref}
         disabled={disabled || isloading}
         className={cn(
           buttonVariants({ variant, size }),
-          isloading && "opacity-70 cursor-not-allowed",
+          isloading && 'opacity-70 cursor-not-allowed',
           className
         )}
         {...props}

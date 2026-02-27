@@ -15,6 +15,7 @@ import { Icon } from '@/shared/icons/Icon'
 
 function PopTable() {
   return (
+
     <div>
       <Table>
         <TableHeader>
@@ -40,12 +41,12 @@ function PopTable() {
           {popupdata ? (
             popupdata?.map((cur, index) => (
               <TableRow key={index}>
-                <TableCell className="font-bold text-[16px] text-app-primary ">
+                <TableCell className=" text-[16px] text-app-greyText ">
                   {cur.date}
                 </TableCell>
                 <TableCell>
                   {' '}
-                  <Typography className="font-bold text-[16px] text-app-primary">
+                  <Typography className="font-medium text-[16px] text-app-greyText">
                     {cur.name}
                   </Typography>{' '}
                 </TableCell>
@@ -68,7 +69,14 @@ function PopTable() {
           )}
         </TableBody>
       </Table>
+
+    
+
+      
+      
     </div>
+    
+     
   )
 }
 
