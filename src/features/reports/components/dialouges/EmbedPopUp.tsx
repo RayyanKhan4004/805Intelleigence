@@ -83,12 +83,12 @@ function EmbedPopUp() {
             </div>
 
             <div className="flex items-center gap-5 h-full">
-              <div className="flex items-center ">
+              <div className="flex items-center gap-[12px] ">
                 <Checkbox className="border border-app-greyText" />
                 <Label className="text-app-greyText text-[14px]">Title</Label>
               </div>
 
-              <div className="flex items-center ">
+              <div className="flex items-center gap-[12px] ">
                 <Checkbox className="border border-app-greyText" />
                 <Label className="text-app-greyText text-[14px]">Segments</Label>
               </div>
