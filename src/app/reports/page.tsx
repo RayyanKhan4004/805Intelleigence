@@ -16,7 +16,7 @@ function page() {
   // const [isOpen, setIsOpen] = React.useState(true)
   return (
     <>
-      <Layout settings={{ navbar: true,footer:true }}>
+      <Layout settings={{ navbar: true, footer: true }}>
         {/* <Navbar /> */}
         <div>
           <Header />
@@ -26,16 +26,7 @@ function page() {
           {/* <AddNewReport/> */}
           {/* <ViewPopUp/> */}
           {/* <PromotePopUp/> */}
-          <EmbedPopUp/>
-
-
-
-
-
-
-
-
-
+          <EmbedPopUp />
 
           {/* <CustomPopup
         title="ertyh"

@@ -12,6 +12,8 @@ import {
 import { Checkbox } from '@/components/UI/checkbox'
 import { Label } from '@/components/UI/label'
 import CustomAreaChart from '@/components/theme/AreaChart'
+import LeadForm from './EmbedPopUp/tabs/LeadForm'
+import SearchBox from './EmbedPopUp/tabs/SearchBox'
 const tabs: Array<{ label: string; value: 'Image' | 'Lead Form' | 'Search Box'; title: string }> = [
   {
     label: 'Image',
@@ -86,6 +88,11 @@ function EmbedPopUp() {
           </div>
         }
       >
+        {selectedTab.value === 'Lead Form' && <LeadForm />}
+
+        {selectedTab.value === 'Search Box' && <SearchBox />}
+
+        {/* dfghjkl */}
         <div className="flex flex-col gap-[20px] ">
           <div className="flex items-center justify-between gap-[20px] ">
             <Select>
