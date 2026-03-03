@@ -5,8 +5,10 @@ import Layout from '@/components/theme/Layout'
 import Analytics from '@/features/reports/components/Analytics'
 import AddNewReport from '@/features/reports/components/dialouges/AddNewReport'
 import EmbedPopUp from '@/features/reports/components/dialouges/EmbedPopUp'
+import MarketViewStatePopUp from '@/features/reports/components/dialouges/MarketViewStatePopUp'
 import PromotePopUp from '@/features/reports/components/dialouges/PromotePopUp'
 import ViewPopUp from '@/features/reports/components/dialouges/ViewPopUp'
+import Setting from '@/features/reports/components/dropdowns/Setting'
 import Header from '@/features/reports/components/header'
 import Stats from '@/features/reports/components/Stats'
 // import React from 'react'
@@ -23,10 +25,19 @@ function page() {
           <Stats />
           <Analytics />
 
+          {/* :::::::::::::::Pop Up::::::::::::::::::::: */}
           {/* <AddNewReport/> */}
           {/* <ViewPopUp/> */}
           {/* <PromotePopUp/> */}
-          <EmbedPopUp />
+          {/* <EmbedPopUp /> */}
+          {/* <MarketViewStatePopUp/> */}
+          {/* ::::::::::::::::::::::::::::::::::::::::: */}
+
+           {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
+           <Setting/>
+           {/* ::::::::::::::::::::::::::::::::::::::::: */}
+
+
 
           {/* <CustomPopup
         title="ertyh"

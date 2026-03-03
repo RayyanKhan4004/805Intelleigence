@@ -25,5 +25,8 @@ export { default as share } from './svg/share.svg'
 export { default as ArrowUp} from './svg/ArrowUp.svg'
 export { default as WhiteSearchIcon} from './svg/WhiteSearchIcon.svg'
 export { default as Cross} from './svg/Cross.svg'
+export { default as Pencil} from './svg/Pencil.svg'
+export { default as Logout} from './svg/Logout.svg'
+export { default as Workflow} from './svg/Workflow.svg'
 
 
