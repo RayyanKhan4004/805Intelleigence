@@ -1,5 +1,5 @@
 import Typography from '@/components/theme/Typography'
-import ReportCharts from './reportCharts'
+import ReportCharts from './ReportCharts'
 import { Icon } from '@/shared/icons/Icon'
 
 const data = [
@@ -27,9 +27,11 @@ function ChartContainer({ title }: { title: string }) {
       }}
     >
       {' '}
-      <div className='flex flex-col gap-[16px]' >
+      <div className="flex flex-col gap-[16px]">
         <div>
-          <Typography className='font-semibold text-[30px] text-app-primary' variant="PageHeading">{title}</Typography>
+          <Typography className="font-semibold text-[30px] text-app-primary" variant="PageHeading">
+            {title}
+          </Typography>
         </div>
         <div className="flex gap-[40px] justify-between ">
           {data.map(item => {
@@ -38,22 +40,21 @@ function ChartContainer({ title }: { title: string }) {
         </div>
       </div>
       <ReportCharts style={{ width: '100%', height: '205px' }} />
-      <div className='flex items-center'>
-      <div className="border-t-2 border-primary w-full flex items-center gap-[8px]  pt-[12px]">
-        <Typography variant="h4" className="text-app-primary font-medium text-[20px]">
-          Houses
-        </Typography>
-        <div>
-          <PercentBadge value="3.2%" />
+      <div className="flex items-center">
+        <div className="border-t-2 border-primary w-full flex items-center gap-[8px]  pt-[12px]">
+          <Typography variant="h4" className="text-app-primary font-medium text-[20px]">
+            Houses
+          </Typography>
+          <div>
+            <PercentBadge value="3.2%" />
+          </div>
+        </div>
+
+        <div className="flex gap-[16px]">
+          <Icon name={'ChartLine'} width={26} height={22} />
+          <Icon name={'share'} width={24} height={24} />
         </div>
       </div>
-
-     <div className='flex gap-[16px]'>
-       <Icon className='' name={'ChartLine'} width={26} height={22} />
-        <Icon name={'share'} width={24} height={24} />
-     </div>
-      </div>
-
     </div>
   )
 }
@@ -77,8 +78,11 @@ function PercentBadge({ value }: { value: string }) {
   const bg = isPositive ? 'bg-[rgb(var(--color-green)/0.1)]' : 'bg-[rgb(var(--color-red)/0.1)]'
   const text = isPositive ? 'text-[rgb(var(--color-green)/1)]' : 'text-[rgb(var(--color-red)/1)]'
   return (
-    <Typography variant="TableText" className={`px-3 py-1 rounded-[32px] font-medium text[16px] flex items-center ${bg} ${text}`}>
-     <Icon name={'ArrowUp'} width={12} height={14} />
+    <Typography
+      variant="TableText"
+      className={`px-3 py-1 rounded-[32px] font-medium text[16px] flex items-center ${bg} ${text}`}
+    >
+      <Icon name={'ArrowUp'} width={12} height={14} />
       {value}
     </Typography>
   )

@@ -40,19 +40,8 @@ function EmbedPopUp() {
       <CustomPopup
         title={
           <div className="flex justify-between items-center font-semibold text-[25px] text-app-primary text-nowrap">
-            {/* Los Angeles County, CA */}
             {selectedTab.title}
-            {/* <div className="flex gap-[15px]">
-              <Button  className="font-medium text-[20px] text-white" variant="rounded">
-                Image
-              </Button>
-              <Button className="font-medium text-[20px] text-app-primary" variant="roundedOutline">
-                Lead Form
-              </Button>
-              <Button className="font-medium text-[20px] text-app-primary" variant="roundedOutline">
-                Search Box
-              </Button>
-            </div> */}
+
             <div className="flex gap-[15px] ">
               {tabs.map(curr => {
                 return (

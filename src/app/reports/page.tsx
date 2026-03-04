@@ -1,45 +1,41 @@
 'use client'
 import Layout from '@/components/theme/Layout'
-// import Footer from '@/features/Footer/components/Footer'
-// import Navbar from '@/features/navBar/components/Navbar'
-import Analytics from '@/features/reports/components/Analytics'
-import AddNewReport from '@/features/reports/components/dialouges/AddNewReport'
-import EmbedPopUp from '@/features/reports/components/dialouges/EmbedPopUp'
-import MarketViewStatePopUp from '@/features/reports/components/dialouges/MarketViewStatePopUp'
-import PromotePopUp from '@/features/reports/components/dialouges/PromotePopUp'
-import ViewPopUp from '@/features/reports/components/dialouges/ViewPopUp'
+import {
+  Analytics,
+  AddNewReport,
+  EmbedPopUp,
+  MarketViewStatePopUp,
+  PromotePopUp,
+  ViewPopUp,
+  Header,
+  Stats,
+} from '@/features/reports'
 import Setting from '@/features/reports/components/dropdowns/Setting'
-import Header from '@/features/reports/components/header'
-import Stats from '@/features/reports/components/Stats'
 // import React from 'react'
 // import CustomPopup from '@/components/theme/CustomPopUp'
 
 function page() {
-  // const [isOpen, setIsOpen] = React.useState(true)
   return (
-    <>
-      <Layout settings={{ navbar: true, footer: true }}>
-        {/* <Navbar /> */}
-        <div>
-          <Header />
-          <Stats />
-          <Analytics />
+    <Layout settings={{ navbar: true, footer: true }}>
+      {/* <Navbar /> */}
+      <div>
+        <Header />
+        <Stats />
+        <Analytics />
 
-          {/* :::::::::::::::Pop Up::::::::::::::::::::: */}
-          {/* <AddNewReport/> */}
-          {/* <ViewPopUp/> */}
-          {/* <PromotePopUp/> */}
-          {/* <EmbedPopUp /> */}
-          <MarketViewStatePopUp/>
-          {/* ::::::::::::::::::::::::::::::::::::::::: */}
+        {/* :::::::::::::::Pop Up::::::::::::::::::::: */}
+        {/* <AddNewReport/> */}
+        {/* <ViewPopUp/> */}
+        {/* <PromotePopUp/> */}
+        {/* <EmbedPopUp /> */}
+        <MarketViewStatePopUp />
+        {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
-           {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
-           {/* <Setting/> */}
-           {/* ::::::::::::::::::::::::::::::::::::::::: */}
+        {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
+        {/* <Setting/> */}
+        {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
-
-
-          {/* <CustomPopup
+        {/* <CustomPopup
         title="ertyh"
         Description="ertyh"
         isOpen={isOpen}
@@ -47,10 +43,9 @@ function page() {
       >
       </CustomPopup> */}
 
-          {/* <div className="h-4" onClick={() => setIsOpen(true)}>hjhbnknkn</div> */}
-        </div>
-      </Layout>
-    </>
+        {/* <div className="h-4" onClick={() => setIsOpen(true)}>hjhbnknkn</div> */}
+      </div>
+    </Layout>
   )
 }
 

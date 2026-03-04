@@ -1,11 +1,10 @@
 'use client'
 import { Button } from '@/components/UI/button'
 import React from 'react'
-import { br, reportsData } from '../Data'
 
 import ChartGrid from './ChartGrid'
 import { Icon } from '@/shared/icons/Icon'
-import ReportTable from './reportTable'
+import ReportTable from './ReportTable'
 import { sampleTableData } from '../Data'
 function Analytics() {
   const [type, setType] = React.useState<'table' | 'chart'>('chart')
@@ -55,11 +54,7 @@ function Analytics() {
           </Button>
         </div>
       </div>
-      {type === 'table' ? (
-        <ReportTable tableData={sampleTableData} />
-      ) : (
-        <ChartGrid />
-      )}
+      {type === 'table' ? <ReportTable tableData={sampleTableData} /> : <ChartGrid />}
     </div>
   )
 }

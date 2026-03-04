@@ -31,14 +31,12 @@ export function ReportsTable({ data, title }: ReportsTableProps) {
           {data.map(row => (
             <TableRow key={row.id} className="hover:bg-muted/40">
               {title.map(key => (
-          <TableCell key={String(key)}>{String(row[key] || '-----------------')}</TableCell>
+                <TableCell key={String(key)}>{String(row[key] || '-----------------')}</TableCell>
               ))}
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </div>
-
   )
-
 }

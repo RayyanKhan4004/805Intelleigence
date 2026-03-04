@@ -2,7 +2,7 @@ import CustomPopup from '@/components/theme/CustomPopUp'
 
 import React from 'react'
 import Analytics from '../Analytics'
-import PopTable from '../PopTable'
+import PopTable from '../PopUpTable'
 import { Button } from '@/components/UI/button'
 
 export function ViewPopUp() {

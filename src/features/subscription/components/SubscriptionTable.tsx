@@ -1,9 +1,7 @@
 'use client'
-import React from 'react'
-import { PricingTableHead as TableHead, PricingTableFeature as feature } from '../Data'
-import Image from 'next/image'
 
-import Link from 'next/link'
+import { PricingTableHead as TableHead, PricingTableFeature as feature } from '../Data'
+
 import { Icon } from '@/shared/icons/Icon'
 
 function TableComponent() {

@@ -6,6 +6,44 @@ export const PricingTableHead: string[] = ['Features', 'BASIC', 'PREMIUM', 'PRO'
 //   { employeess: '250-1000', basic: 'Free', premium: '$80' },
 //   { employeess: '>1000', basic: 'Free', premium: '$160' },
 // ]
+export const listCardData = [
+  {
+    title: 'Basic',
+    subtitle: 'Generate a free report',
+    price: '$0',
+    li: ['1 zip/city report', '1 county report', 'Easy-to-share market summaries', 'empty'],
+    button: 'Get Started',
+  },
+  {
+    title: 'Premium',
+    subtitle: 'Automated market insights',
+    price: '$24',
+    li: [
+      '10 zip/city reports',
+      '1 user',
+      'Custom-branded reports',
+      'Automated marketing suite',
+      '1,000 contacts',
+      'Live training',
+      'Cancel at any time',
+    ],
+    button: 'Get Started',
+  },
+  {
+    title: 'Pro',
+    subtitle: 'Dominate your entire state',
+    price: '$24',
+    li: [
+      'Everything in professional',
+      'Every report in 1 state',
+      '3 users with shared branding',
+      '5,000 contacts',
+      'Advanced analytics platform',
+      'Cancel at any time',
+    ],
+    button: 'Get Started',
+  },
+]
 export const PricingTableFeature = [
   {
     desp: 'No of users',
@@ -77,7 +115,7 @@ export const PricingTableFeature = [
     desp: 'CRM integrations',
     basic: '10 per month',
     premium: 'Unlimited',
-      pro: true,
+    pro: true,
   },
   {
     desp: 'Website integrations',

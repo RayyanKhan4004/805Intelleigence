@@ -1,8 +1,6 @@
 'use client'
 import Layout from '@/components/theme/Layout'
-import HeroComponent from '@/features/subscription/components/HeroComponent'
-import ListCard from '@/features/subscription/components/ListCard'
-import TableComponent from '@/features/subscription/components/SubscriptionTable'
+import { HeroComponent, ListCard, SubscriptionTable } from '@/features/subscription'
 function subscriptionpage() {
   return (
     <Layout
@@ -12,7 +10,7 @@ function subscriptionpage() {
       <div className=" max-sm:p-[15px] max:md:p-[32px] mt-[33px]">
         <ListCard />
       </div>
-      <TableComponent />
+      <SubscriptionTable />
     </Layout>
   )
 }

@@ -66,57 +66,57 @@ const reportsData = [
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '4',
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '5',
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '6',
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '7',
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '8',
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '9',
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '10',
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '11',
     location: 'Los Angeles County, CA',
     views: 1,
   },
-   {
+  {
     id: '12',
     location: 'Los Angeles County, CA',
     views: 1,
   },
 ]
-export const sampleTableData= [
-  { location: "New York", views: 1200, performance: "High" },
-  { location: "Los Angeles", views: 950, performance: "Medium" },
-  { location: "Chicago", views: 800, performance: "Low" },
-  { location: "Houston", views: 650 }, 
-  { location: "Phoenix", views: "500+", performance: "Medium" },
-];
-export { data,  br, reportsData }
+export const sampleTableData = [
+  { location: 'New York', views: 1200, performance: 'High' },
+  { location: 'Los Angeles', views: 950, performance: 'Medium' },
+  { location: 'Chicago', views: 800, performance: 'Low' },
+  { location: 'Houston', views: 650 },
+  { location: 'Phoenix', views: '500+', performance: 'Medium' },
+]
+export { data, br, reportsData }

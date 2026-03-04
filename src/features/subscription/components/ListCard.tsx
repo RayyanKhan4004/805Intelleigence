@@ -1,50 +1,11 @@
 import Typography from '@/components/theme/Typography'
 import { Button } from '@/components/UI/button'
-import React from 'react'
-
-const data = [
-  {
-    title: 'Basic',
-    subtitle: 'Generate a free report',
-    price: '$0',
-    li: ['1 zip/city report', '1 county report', 'Easy-to-share market summaries', 'empty'],
-    button: 'Get Started',
-  },
-  {
-    title: 'Premium',
-    subtitle: 'Automated market insights',
-    price: '$24',
-    li: [
-      '10 zip/city reports',
-      '1 user',
-      'Custom-branded reports',
-      'Automated marketing suite',
-      '1,000 contacts',
-      'Live training',
-      'Cancel at any time',
-    ],
-    button: 'Get Started',
-  },
-  {
-    title: 'Pro',
-    subtitle: 'Dominate your entire state',
-    price: '$24',
-    li: [
-      'Everything in professional',
-      'Every report in 1 state',
-      '3 users with shared branding',
-      '5,000 contacts',
-      'Advanced analytics platform',
-      'Cancel at any time',
-    ],
-    button: 'Get Started',
-  },
-]
+import { listCardData } from '../Data'
 
 function ListCard() {
   return (
     <div className="flex gap-[20px] justify-center flex-nowrap items-center max-sm:flex-col  max-xl:flex-wrap   ">
-      {data.map(item => {
+      {listCardData.map(item => {
         return (
           <div className="flex  gap-4 flex-col justify-between border border-app-stroke rounded-[32px] p-[40px] bg-gradient-to-br from-[#EAECEE] to-[#FFFFFF] !h-[603px] ">
             <div className="w-full max-w-[451px]">
