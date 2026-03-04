@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Button } from '@/components/UI/button'
 import {
   DropdownMenu,
@@ -9,34 +7,26 @@ import {
 } from '@/components/UI/dropdown-menu'
 import { Icon } from '@/shared/icons/Icon'
 import { IconProps } from '@/shared/icons/types'
-function Setting() {
+import React from 'react'
+
+function ShowWeeklyChanges() {
   const menuItems: { label: string; icon: IconProps['name']; onClick: () => void }[] = [
     {
-      label: 'Settings',
-      icon: 'Setting',
-      onClick: () => console.log('Settings clicked'),
+      label: 'Show Weekly Changes',
+      icon: 'CircleDot',
+      onClick: () => console.log('Show Weekly Changes clicked'),
     },
     {
-      label: 'Customize Reports',
-      icon: 'Pencil',
-      onClick: () => console.log('Customize Reports clicked'),
-    },
-    {
-      label: 'Integration',
-      icon: 'Workflow',
-      onClick: () => console.log('Integration clicked'),
-    },
-    {
-      label: 'Logout',
-      icon: 'Logout',
-      onClick: () => console.log('Logout clicked'),
+      label: 'Select Market View Status',
+      icon: 'Lines',
+      onClick: () => console.log('Select Market View Status clicked'),
     },
   ]
   return (
     <div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline">Settings</Button>
+          <Button variant="outline">Show Weekly Changes</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           {menuItems.map((item, index) => (
@@ -50,4 +40,4 @@ function Setting() {
   )
 }
 
-export default Setting
+export default ShowWeeklyChanges

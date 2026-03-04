@@ -10,7 +10,13 @@ import {
   Header,
   Stats,
 } from '@/features/reports'
+import AbbyGarcia from '@/features/reports/components/dropdowns/AbbyGarcia'
+import Carpinteria from '@/features/reports/components/dropdowns/Carpinteria'
+import Promote from '@/features/reports/components/dropdowns/Promote'
+import SantaBarbara from '@/features/reports/components/dropdowns/SantaBarbara'
 import Setting from '@/features/reports/components/dropdowns/Setting'
+import ShowWeeklyChanges from '@/features/reports/components/dropdowns/ShowWeeklyChanges'
+import SortBy from '@/features/reports/components/dropdowns/SortBy'
 // import React from 'react'
 // import CustomPopup from '@/components/theme/CustomPopUp'
 
@@ -28,11 +34,18 @@ function page() {
         {/* <ViewPopUp/> */}
         {/* <PromotePopUp/> */}
         {/* <EmbedPopUp /> */}
-        <MarketViewStatePopUp />
+        {/* <MarketViewStatePopUp /> */}
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
         {/* <Setting/> */}
+        {/* <SantaBarbara /> */}
+        {/* <Carpinteria/> */}
+        {/* <SortBy/> */}
+        {/* <AbbyGarcia/> */}
+        <Promote />
+        {/* <ShowWeeklyChanges/> */}
+
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* <CustomPopup
