@@ -43,13 +43,11 @@ function MarketViewStatePopUp() {
                   </Button>
                 )
               })}
-            </div>
-            <div >
-              <Select >
-                <SelectTrigger className="w-full h-[60px]">
+              <Select>
+                <SelectTrigger className="w-full h-[60px] rounded-[32px] border-app-primary border-[1.5px]  data-[placeholder]:text-app-primary data-[placeholder]:font-medium data-[placeholder]:text-[20px]">
                   <SelectValue
                     placeholder="Houses"
-                    className="font-medium text-[20px] text-app-primary"
+                    className="font-medium text-[20px] text-app-primary !text-app-primary"
                   />
                 </SelectTrigger>
               </Select>
@@ -60,10 +58,9 @@ function MarketViewStatePopUp() {
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         hideClose={true}
-         
       >
-        <div className='flex flex-col gap-[30px]'>
-          <div className='flex flex-col gap-[15px]'>
+        <div className="flex flex-col gap-[30px]">
+          <div className="flex flex-col gap-[15px]">
             <div className="text-[20px] text-app-primary">Select Charts</div>
             <div>
               <Select>
@@ -74,21 +71,18 @@ function MarketViewStatePopUp() {
             </div>
           </div>
 
-
           <CustomBadge />
-
-
 
           <div className=" rounded-[20px] shadow-shadow p-5">
             <div className="font-medium text-[20px] text-app-primary mb-[11px]">Preview</div>
             <ChartContainer title={'ORANGE COUNTY, CA'} />
           </div>
-            <div className="flex justify-end gap-[10px] mt-[30px]">
-                      <Button className="text-[16px] font-medium text-app-primary" variant="outline">
-                        Cancel
-                      </Button>
-                      <Button>Save </Button>
-                    </div>
+          <div className="flex justify-end gap-[10px] mt-[30px]">
+            <Button className="text-[16px] font-medium text-app-primary" variant="outline">
+              Cancel
+            </Button>
+            <Button>Save </Button>
+          </div>
         </div>
       </CustomPopup>
     </div>
