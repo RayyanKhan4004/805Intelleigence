@@ -33,7 +33,7 @@ function ChartContainer({ title }: { title: string }) {
             {title}
           </Typography>
         </div>
-        <div className="flex gap-[40px] justify-between ">
+        <div className="flex gap-[40px] justify-between max-sm:flex-col ">
           {data.map(item => {
             return priceContainer({ title: item.title, price: item.price })
           })}
@@ -61,7 +61,7 @@ function ChartContainer({ title }: { title: string }) {
 
 function priceContainer({ title, price }: { title: string; price: string }) {
   return (
-    <div className="px-[15px] pt-4 pb-6 rounded-[8px] bg-primary/5 w-[195px] h-[94px] justify-center flex flex-col text-center ">
+    <div className="px-[15px] pt-4 pb-6 rounded-[8px] bg-primary/5 w-[195px] h-[94px] justify-center flex flex-col text-center max-sm:w-full">
       <Typography variant="h4" className="font-semibold text-[20px] text-app-primary">
         {title}
       </Typography>

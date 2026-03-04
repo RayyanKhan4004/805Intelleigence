@@ -43,7 +43,7 @@ function page() {
         {/* <Carpinteria/> */}
         {/* <SortBy/> */}
         {/* <AbbyGarcia/> */}
-        <Promote />
+        {/* <Promote /> */}
         {/* <ShowWeeklyChanges/> */}
 
         {/* ::::::::::::::::::::::::::::::::::::::::: */}

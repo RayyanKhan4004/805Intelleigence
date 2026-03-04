@@ -9,7 +9,7 @@ import { sampleTableData } from '../Data'
 function Analytics() {
   const [type, setType] = React.useState<'table' | 'chart'>('chart')
   return (
-    <div className="p-[60px]">
+    <div className="p-[60px]   max-md:px-6 max-sm:px-6 max-lg:px-6">
       <div className="flex justify-between rounded-[80px]  mb-[30px] bg-app-surface items-center px-[19px] py-[20px] overflow-x-auto">
         <div className="flex gap-2.5">
           <Button
