@@ -47,7 +47,7 @@ function MarketViewStatePopUp() {
                 <SelectTrigger className="w-full h-[60px] rounded-[32px] border-app-primary border-[1.5px]  data-[placeholder]:text-app-primary data-[placeholder]:font-medium data-[placeholder]:text-[20px]">
                   <SelectValue
                     placeholder="Houses"
-                    className="font-medium text-[20px] text-app-primary !text-app-primary"
+                    className="font-medium text-[20px] !text-app-primary"
                   />
                 </SelectTrigger>
               </Select>
