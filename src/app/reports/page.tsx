@@ -30,11 +30,11 @@ function page() {
           {/* <ViewPopUp/> */}
           {/* <PromotePopUp/> */}
           {/* <EmbedPopUp /> */}
-          {/* <MarketViewStatePopUp/> */}
+          <MarketViewStatePopUp/>
           {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
            {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
-           <Setting/>
+           {/* <Setting/> */}
            {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
 

@@ -28,5 +28,6 @@ export { default as Cross} from './svg/Cross.svg'
 export { default as Pencil} from './svg/Pencil.svg'
 export { default as Logout} from './svg/Logout.svg'
 export { default as Workflow} from './svg/Workflow.svg'
+export { default as OrangeX} from './svg/OrangeX.svg'
 
 
