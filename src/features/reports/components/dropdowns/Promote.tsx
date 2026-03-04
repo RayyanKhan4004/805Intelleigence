@@ -9,34 +9,34 @@ import {
 } from '@/components/UI/dropdown-menu'
 import { Icon } from '@/shared/icons/Icon'
 import { IconProps } from '@/shared/icons/types'
-function Setting() {
+function Promote() {
   const menuItems: { label: string; icon: IconProps['name']; onClick: () => void }[] = [
     {
-      label: 'Settings',
-      icon: 'Setting',
-      onClick: () => console.log('Settings clicked'),
+      label: 'Promote',
+      icon: 'Promote',
+      onClick: () => console.log('Promote clicked'),
     },
     {
-      label: 'Customize Reports',
-      icon: 'Pencil',
-      onClick: () => console.log('Customize Reports clicked'),
+      label: 'Embed',
+      icon: 'DownDown',
+      onClick: () => console.log('Embed clicked'),
     },
     {
-      label: 'Integration',
-      icon: 'Workflow',
-      onClick: () => console.log('Integration clicked'),
+      label: 'Views 4',
+      icon: 'Eye',
+      onClick: () => console.log('Views 4 clicked'),
     },
     {
-      label: 'Logout',
-      icon: 'Logout',
-      onClick: () => console.log('Logout clicked'),
+      label: 'Favourite',
+      icon: 'Heart',
+      onClick: () => console.log('Favourite clicked'),
     },
   ]
   return (
     <div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline">Settings</Button>
+          <Button variant="outline">Promote</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           {menuItems.map((item, index) => (
@@ -50,4 +50,4 @@ function Setting() {
   )
 }
 
-export default Setting
+export default Promote
