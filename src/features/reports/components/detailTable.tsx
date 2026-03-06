@@ -64,7 +64,7 @@ export function DetailTable({ tableData }: { tableData?: tableDataProps[] }) {
                 </TableCell>
                 <TableCell className="font-medium text-[16px] text-app-greyText">
                   {' '}
-                  {cur[' # Bed'] }
+                  {cur[' # Bed']}
                 </TableCell>
                 <TableCell className="font-medium text-[16px] text-app-greyText">
                   {' '}
@@ -72,15 +72,15 @@ export function DetailTable({ tableData }: { tableData?: tableDataProps[] }) {
                 </TableCell>
                 <TableCell className="font-medium text-[16px] text-app-greyText">
                   {' '}
-                  {cur['$ Selling'] }
+                  {cur['$ Selling']}
                 </TableCell>
                 <TableCell className="font-medium text-[16px] text-app-greyText">
                   {' '}
-                  {cur['Date Sold'] }
+                  {cur['Date Sold']}
                 </TableCell>
                 <TableCell className="font-medium text-[16px] text-app-greyText">
                   {' '}
-                  {cur.Dom }
+                  {cur.Dom}
                 </TableCell>
               </TableRow>
             ))

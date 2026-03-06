@@ -9,9 +9,6 @@ import CustomAreaChart from '@/components/theme/AreaChart'
 import { sampleData } from '@/features/reports/Data'
 import { DetailTable } from '@/features/reports/components/detailTable'
 
-
-
-
 function page() {
   const [tapswitch, settapswitch] = useState<'Houses' | 'Codos'>('Houses')
   return (
@@ -100,13 +97,22 @@ function page() {
               </div>
               <CustomAreaChart />
             </div>
-             </div>
+          </div>
 
-            <div className='main'>
-             <div className='font-bold text-[25px] text-app-white bg-app-primary text-nowrap text-center rounded-tl-[10px] rounded-tr-[10px] py-[16px] px-[628px]'>2025 Sales</div>
-          <DetailTable tableData={sampleData} />
+          <div className="flex flex-col gap-[40px]">
+            <div>
+              <div className="font-bold text-[25px] text-app-white bg-app-primary text-nowrap text-center rounded-tl-[10px] rounded-tr-[10px] py-[16px] px-[628px]">
+                2025 Sales
+              </div>
+              <DetailTable tableData={sampleData} />
             </div>
-         
+            <div>
+              <div className="font-bold text-[25px] text-app-white bg-app-primary text-nowrap text-center rounded-tl-[10px] rounded-tr-[10px] py-[16px] px-[628px]">
+                2025 Sales
+              </div>
+              <DetailTable tableData={sampleData} />
+            </div>
+          </div>
         </div>
       </Layout>
     </div>
