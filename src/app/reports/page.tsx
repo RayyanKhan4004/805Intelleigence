@@ -11,6 +11,7 @@ import {
   Stats,
 } from '@/features/reports'
 import EmailShareReport from '@/features/reports/components/dialouges/EmailShareReport'
+import SubscribePopUp from '@/features/reports/components/dialouges/SubscribePopUp'
 import AbbyGarcia from '@/features/reports/components/dropdowns/AbbyGarcia'
 import Carpinteria from '@/features/reports/components/dropdowns/Carpinteria'
 import Promote from '@/features/reports/components/dropdowns/Promote'
@@ -22,6 +23,7 @@ import SortBy from '@/features/reports/components/dropdowns/SortBy'
 // import CustomPopup from '@/components/theme/CustomPopUp'
 
 function page() {
+  // const [isOpen, setIsOpen] = React.useState(true)
   return (
     <Layout settings={{ navbar: true, footer: true }}>
       {/* <Navbar /> */}
@@ -36,7 +38,8 @@ function page() {
         {/* <PromotePopUp/> */}
         {/* <EmbedPopUp /> */}
         {/* <MarketViewStatePopUp /> */}
-        <EmailShareReport/>
+        {/* <EmailShareReport/> */}
+        <SubscribePopUp/>
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* :::::::::::::::DropDowns::::::::::::::::::::: */}

@@ -33,3 +33,5 @@ export { default as Promote } from './svg/Promote.svg'
 export { default as CircleDot } from './svg/CircleDot.svg'
 export { default as Lines } from './svg/Lines.svg'
 export { default as Bell } from './svg/Bell.svg'
+export { default as ContinueWithFacebook } from './images/ContinueWithFacebook.png'
+
