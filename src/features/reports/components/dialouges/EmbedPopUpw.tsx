@@ -81,7 +81,6 @@ function EmbedPopUp() {
 
         {selectedTab.value === 'Search Box' && <SearchBox />}
 
-        {/* dfghjkl */}
         <div className="flex flex-col gap-[20px] ">
           <div className="flex items-center justify-between gap-[20px] ">
             <Select>

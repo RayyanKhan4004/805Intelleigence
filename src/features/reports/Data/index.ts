@@ -1,3 +1,5 @@
+import { Bath } from "lucide-react"
+
 const data = [
   { title: '24', sub: 'Active Markets' },
   { title: '$1.2M', sub: 'Avg List Price' },
@@ -119,4 +121,17 @@ export const sampleTableData = [
   { location: 'Houston', views: 650 },
   { location: 'Phoenix', views: '500+', performance: 'Medium' },
 ]
+export const sampleData = [
+  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5' ,'# Bath': '3','$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'32'},
+  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5','# Bath': '3', '$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'28'},
+  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5','# Bath': '3', '$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'35'},
+  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5','# Bath': '3', '$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'42'},
+  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5','# Bath': '3', '$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'38'},
+]
+
+
+
+
+
+
 export { data, br, reportsData }
