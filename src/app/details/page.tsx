@@ -6,8 +6,13 @@ import { Button } from '@/components/UI/button'
 import { Icon } from '@/shared/icons/Icon'
 import { Select, SelectTrigger, SelectValue } from '@/components/UI/select'
 import CustomAreaChart from '@/components/theme/AreaChart'
-import { sampleData } from '@/features/reports/Data'
+import { br, sampleData } from '@/features/reports/Data'
 import { DetailTable } from '@/features/reports/components/detailTable'
+
+import GoogleMap from '@/features/detail/components/GoogleMap'
+import StackedBarChart from '@/components/theme/CustomBarChart'
+
+
 
 function page() {
   const [tapswitch, settapswitch] = useState<'Houses' | 'Codos'>('Houses')
@@ -108,11 +113,25 @@ function page() {
             </div>
             <div>
               <div className="font-bold text-[25px] text-app-white bg-app-primary text-nowrap text-center rounded-tl-[10px] rounded-tr-[10px] py-[16px] px-[628px]">
-                2025 Sales
+                2024 Sales
               </div>
               <DetailTable tableData={sampleData} />
             </div>
           </div>
+         
+ 
+    <div className=" w-full  rounded-[20px] shadow-shadow p-5">
+      <GoogleMap />
+    </div>
+
+    <div className=" w-[453px] h-[362px]  rounded-[18px] shadow-shadow p-5 flex flex-col gap-[18px]">
+        <div>
+      <StackedBarChart data={br} />
+      </div>
+      <div className='font-semibold text-[27px] text-app-primary text-center '>Avg List Price</div>
+    </div>
+ 
+
         </div>
       </Layout>
     </div>

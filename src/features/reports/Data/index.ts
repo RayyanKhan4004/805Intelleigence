@@ -1,4 +1,4 @@
-import { Bath } from "lucide-react"
+import { Bath } from 'lucide-react'
 
 const data = [
   { title: '24', sub: 'Active Markets' },
@@ -7,6 +7,7 @@ const data = [
   { title: '+34%', sub: 'YoY Growth' },
   { title: '38', sub: 'Avg Days on Market' },
 ]
+
 const br = [
   {
     name: 'Page A',
@@ -122,16 +123,51 @@ export const sampleTableData = [
   { location: 'Phoenix', views: '500+', performance: 'Medium' },
 ]
 export const sampleData = [
-  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5' ,'# Bath': '3','$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'32'},
-  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5','# Bath': '3', '$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'28'},
-  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5','# Bath': '3', '$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'35'},
-  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5','# Bath': '3', '$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'42'},
-  { Property: 'Asynchronous Care Visit', 'SQ FT': '1870',' # Bed': '5','# Bath': '3', '$ Selling':'$1,400,000','Date Sold':'01/12/2025',Dom:'38'},
+  {
+    Property: 'Asynchronous Care Visit',
+    'SQ FT': '1870',
+    ' # Bed': '5',
+    '# Bath': '3',
+    '$ Selling': '$1,400,000',
+    'Date Sold': '01/12/2025',
+    Dom: '32',
+  },
+  {
+    Property: 'Asynchronous Care Visit',
+    'SQ FT': '1870',
+    ' # Bed': '5',
+    '# Bath': '3',
+    '$ Selling': '$1,400,000',
+    'Date Sold': '01/12/2025',
+    Dom: '28',
+  },
+  {
+    Property: 'Asynchronous Care Visit',
+    'SQ FT': '1870',
+    ' # Bed': '5',
+    '# Bath': '3',
+    '$ Selling': '$1,400,000',
+    'Date Sold': '01/12/2025',
+    Dom: '35',
+  },
+  {
+    Property: 'Asynchronous Care Visit',
+    'SQ FT': '1870',
+    ' # Bed': '5',
+    '# Bath': '3',
+    '$ Selling': '$1,400,000',
+    'Date Sold': '01/12/2025',
+    Dom: '42',
+  },
+  {
+    Property: 'Asynchronous Care Visit',
+    'SQ FT': '1870',
+    ' # Bed': '5',
+    '# Bath': '3',
+    '$ Selling': '$1,400,000',
+    'Date Sold': '01/12/2025',
+    Dom: '38',
+  },
 ]
-
-
-
-
-
 
 export { data, br, reportsData }
