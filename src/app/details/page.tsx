@@ -125,6 +125,7 @@ function page() {
     </div>
 
     <div className=" w-[453px] h-[362px]  rounded-[18px] shadow-shadow p-5 flex flex-col gap-[18px]">
+        
         <div>
       <StackedBarChart data={br} />
       </div>

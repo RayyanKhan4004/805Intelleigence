@@ -10,6 +10,7 @@ import {
   Header,
   Stats,
 } from '@/features/reports'
+import EmailShareReport from '@/features/reports/components/dialouges/EmailShareReport'
 import AbbyGarcia from '@/features/reports/components/dropdowns/AbbyGarcia'
 import Carpinteria from '@/features/reports/components/dropdowns/Carpinteria'
 import Promote from '@/features/reports/components/dropdowns/Promote'
@@ -35,6 +36,7 @@ function page() {
         {/* <PromotePopUp/> */}
         {/* <EmbedPopUp /> */}
         {/* <MarketViewStatePopUp /> */}
+        <EmailShareReport/>
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
