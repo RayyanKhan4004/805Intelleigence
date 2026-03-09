@@ -169,5 +169,13 @@ export const sampleData = [
     Dom: '38',
   },
 ]
+const cards = [
+  { id: 1, title: "Avg List Price" },
+  { id: 2, title: "Avg List Price" },
+  { id: 3, title: "Avg List Price" },
+  { id: 4, title: "Avg List Price" },
+  { id: 5, title: "Avg List Price" },
+  { id: 6, title: "Avg List Price" },
+]
 
-export { data, br, reportsData }
+export { data, br, reportsData,cards }

@@ -6,27 +6,25 @@ import { Button } from '@/components/UI/button'
 import { Icon } from '@/shared/icons/Icon'
 import { Select, SelectTrigger, SelectValue } from '@/components/UI/select'
 import CustomAreaChart from '@/components/theme/AreaChart'
-import { br, sampleData } from '@/features/reports/Data'
+import { br, cards, sampleData } from '@/features/reports/Data'
 import { DetailTable } from '@/features/reports/components/detailTable'
 
 import GoogleMap from '@/features/detail/components/GoogleMap'
 import StackedBarChart from '@/components/theme/CustomBarChart'
-
-
 
 function page() {
   const [tapSwitch, settapSwitch] = useState<'Houses' | 'Codos'>('Houses')
   return (
     <div>
       <Layout settings={{ navbar: true }}>
-        <div>
+        <div className='p-[60px] max-md:px-6 max-sm:px-6 max-lg:px-6'>
           <div className="font-semibold text-[30px] text-app-primary">
             Market Update with 805Intelleigence
           </div>
           <div className="text-[14px] text-app-blackText ">Presented by Sergio Gonzalez</div>
         </div>
-        <div className="flex justify-between items-center bg-app-stroke rounded-[80px] py-[19px] px-5">
-          <div className='border border-app-primary rounded-[32px] overflow-hidden bg-white'>
+        <div className="flex justify-between items-center bg-app-stroke rounded-[80px] py-[19px] px-5 p-[60px] max-md:px-6 max-sm:px-6 max-lg:px-6">
+          <div className="border border-app-primary rounded-[32px] overflow-hidden bg-white ">
             <button
               onClick={() => settapSwitch('Houses')}
               className={`${tapSwitch === 'Houses' ? 'bg-app-primary text-white rounded-[32px]' : 'bg-white text-primary '} px-[16px] py-[8px] `}
@@ -62,7 +60,7 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-[50px]">
+        <div className="flex flex-col gap-[50px] p-[60px] max-md:px-6 max-sm:px-6 max-lg:px-6">
           <div>
             <div className="font-semibold text-[30px] text-app-primary">Acton, CA </div>
             <div className="font-bold text-[16px] text-app-primary">Mon, Dec 08 2025</div>
@@ -118,21 +116,33 @@ function page() {
               <DetailTable tableData={sampleData} />
             </div>
           </div>
-         
- 
-    <div className=" w-full  rounded-[20px] shadow-shadow p-5">
-      <GoogleMap />
-    </div>
 
-    <div className=" w-[453px] h-[362px]  rounded-[18px] shadow-shadow p-5 flex flex-col gap-[18px]">
-        
+          <div className=" w-full  rounded-[20px] shadow-shadow p-5">
+            <GoogleMap />
+          </div>
+
+          {/* <div className=" w-[453px] h-[362px]  rounded-[18px] shadow-shadow p-5 flex flex-col gap-[18px]">
         <div>
       <StackedBarChart data={br} />
       </div>
       <div className='font-semibold text-[27px] text-app-primary text-center '>Avg List Price</div>
-    </div>
- 
+    </div> */}
+          <div className="grid grid-cols-3 gap-6">
+            {cards.map(card => (
+              <div
+                key={card.id}
+                className="w-[453px] h-[362px] rounded-[18px] shadow-shadow p-5 flex flex-col gap-[18px]"
+              >
+                <div>
+                  <StackedBarChart data={br} />
+                </div>
 
+                <div className="font-semibold text-[27px] text-app-primary text-center">
+                  {card.title}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Layout>
     </div>
