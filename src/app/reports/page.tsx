@@ -14,11 +14,19 @@ import EmailShareReport from '@/features/reports/components/dialouges/EmailShare
 import SubscribePopUp from '@/features/reports/components/dialouges/SubscribePopUp'
 import AbbyGarcia from '@/features/reports/components/dropdowns/AbbyGarcia'
 import Carpinteria from '@/features/reports/components/dropdowns/Carpinteria'
+import Compaign from '@/features/reports/components/dropdowns/Compaign'
+import ContactsDownload from '@/features/reports/components/dropdowns/ContactsDownload'
+import ContactsPage from '@/features/reports/components/dropdowns/ContactsPage'
+import CreatedAnyTime from '@/features/reports/components/dropdowns/CreatedAnyTime'
+import CreatedAnyTimeTwo from '@/features/reports/components/dropdowns/CreatedAnyTimeTwo'
 import Promote from '@/features/reports/components/dropdowns/Promote'
 import SantaBarbara from '@/features/reports/components/dropdowns/SantaBarbara'
 import Setting from '@/features/reports/components/dropdowns/Setting'
 import ShowWeeklyChanges from '@/features/reports/components/dropdowns/ShowWeeklyChanges'
 import SortBy from '@/features/reports/components/dropdowns/SortBy'
+import Type from '@/features/reports/components/dropdowns/Type'
+
+
 // import React from 'react'
 // import CustomPopup from '@/components/theme/CustomPopUp'
 
@@ -39,7 +47,7 @@ function page() {
         {/* <EmbedPopUp /> */}
         {/* <MarketViewStatePopUp /> */}
         {/* <EmailShareReport/> */}
-        <SubscribePopUp/>
+        {/* <SubscribePopUp/> */}
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
@@ -50,6 +58,12 @@ function page() {
         {/* <AbbyGarcia/> */}
         {/* <Promote /> */}
         {/* <ShowWeeklyChanges/> */}
+        {/* <ContactsPage/> */}
+        {/* <Compaign/> */}
+        {/* <CreatedAnyTime/> */}
+        {/* <CreatedAnyTimeTwo/> */}
+        {/* <Type/> */}
+        <ContactsDownload/>
 
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 

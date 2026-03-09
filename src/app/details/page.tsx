@@ -17,7 +17,7 @@ function page() {
   return (
     <div>
       <Layout settings={{ navbar: true }}>
-        <div className='p-[60px] max-md:px-6 max-sm:px-6 max-lg:px-6'>
+        <div className="p-[60px] max-md:px-6 max-sm:px-6 max-lg:px-6">
           <div className="font-semibold text-[30px] text-app-primary">
             Market Update with 805Intelleigence
           </div>
