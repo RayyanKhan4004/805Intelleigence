@@ -34,13 +34,12 @@ interface tableProps {
   views?: string | number
   source: string
   added: string
- 
 }
- export function ContactsTable({ table }:{ table?: tableProps[] }) {
+export function ContactsTable({ table }: { table?: tableProps[] }) {
   return (
-    <div>
+    <div className="p-[60px]   max-md:px-6 max-sm:px-6 max-lg:px-6">
       <Table>
-         <TableHeader>
+        <TableHeader>
           <TableRow className="bg-app-mutedBg border-app-primary border-b">
             <TableHead className="font-bold text-[20px] text-app-primary  h-[60px] w-[295px]">
               Property
@@ -54,79 +53,70 @@ interface tableProps {
             <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">
               Option
             </TableHead>
-             <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">
+            <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">
               Views
             </TableHead>
-             <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">
+            <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">
               Source
             </TableHead>
-             <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">
+            <TableHead className="font-bold text-[20px] text-app-primary h-[60px] w-[295px] ">
               Added
             </TableHead>
           </TableRow>
         </TableHeader>
-         <TableBody>
-  {table?.map((cur) => (
-    <TableRow key={cur.id}>
-      
-      {/* Property */}
-      <TableCell>
-        <div className="flex flex-col">
-          <span className="font-bold text-[16px] text-app-primary">
-            {cur.property}
-          </span>
-          <span className=" font-medium text-[16px] text-app-greyText">
-            {cur.email}
-          </span>
-        </div>
-      </TableCell>
+        <TableBody>
+          {table?.map(cur => (
+            <TableRow key={cur.id}>
+              {/* Property */}
+              <TableCell>
+                <div className="flex flex-col">
+                  <span className="font-bold text-[16px] text-app-primary">{cur.property}</span>
+                  <span className=" font-medium text-[16px] text-app-greyText">{cur.email}</span>
+                </div>
+              </TableCell>
 
-      {/* Reports */}
-      <TableCell>
-         <div className="flex flex-col gap-[10px]">
-            <Icon name="HomePlus" className="!w-[20px] !h-[20px]" />
-        <Typography className="font-medium text-[16px] text-app-greyText text-nowrap">
-          {cur.location}
-        </Typography>
-        </div>
-      </TableCell>
+              {/* Reports */}
+              <TableCell>
+                <div className="flex flex-col gap-[10px]">
+                  <Icon name="HomePlus" className="!w-[20px] !h-[20px]" />
+                  <Typography className="font-medium text-[16px] text-app-greyText text-nowrap">
+                    {cur.location}
+                  </Typography>
+                </div>
+              </TableCell>
 
-      {/* Campaign */}
-      <TableCell>
-        <div className="flex flex-col">
-          <span className="font-bold text-[16px] text-app-primary text-nowrap">
-            {cur.campaign}
-          </span>
-          <span className=" font-medium text-[16px] text-app-greyText">
-            {cur.campaignStatus}
-          </span>
-        </div>
-      </TableCell>
-     
+              {/* Campaign */}
+              <TableCell>
+                <div className="flex flex-col">
+                  <span className="font-bold text-[16px] text-app-primary text-nowrap">
+                    {cur.campaign}
+                  </span>
+                  <span className=" font-medium text-[16px] text-app-greyText">
+                    {cur.campaignStatus}
+                  </span>
+                </div>
+              </TableCell>
 
-      {/* Option */}
-      <TableCell className="font-bold text-[16px] text-app-primary ">
-        {cur.option || "--------"}
-      </TableCell>
+              {/* Option */}
+              <TableCell className="font-bold text-[16px] text-app-primary ">
+                {cur.option || '--------'}
+              </TableCell>
 
-      {/* Views */}
-      <TableCell className="font-bold text-[16px] text-app-primary ">
-        {cur.views || "--------"}
-      </TableCell>
+              {/* Views */}
+              <TableCell className="font-bold text-[16px] text-app-primary ">
+                {cur.views || '--------'}
+              </TableCell>
 
-      {/* Source */}
-      <TableCell className="font-bold text-[16px] text-app-primary ">
-        {cur.source}
-      </TableCell>
+              {/* Source */}
+              <TableCell className="font-bold text-[16px] text-app-primary ">
+                {cur.source}
+              </TableCell>
 
-      {/* Added */}
-      <TableCell className="font-bold text-[16px] text-app-primary ">
-        {cur.added}
-      </TableCell>
-
-    </TableRow>
-  ))}
-</TableBody>
+              {/* Added */}
+              <TableCell className="font-bold text-[16px] text-app-primary ">{cur.added}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
       </Table>
     </div>
   )

@@ -7,11 +7,13 @@ import { Icon } from '@/shared/icons/Icon'
 import Head from '@/features/contacts/components/Head'
 import { ContactsTable } from '@/features/contacts/components/ContactsTable'
 import {table } from '@/features/reports/Data'
+import Static from '@/features/contacts/components/Static'
 function page() {
   return (
     <Layout settings={{ navbar: true }}>
       <div>
        <Head/>
+       <Static/>
        <ContactsTable table={table} />
       </div>
     </Layout>
