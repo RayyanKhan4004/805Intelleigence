@@ -170,12 +170,51 @@ export const sampleData = [
   },
 ]
 const cards = [
-  { id: 1, title: "Avg List Price" },
-  { id: 2, title: "Avg List Price" },
-  { id: 3, title: "Avg List Price" },
-  { id: 4, title: "Avg List Price" },
-  { id: 5, title: "Avg List Price" },
-  { id: 6, title: "Avg List Price" },
+  { id: 1, title: 'Avg List Price' },
+  { id: 2, title: 'Avg List Price' },
+  { id: 3, title: 'Avg List Price' },
+  { id: 4, title: 'Avg List Price' },
+  { id: 5, title: 'Avg List Price' },
+  { id: 6, title: 'Avg List Price' },
 ]
 
-export { data, br, reportsData,cards }
+const table = [
+  {
+    id: 1,
+    property: 'Zaman Ali',
+    email: 'alibinzaman@yahoo.com',
+    location: 'Acton, CA',
+    campaign: 'New Client Default Campaign',
+    campaignStatus: 'never sent',
+    option: 'Option',
+    views: 'View',
+    source: 'Self Sign Up',
+    added: '12/04/2025',
+  },
+  {
+    id: 2,
+    property: 'Zaman Ali',
+    email: 'alibinzaman@yahoo.com',
+    location: 'Oxnard, CA 93030',
+    campaign: 'New Client Default Campaign',
+    campaignStatus: 'never sent',
+    option: 'Option',
+    views: 'View',
+    source: 'Self Sign Up',
+    added: '12/04/2025',
+  },
+  {
+    id: 3,
+    property: 'Zaman Ali',
+    email: 'alibinzaman@yahoo.com',
+    location: 'Ventura County, CA',
+    campaign: 'New Client Default Campaign',
+    campaignStatus: 'never sent',
+    option: 'Option',
+    views: 'View',
+    source: 'Self Sign Up',
+    added: '12/04/2025',
+  },
+]
+
+export { data, br, reportsData, cards, table }

@@ -39,4 +39,6 @@ export { default as Assign } from './svg/Assign.svg'
 export { default as Compaign } from './svg/Compaign.svg'
 export { default as Opt } from './svg/Opt.svg'
 export { default as SendEmail } from './svg/SendEmail.svg'
+export { default as Up } from './svg/Up.svg'
+export { default as HomePlus } from './svg/HomePlus.svg'
 
