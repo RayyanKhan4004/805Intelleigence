@@ -15,7 +15,7 @@ import StackedBarChart from '@/components/theme/CustomBarChart'
 
 
 function page() {
-  const [tapswitch, settapswitch] = useState<'Houses' | 'Codos'>('Houses')
+  const [tapSwitch, settapSwitch] = useState<'Houses' | 'Codos'>('Houses')
   return (
     <div>
       <Layout settings={{ navbar: true }}>
@@ -25,17 +25,17 @@ function page() {
           </div>
           <div className="text-[14px] text-app-blackText ">Presented by Sergio Gonzalez</div>
         </div>
-        <div className="flex justify-between items-center bg-app-stroke rounded-[80px] ">
-          <div>
+        <div className="flex justify-between items-center bg-app-stroke rounded-[80px] py-[19px] px-5">
+          <div className='border border-app-primary rounded-[32px] overflow-hidden bg-white'>
             <button
-              onClick={() => settapswitch('Houses')}
-              className={`${tapswitch === 'Houses' ? 'bg-app-primary text-white rounded-[32px]' : 'bg-white text-primary '}px-[16px] py-[8px] `}
+              onClick={() => settapSwitch('Houses')}
+              className={`${tapSwitch === 'Houses' ? 'bg-app-primary text-white rounded-[32px]' : 'bg-white text-primary '} px-[16px] py-[8px] `}
             >
               Houses
             </button>
             <button
-              onClick={() => settapswitch('Codos')}
-              className={`${tapswitch === 'Codos' ? 'bg-app-primary text-white rounded-[32px]' : 'bg-white text-primary'} px-[16px] py-[8px] `}
+              onClick={() => settapSwitch('Codos')}
+              className={`${tapSwitch === 'Codos' ? 'bg-app-primary text-white rounded-[32px]' : 'bg-white text-primary'} px-[16px] py-[8px] `}
             >
               Codos
             </button>
