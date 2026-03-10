@@ -217,4 +217,80 @@ const table = [
   },
 ]
 
-export { data, br, reportsData, cards, table }
+const SData = [
+  {
+    id: 1,
+    name: "Previous Buyer Client Campaign",
+    campaignId: 234657,
+    sends: "------",
+    clicks: "------",
+    status: "Paused",
+    contacts: "No contacts",
+  },
+  {
+    id: 2,
+    name: "Buyer's Campaign",
+    campaignId: 234657,
+    sends: "------",
+    clicks: "------",
+    status: "Paused",
+    contacts: "No contacts",
+  },
+  {
+    id: 3,
+    name: "Previous Buyer Client Campaign",
+    campaignId: 234657,
+    sends: "------",
+    clicks: "------",
+    status: "Paused",
+    contacts: "No contacts",
+  },
+  {
+    id: 4,
+    name: "Seller's Campaign",
+    campaignId: 234657,
+    sends: "------",
+    clicks: "------",
+    status: "Paused",
+    contacts: "Contacts: 1",
+  },
+  {
+    id: 5,
+    name: "Buyer's Campaign",
+    campaignId: 234657,
+    sends: "------",
+    clicks: "------",
+    status: "Paused",
+    contacts: "No contacts",
+  },
+  {
+    id: 6,
+    name: "Seller's Campaign",
+    campaignId: 234657,
+    sends: "------",
+    clicks: "------",
+    status: "Paused",
+    contacts: "No contacts",
+  },
+  {
+    id: 7,
+    name: "Seller's Campaign",
+    campaignId: 234657,
+    sends: "------",
+    clicks: "------",
+    status: "Paused",
+    contacts: "No contacts",
+  },
+  {
+    id: 8,
+    name: "Seller's Campaign",
+    campaignId: 234657,
+    sends: "------",
+    clicks: "------",
+    status: "Paused",
+    contacts: "No contacts",
+  },
+]
+
+
+export { data, br, reportsData, cards, table ,SData}

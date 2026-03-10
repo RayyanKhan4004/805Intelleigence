@@ -54,7 +54,7 @@ function page() {
         {/* <UploadContactsPopUp/> */}
         {/* <CreateNewContactPopUp/> */}
         {/* <CreateCompaignPopUp/> */}
-        <PreViewEmailPopUp />
+        {/* <PreViewEmailPopUp /> */}
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
