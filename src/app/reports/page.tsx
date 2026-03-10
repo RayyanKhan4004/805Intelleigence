@@ -10,8 +10,10 @@ import {
   Header,
   Stats,
 } from '@/features/reports'
+import CreateNewContactPopUp from '@/features/reports/components/dialouges/CreateNewContactPopUp'
 import EmailShareReport from '@/features/reports/components/dialouges/EmailShareReport'
 import SubscribePopUp from '@/features/reports/components/dialouges/SubscribePopUp'
+import UploadContactsPopUp from '@/features/reports/components/dialouges/UploadContactsPopUp'
 import AbbyGarcia from '@/features/reports/components/dropdowns/AbbyGarcia'
 import Carpinteria from '@/features/reports/components/dropdowns/Carpinteria'
 import Compaign from '@/features/reports/components/dropdowns/Compaign'
@@ -48,6 +50,8 @@ function page() {
         {/* <MarketViewStatePopUp /> */}
         {/* <EmailShareReport/> */}
         {/* <SubscribePopUp/> */}
+        {/* <UploadContactsPopUp/> */}
+        <CreateNewContactPopUp/>
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* :::::::::::::::DropDowns::::::::::::::::::::: */}

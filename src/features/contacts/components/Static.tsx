@@ -12,7 +12,7 @@ function Static() {
             </SelectTrigger>
           </Select>
         </div>
-        <div className='flex gap-[7px]'>
+        <div className="flex gap-[7px]">
           <div>
             <Select>
               <SelectTrigger className="w-full h-[60px]">
