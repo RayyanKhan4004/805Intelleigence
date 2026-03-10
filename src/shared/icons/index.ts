@@ -41,4 +41,6 @@ export { default as Opt } from './svg/Opt.svg'
 export { default as SendEmail } from './svg/SendEmail.svg'
 export { default as Up } from './svg/Up.svg'
 export { default as HomePlus } from './svg/HomePlus.svg'
-
+export { default as Toolbar } from './images/Toolbar.png'
+export { default as BigToolbar } from './images/BigToolbar.png'
+export { default as Rectangle } from './images/Rectangle.png'

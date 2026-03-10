@@ -10,8 +10,10 @@ import {
   Header,
   Stats,
 } from '@/features/reports'
+import CreateCompaignPopUp from '@/features/reports/components/dialouges/CreateCompaignPopUp'
 import CreateNewContactPopUp from '@/features/reports/components/dialouges/CreateNewContactPopUp'
 import EmailShareReport from '@/features/reports/components/dialouges/EmailShareReport'
+import PreViewEmailPopUp from '@/features/reports/components/dialouges/PreViewEmailPopUp'
 import SubscribePopUp from '@/features/reports/components/dialouges/SubscribePopUp'
 import UploadContactsPopUp from '@/features/reports/components/dialouges/UploadContactsPopUp'
 import AbbyGarcia from '@/features/reports/components/dropdowns/AbbyGarcia'
@@ -27,7 +29,6 @@ import Setting from '@/features/reports/components/dropdowns/Setting'
 import ShowWeeklyChanges from '@/features/reports/components/dropdowns/ShowWeeklyChanges'
 import SortBy from '@/features/reports/components/dropdowns/SortBy'
 import Type from '@/features/reports/components/dropdowns/Type'
-
 
 // import React from 'react'
 // import CustomPopup from '@/components/theme/CustomPopUp'
@@ -51,7 +52,9 @@ function page() {
         {/* <EmailShareReport/> */}
         {/* <SubscribePopUp/> */}
         {/* <UploadContactsPopUp/> */}
-        <CreateNewContactPopUp/>
+        {/* <CreateNewContactPopUp/> */}
+        {/* <CreateCompaignPopUp/> */}
+        <PreViewEmailPopUp />
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
