@@ -5,7 +5,6 @@ import { Label } from '@/components/UI/label'
 import Header from '@/features/settingsp/components/Header'
 import { PersonImage } from '@/shared/icons'
 import Image from 'next/image'
-import React from 'react'
 
 function page() {
   return (
@@ -15,7 +14,7 @@ function page() {
         <div className=" flex flex-col rounded-[20px] shadow-shadow p-5 px-[30px]">
           <div className="font-semibold text-[25px] text-app-primary">Edit profile</div>
           <div className="border-b border-app-stroke  pb-[30px]"></div>
-          <div className='mt-[30px]'>
+          <div className="mt-[30px]">
             <Image src={PersonImage} alt="PersonImage" />
           </div>
           <div className="flex flex-col gap-[20px] mt-[30px]">
