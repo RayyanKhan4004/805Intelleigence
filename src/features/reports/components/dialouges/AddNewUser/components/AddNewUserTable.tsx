@@ -57,7 +57,7 @@ function AddNewUserTable() {
             <tr key={ind} className="text-center border-b border-app-stroke">
               <td
                 style={{ verticalAlign: 'middle' }}
-                className="w-[450px] px-[24px] text-[20px] font-medium pr-[16px] lg:pr-[27px] py-[16px] lg:py-[18px] leading-6 text-app-primary text-nowrap "
+                className="w-[450px] px-[24px] text-[18px] font-semibold pr-[20px] lg:pr-[27px] py-[16px] lg:py-[18px] leading-6 text-app-primary text-nowrap "
               >
                 {curr.account}
               </td>
