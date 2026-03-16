@@ -10,6 +10,7 @@ import {
   Header,
   Stats,
 } from '@/features/reports'
+import AddNewUserPopUp from '@/features/reports/components/dialouges/AddNewUserPopUp'
 import CreateCompaignPopUp from '@/features/reports/components/dialouges/CreateCompaignPopUp'
 import CreateNewContactPopUp from '@/features/reports/components/dialouges/CreateNewContactPopUp'
 import EmailShareReport from '@/features/reports/components/dialouges/EmailShareReport'
@@ -55,6 +56,7 @@ function page() {
         {/* <CreateNewContactPopUp/> */}
         {/* <CreateCompaignPopUp/> */}
         {/* <PreViewEmailPopUp /> */}
+        <AddNewUserPopUp/>
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
         {/* :::::::::::::::DropDowns::::::::::::::::::::: */}
