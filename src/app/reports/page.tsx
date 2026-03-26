@@ -45,7 +45,7 @@ function page() {
         <Analytics />
 
         {/* :::::::::::::::Pop Up::::::::::::::::::::: */}
-        {/* <AddNewReport/> */}
+        <AddNewReport/>
         {/* <ViewPopUp/> */}
         {/* <PromotePopUp/> */}
         {/* <EmbedPopUp /> */}
@@ -55,7 +55,7 @@ function page() {
         {/* <UploadContactsPopUp/> */}
         {/* <CreateNewContactPopUp/> */}
         {/* <CreateCompaignPopUp/> */}
-        <PreViewEmailPopUp />
+        {/* <PreViewEmailPopUp /> */}
         {/* <AddNewUserPopUp/> */}
         {/* ::::::::::::::::::::::::::::::::::::::::: */}
 
