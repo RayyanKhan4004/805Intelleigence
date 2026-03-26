@@ -19,7 +19,7 @@ function AddNewUserPopUp() {
         <div className="flex flex-col gap-[20px]">
           <div className="flex items-center gap-[10px] justify-between">
             <div className="w-full flex flex-col gap-[15px]">
-               <div className="text-[20px] text-app-primary">First Name</div>
+              <div className="text-[20px] text-app-primary">First Name</div>
               <Input
                 className="h-[60px]"
                 id="firstName"
