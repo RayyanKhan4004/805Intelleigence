@@ -48,9 +48,11 @@ function Analytics() {
           </Button>
           <Button
             variant="roundedOutline"
+            onClick={() => setType(pre => (pre == 'chart' ? 'table' : 'chart'))}
             className="  h-[56px] border border-app-primary bg-primary text-white font-medium text-[20px] rounded-[32px]"
           >
-            List view <Icon name={'ListView'} size={20} className="!w-[24px] !h-[24px]" />
+            {type == 'chart' ? 'Grid' : 'List'} view{' '}
+            <Icon name={'ListView'} size={20} className="!w-[24px] !h-[24px]" />
           </Button>
         </div>
       </div>
@@ -60,3 +62,4 @@ function Analytics() {
 }
 
 export default Analytics
+ 

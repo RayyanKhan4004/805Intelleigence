@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname  } from 'next/navigation'
 import { Tabs, TabsList, TabsTrigger } from '@/components/UI/tabs'
 import { tabs } from '../enums'
 import Link from 'next/link'
@@ -8,8 +8,7 @@ import Link from 'next/link'
 function NavTabs() {
   // const router = useRouter()
   const [activeTab, setActiveTab] = useState('Reports')
-
-  //
+  const Pathname =  usePathname()
   const handleTabChange = (tabName: string) => {
     setActiveTab(tabName)
     // const route = tabName.toLowerCase().replace(/\s+/g, '-')
@@ -23,7 +22,7 @@ function NavTabs() {
           <TabsTrigger
             key={tab.name}
             value={tab.name}
-            className="data-[state=active]:bg-white data-[state=active]:text-app-primary text-[18px]  max-lg:w-full  max-lg:text-[26px] "
+            className={`${Pathname.includes(tab.href) && 'bg-white text-app-primary'} text-[18px]  max-lg:w-full  max-lg:text-[26px] `}
           >
             <Link href={tab.href}>{tab.name}</Link>
           </TabsTrigger>

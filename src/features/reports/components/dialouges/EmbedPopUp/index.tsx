@@ -32,8 +32,8 @@ const tabs: Array<{ label: string; value: 'image' | 'lead form' | 'search box'; 
     title: 'Search Box ',
   },
 ]
-function EmbedPopUp() {
-  const [isOpen, setIsOpen] = React.useState(true)
+function EmbedPopUp({ isOpen , onClose} : {isOpen : boolean ,  onClose : any}) {
+  // const [isOpen, setIsOpen] = React.useState(true)
   const [selectedTab, setSelectedTab] = React.useState(tabs[0])
 
   return (
@@ -62,7 +62,7 @@ function EmbedPopUp() {
         }
         // Description="ertyh"
         isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
+        onClose={onClose}
         hideClose={true}
         // footer={
         //   <div className="flex items-center justify-between w-full ">

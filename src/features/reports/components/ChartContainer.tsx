@@ -1,5 +1,5 @@
 import Typography from '@/components/theme/Typography'
-import ReportCharts from './ReportCharts'
+import ReportCharts from './reportCharts'
 import { Icon } from '@/shared/icons/Icon'
 
 const data = [
@@ -40,8 +40,8 @@ function ChartContainer({ title }: { title: string }) {
         </div>
       </div>
       <ReportCharts style={{ width: '100%', height: '205px' }} />
-      <div className="flex items-center">
-        <div className="border-t-2 border-primary w-full flex items-center gap-[8px]  pt-[12px]">
+      <div className="flex items-center justify-between border-t-2 border-primary w-full pt-[12px]">
+        <div className="flex items-center gap-[8px]  ">
           <Typography variant="h4" className="text-app-primary font-medium text-[20px]">
             Houses
           </Typography>
@@ -49,7 +49,6 @@ function ChartContainer({ title }: { title: string }) {
             <PercentBadge value="3.2%" />
           </div>
         </div>
-
         <div className="flex gap-[16px]">
           <Icon name={'ChartLine'} width={26} height={22} />
           <Icon name={'share'} width={24} height={24} />

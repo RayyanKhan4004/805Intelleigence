@@ -1,3 +1,4 @@
+'use client'
 import Typography from '@/components/theme/Typography'
 import { ReportRow } from '@/components/types'
 import { Button } from '@/components/UI/button'
@@ -10,6 +11,8 @@ import {
   TableRow,
 } from '@/components/UI/table'
 import { Icon } from '@/shared/icons/Icon'
+import { EmbedPopUp } from './dialouges'
+import { useState } from 'react'
 
 interface tableDataProps {
   location: string
@@ -17,6 +20,7 @@ interface tableDataProps {
   performance?: string
 }
 export function ReportTable({ tableData }: { tableData?: tableDataProps[] }) {
+  const [popUp, setPopUp] = useState<undefined | 'embed' | 'snapshot' | 'pdf'>(undefined)
   return (
     <div>
       <Table>
@@ -67,7 +71,11 @@ export function ReportTable({ tableData }: { tableData?: tableDataProps[] }) {
                       <Icon name={'share'} size={24} className="!w-6 !h-6" /> Share{' '}
                       <Icon name={'ArrowDown'} size={24} className="!w-6 !h-6" />
                     </Button>
-                    <Button className="h-[44px] w-[115px]" variant={'outline'}>
+                    <Button
+                      className="h-[44px] w-[115px]"
+                      variant={'outline'}
+                      onClick={() => setPopUp('embed')}
+                    >
                       {' '}
                       <Icon name={'DownDown'} size={24} className="!w-6 !h-6" /> Embed
                     </Button>
@@ -97,6 +105,7 @@ export function ReportTable({ tableData }: { tableData?: tableDataProps[] }) {
           )}
         </TableBody>
       </Table>
+      <EmbedPopUp isOpen={popUp == 'embed'} onClose={() => setPopUp(undefined)} />
     </div>
   )
 }

@@ -66,6 +66,24 @@ export default function SignupForm() {
             {/* Name Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
+                <Input
+                  {...register('membership')}
+                  id="email"
+                  // type="email"
+                  placeholder="sergio123@example.com"
+                  name="email"
+                  value={'basic'}
+                  className="sr-only"
+                />
+                <Input
+                  {...register('username')}
+                  id="email"
+                  // type="email"
+                  placeholder="sergio123@example.com"
+                  name="email"
+                  value={'Basic'}
+                  className="sr-only"
+                />
                 <Label htmlFor="firstName">First Name</Label>
                 <Input
                   {...register('first_name')}
