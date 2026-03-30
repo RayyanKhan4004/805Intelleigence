@@ -1,16 +1,16 @@
 import CustomPopup from '@/components/theme/CustomPopUp'
 import { Button } from '@/components/UI/button'
-import React from 'react'
+// import React from 'react'
 
-function UploadContactsPopUp() {
-  const [isOpen, setIsOpen] = React.useState(true)
+function UploadContactsPopUp({isOpen ,  onClose} : {isOpen : boolean ,  onClose : any}) {
+  // const [isOpen, setIsOpen] = React.useState(true)
   return (
     <div>
       <CustomPopup
         title="Import Contacts"
         // Description="ertyh"
         isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
+        onClose={onClose}
       >
         <div>
           <span className="text-[14px] text-app-greyText">
