@@ -82,7 +82,7 @@ function AddNewReport({ isOpen, onClose }: { isOpen: boolean; onClose: any }) {
           </div>
         )}
         {selectedTab === 'zipCode' && (
-          <div className='mt-[14px]'>
+          <div className="mt-[14px]">
             <div className="font-bold text-[16px] text-app-primary mb-[15px]">Search Results</div>
 
             <div className=" flex flex-col  gap-[10px]">
@@ -127,5 +127,4 @@ function AddNewReport({ isOpen, onClose }: { isOpen: boolean; onClose: any }) {
     </div>
   )
 }
-
 export default AddNewReport
