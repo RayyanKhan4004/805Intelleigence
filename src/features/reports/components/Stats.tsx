@@ -1,4 +1,4 @@
-import Typography from '@/components/theme/Typography'
+import Typography from '@/components/theme/Typography'           
 import { data } from '../Data'
 
 function Stats() {
