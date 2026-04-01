@@ -4,6 +4,7 @@ import { ChevronDown } from 'lucide-react'
 import NavTabs from './NavTabs'
 import React, { useState } from 'react'
 import SideBar from './SideBar'
+import Link from 'next/link'
 require('../styles/index.css')
 export default function Navbar() {
   const [openSideBar, setOpenSideBar] = useState(false)
@@ -25,7 +26,7 @@ export default function Navbar() {
         </div>
 
         {/* User Profile */}
-        <div className="flex items-center gap-3 max-lg:hidden">
+        <Link href={'/settingsPage'} className="flex items-center gap-3 max-lg:hidden" >
           <div className="h-[60px] w-[60px] overflow-hidden rounded-full border border-gray-500 bg-gray-200 max-xl:h-[40px] max-xl:w-[40px]">
             <img
               src="https://avatar.vercel.sh/david-taylor"
@@ -37,7 +38,7 @@ export default function Navbar() {
             <span>David Taylor</span>
             <ChevronDown className="h-4 w-4 text-gray-400 " />
           </div>
-        </div>
+        </Link>
         <div
           className={`lg:hidden relative flex flex-col justify-center items-center cursor-pointer h-[44px] w-[44px] ${
             !openSideBar && 'gap-1'
