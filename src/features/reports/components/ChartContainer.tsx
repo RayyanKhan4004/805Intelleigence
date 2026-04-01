@@ -40,7 +40,7 @@ function ChartContainer({ title }: { title: string }) {
         </div>
       </div>
       <ReportCharts style={{ width: '100%', height: '205px' }} />
-      <div className="flex items-center justify-between border-t-2 border-primary w-full pt-[12px]">
+      <div className="flex items-center justify-between border-t-2 border-primary w-full pt-[12px]">,
         <div className="flex items-center gap-[8px]  ">
           <Typography variant="h4" className="text-app-primary font-medium text-[20px]">
             Houses

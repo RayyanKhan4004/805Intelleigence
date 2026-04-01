@@ -1,5 +1,5 @@
 import { Button } from '@/components/UI/button'
-import {
+import {              
   Dialog,
   DialogClose,
   DialogContent,
@@ -27,9 +27,9 @@ export default function CustomPopup({
 }: props) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <form className="max-h-[90vh] overflow-y-scroll">
+      <form className="max-h-[90vh] overflow-y-auto">
         {trigger && <DialogTrigger asChild>{trigger}</DialogTrigger>}
-        <DialogContent className={className + ' ' + 'max-h-[90vh] overflow-y-scroll min-w-[20vw]'}>
+        <DialogContent className={className + ' ' + 'max-h-[90vh] overflow-y-auto min-w-[20vw]'}>
           <DialogHeader className="border-b border-app-stroke pb-2.5">
             <DialogTitle className="text-[25px] font-semibold text-app-primary">
               {title}
