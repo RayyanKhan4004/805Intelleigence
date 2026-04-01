@@ -18,4 +18,6 @@ export const signupSchema = yup.object({
     .string()
     .oneOf([yup.ref('password')], 'Passwords do not match')
     .required('Confirm your password'),
+  membership: yup.string().required(),
+  username: yup.string().required(),
 })

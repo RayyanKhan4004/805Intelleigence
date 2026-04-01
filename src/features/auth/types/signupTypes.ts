@@ -8,4 +8,6 @@ export type SignupFormValues = {
   zip: string
   password: string
   confirm_password: string
+  membership: string
+  username: string
 }
