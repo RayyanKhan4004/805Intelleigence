@@ -27,7 +27,7 @@ function Header() {
             <Input
               preIcon={<Icon name="Search" className="!w-6 !h-6" />}
               className="w-[237px] h-[56px] text-app-primary placeholder:text-app-greyText rounded-[12px] border-app-primary "
-              placeholder=" Search by name"
+              placeholder=" Search by name" 
             />
             <Button variant="outline" className="p-4  h-[56px] border border-app-primary">
               <Typography

@@ -9,42 +9,29 @@ import { EyeOff } from 'lucide-react'
 import Link from 'next/link'
 import Typography from '@/components/theme/Typography'
 import Card from '@/components/theme/Card'
-import { useLoginMutation } from '../authApi'
+import { useForgetPasswordMutation } from '../authApi'
 import { useForm } from 'react-hook-form'
 import { LoginFormValues } from '../types'
 import { toast } from '@/hooks/use-toast'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Icon } from '@/shared/icons/Icon'
-import { loginSchema } from './schema/login.schema'
-import { useAppDispatch } from '@/store/hooks'
-import { setCredentials } from '../authSlice'
-import { useRouter } from 'next/navigation'
 
-export default function LoginForm() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [login, { isLoading }] = useLoginMutation()
-  const dispatch = useAppDispatch()
-  const router = useRouter()
+import { forgetPasswordSchema } from './schema/forget.schema'
+import { ForgetPasswordFormValues } from '../types/forgetTypes'
+
+export default function ForgetPasswordForm() {
+  const [forgetPassword, { isLoading }] = useForgetPasswordMutation()
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormValues>({
-    resolver: yupResolver(loginSchema),
+  } = useForm<ForgetPasswordFormValues>({
+    resolver: yupResolver(forgetPasswordSchema),
   })
 
-  const onSubmit = async (data: LoginFormValues) => {
+  const onSubmit = async (data: ForgetPasswordFormValues) => {
     try {
-      const result = await login(data).unwrap()
-      // Save to Redux + localStorage
-      dispatch(
-        setCredentials({ access: result.access, refresh: result.refresh, user: result.user })
-      )
-      // Set cookie for middleware auth guard
-      document.cookie = `accessToken=${result.access}; path=/; max-age=${60 * 60}`
-      toast({ title: 'Success', description: 'Login successful' })
-      router.push('/reports')
+      const result = await forgetPassword(data).unwrap()
     } catch (err: any) {
       toast({
         title: 'Error',
@@ -60,7 +47,7 @@ export default function LoginForm() {
         variant="h6"
         className="font-semibold text-app-primary mb-[72px] text-center break-words p-0 text-nowrap"
       >
-        LOGIN
+        FORGET-PASSWORD
       </Typography>
       <CardContent className="p-0">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 gap-[24px]">
@@ -75,45 +62,14 @@ export default function LoginForm() {
             <p className="text-red-500 text-sm">{errors.email?.message}</p>
           </div>
 
-          <div className="space-y-2 relative">
-            <Label htmlFor="password">Password</Label>
-            <div className="relative">
-              <Input
-                {...register('password')}
-                id="password"
-                type={showPassword ? 'text' : 'password'}
-                placeholder="********"
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-app-greyText hover:text-app-greyText"
-              >
-                {showPassword ? <EyeOff size={20} /> : <Icon name="Eye" size={20} />}
-              </button>
-            </div>
-            <p className="text-red-500 text-sm">{errors.password?.message}</p>
-          </div>
-
           <Button
             type="submit"
             isloading={isLoading}
             className="w-full bg-app-primary hover:opacity-90 text-white font-bold h-12 rounded-lg text-base shadow-lg transition-all duration-200"
           >
-            Login
+            Submit
           </Button>
         </form>
-
-        <div className="text-right mt-4">
-          <Typography variant="TableText">
-            <Link
-              className="text-app-primary font-semibold hover:underline cursor-pointer"
-              href="/forget-password"
-            >
-              Forgot password?
-            </Link>
-          </Typography>
-        </div>
 
         <div className="w-full text-center !mt-[60px]">
           <Typography variant="TableText" className="text-white font-medium inline-block">
