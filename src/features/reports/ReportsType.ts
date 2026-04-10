@@ -16,35 +16,26 @@ export const authApi = createApi({
       return headers
     },
   }),
-  tagTypes: ['Auth'],
+  tagTypes: ['reports'],
   endpoints: builder => ({
     login: builder.mutation({
       query: body => ({
-        url: '/login/',
+        url: '/reports/',
         method: 'POST',
         body,
       }),
-      invalidatesTags: ['Auth'],
+      invalidatesTags: ['reports'],
     }),
 
     signup: builder.mutation({
       query: body => ({
-        url: '/register/',
+        url: '/repotrs/',
         method: 'POST',
         body,
       }),
-      invalidatesTags: ['Auth'],
-    }),
-
-    forgetPassword: builder.mutation({
-      query: body => ({
-        url: '/forgot-password/',
-        method: 'POST',
-        body,
-      }),
-      invalidatesTags: ['Auth'],
+      invalidatesTags: ['reports'],
     }),
   }),
 })
 
-export const { useLoginMutation, useSignupMutation, useForgetPasswordMutation } = authApi
+export const { useLoginMutation, useSignupMutation } = authApi
