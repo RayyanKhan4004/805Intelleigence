@@ -1,6 +1,6 @@
 import Discription from '@/features/auth/components/Discription'
 import SignupForm from '@/features/auth/components/SignupForm'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 export default function SignupPage() {
   const descriptionData = {
@@ -17,16 +17,12 @@ export default function SignupPage() {
     ],
   }
   return (
-    <div className="min-h-screen bg-app-primary text-white lg:flex justify-between p-[60px]    max-sm:p-[20px]  ">
-      {/* Background/Layout Container */}
-      <div className="w-full flex lg:flex-row flex-col  gap-[60px] ">
-        {/* Left Side: Branding & Info */}
+    <div className="min-h-screen bg-app-primary text-white lg:flex justify-between p-[60px] max-sm:p-[20px]">
+      <div className="w-full flex lg:flex-row flex-col gap-[60px]">
         <Discription {...descriptionData} />
-
-        {/* Right Side: Signup Form */}
-        {/* <div className="w-full max-w-xl mx-auto lg:ml-auto"> */}
-        <SignupForm />
-        {/* </div> */}
+        <Suspense fallback={null}>
+          <SignupForm />
+        </Suspense>
       </div>
     </div>
   )

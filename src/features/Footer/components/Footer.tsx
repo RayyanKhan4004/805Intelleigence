@@ -6,7 +6,7 @@ import { Icon } from '@/shared/icons/Icon'
 
 function Footer() {
   return (
-    <div className="bg-primary  px-[60px] py-[40px] max-sm:p-[15px] max-md:p-[32px]">
+    <div className="bg-primary  px-[60px] py-[40px] max-sm:p-[15px] max-md:p-[32px]  max-md:px-6 max-sm:px-6 max-lg:px-6">
       <div className=" text-white flex justify-between items-start max-lg:grid max-lg:grid-cols-2 max-sm:grid-cols-1 gap-y-10 lg:gap-y-0 gap-x-8 ">
         {footerSections.map(section => (
           <div key={section.title}>

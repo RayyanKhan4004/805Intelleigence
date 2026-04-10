@@ -1,13 +1,8 @@
-// import React, { useEffect } from 'react';
-
 import Typography from '@/components/theme/Typography'
-import { useEffect, useState } from 'react'
-
-// import { use } from 'chai';
-
+import { useState } from 'react'
 function HeroComponent() {
   // states
-  const [gradient, setGradient] = useState(1)
+  // const [gradient, setGradient] = useState(1)
   //   setGradient(prev => (prev >= 270 ? 90 : prev + 1))
   //   This function generates the CSS for the grid background
 

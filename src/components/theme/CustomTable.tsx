@@ -21,24 +21,22 @@ export function ReportsTable({ data, title }: ReportsTableProps) {
       <Table>
         <TableHeader>
           <TableRow>
-            {title.map(key => (
+            {title?.map(key => (
               <TableHead key={String(key)}>{String(key)}</TableHead>
             ))}
           </TableRow>
         </TableHeader>
 
         <TableBody>
-          {data.map(row => (
+          {data?.map(row => (
             <TableRow key={row.id} className="hover:bg-muted/40">
               {title.map(key => (
-          <TableCell key={String(key)}>{String(row[key] || '-----------------')}</TableCell>
+                <TableCell key={String(key)}>{String(row[key] || '-----------------')}</TableCell>
               ))}
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </div>
-
   )
-
 }

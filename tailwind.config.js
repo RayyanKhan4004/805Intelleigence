@@ -20,6 +20,12 @@ module.exports = {
       },
       /* ---------------- Shadows ---------------- */
       boxShadow: {
+         shadow: `
+    0px 2.55px 5.95px rgba(0, 0, 0, 0.10),
+    0px 10.48px 10.48px rgba(0, 0, 0, 0.09),
+    0px 42.5px 17px rgba(0, 0, 0, 0.02),
+    0px 66.3px 18.7px rgba(0, 0, 0, 0)
+  `,
         field: `
       0px 2.55px 5.95px rgba(255, 255, 255, 0.10),
       0px 10.48px 10.48px rgba(255, 255, 255, 0.09)
@@ -89,9 +95,9 @@ module.exports = {
           stroke2: 'rgb(var(--color-stroke2) / <alpha-value>)',
           buttonPrimary: 'rgb(var(--color-buttonprimary) / <alpha-value>)',
           primaryLight: 'rgb(var(--color-primary-light) / <alpha-value>)',
-
           surface: 'rgb(var(--color-surface) / <alpha-value>)',
           mutedBg: 'rgb(var(--color-mutedbg) / <alpha-value>)',
+          badge: 'rgb(var(--color-badge) / <alpha-value>)',
         
         },
       },

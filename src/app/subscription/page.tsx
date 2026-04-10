@@ -1,20 +1,17 @@
 'use client'
-import Footer from '@/features/Footer/components/Footer'
-import Navbar from '@/features/navBar/components/Navbar'
-import HeroComponent from '@/features/subscription/components/HeroComponent'
-import ListCard from '@/features/subscription/components/ListCard'
-import TableComponent from '@/features/subscription/components/SubscriptionTable'
+import Layout from '@/components/theme/Layout'
+import { HeroComponent, ListCard, SubscriptionTable } from '@/features/subscription'
 function subscriptionpage() {
   return (
-    <div>
-      <Navbar />
-      <HeroComponent />
-      <div className="p-[60px] max-sm:p-[15px] max:md:p-[32px]">
+    <Layout
+      settings={{ navbar: true, footer: true, padding: 60 }}
+      heroComponent={<HeroComponent />}
+    >
+      <div className=" max-sm:p-[15px] max:md:p-[32px] mt-[33px]">
         <ListCard />
       </div>
-      <TableComponent />
-      <Footer />
-    </div>
+      <SubscriptionTable />
+    </Layout>
   )
 }
 export default subscriptionpage
